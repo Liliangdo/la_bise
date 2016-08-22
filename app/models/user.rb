@@ -7,5 +7,12 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :events
 
-  validate
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :birth_date, presence: true
+  validates :address, presence: true
+  validates :gender, presence: true
+  validates :phone_number, presence: true
+  validates :email, uniqueness: true
+
 end
