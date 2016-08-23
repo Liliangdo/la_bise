@@ -10,15 +10,15 @@ class User < ApplicationRecord
   has_many :messages, through: :events
   has_many :reviews, through: :events
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :birth_date, presence: true
-  validates :address, presence: true
-  validates :gender, presence: true
-  validates :phone_number, presence: true
-  validates :email, uniqueness: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :birth_date, presence: true
+  # validates :address, presence: true
+  # validates :gender, presence: true
+  # validates :phone_number, presence: true
+  # validates :email, uniqueness: true
 
-  has_attachment :photo
+  # has_attachment :photo
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.to_h.slice(:provider, :uid)
@@ -29,6 +29,7 @@ class User < ApplicationRecord
 
     user = User.where(provider: auth.provider, uid: auth.uid).first
     user ||= User.where(email: auth.info.email).first # User did a regular sign up in the past.
+    byebug
     if user
       user.update(user_params)
     else
