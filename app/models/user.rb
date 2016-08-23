@@ -9,13 +9,13 @@ class User < ApplicationRecord
   has_many :messages, through: :events
   has_many :reviews, through: :events
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :birth_date, presence: true
-  validates :address, presence: true
-  validates :gender, presence: true
-  validates :phone_number, presence: true
-  validates :email, uniqueness: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :birth_date, presence: true
+  # validates :address, presence: true
+  # validates :gender, presence: true
+  # validates :phone_number, presence: true
+  # validates :email, uniqueness: true
 
   has_attachment :photo
 
