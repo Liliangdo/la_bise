@@ -14,7 +14,6 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.event = @event
     if @message.save
-      #TODO change the redirect to the Dasgboard
       redirect_to event_path(@event)
     else
       render 'messages/new'
