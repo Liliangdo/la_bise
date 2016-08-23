@@ -16,9 +16,9 @@ class ReviewsController < ApplicationController
   end
 
   private
-  def find_review
-    @review = Review.find(params[:id])
-  end
+  #def find_review
+  #  @review = Review.find(params[:id])
+  #end
   def review_params
     params.require(:reviews).permit(:content, :rating)
 end
