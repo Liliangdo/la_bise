@@ -30,13 +30,14 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:events).permit( photos: [],
+    params.require(:events).permit( 
       :name,
       :description,
       :price,
       :house_type,
       :capacity,
-      :starting_at )
+      :starting_at, 
+      photos: [] )
   end
 end
 
