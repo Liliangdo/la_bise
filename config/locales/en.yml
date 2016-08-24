@@ -27,9 +27,14 @@ en:
       sign_out: "Log out"
       top_call_to_action: "Add event"
       sign_in: "Sign In"
+
+
   pages:
-    dashboard:
-      profil: "Profile"
-      messages: "Messages"
-      events: "Events"
-      reservations: "Reservations"
+    home:
+      punchline: "Share real moment at home with amazing people like you"
+      check: "Check it out !"
+
+    datepicker:
+      city: "Enter a city"
+      capacity: "Guests"
+      search: "Search"

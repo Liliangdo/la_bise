@@ -5,10 +5,15 @@ fr:
       home: "Acccueil"
       sign_out: "Déconnexion"
       top_call_to_action: "Créer une soirée"
-      sign_in: "S'enregistrer"
+      sign_in: "Connexion"
+
+
   pages:
-    dashboard:
-      profil: "Profil"
-      messages: "Messages"
-      events: "Évènements"
-      reservations: "Résèrvations"
+    home:
+      punchline: "Venez fumer des champignons !"
+      check: "Voyez donc !"
+
+    datepicker:
+      city: "Entrer une ville"
+      capacity: "Invités"
+      search: "Rechercher"

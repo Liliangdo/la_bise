@@ -3,7 +3,7 @@
     <div class="row">
 
       <div class="col-md-3">
-        <%= f.input :city, label: false, placeholder:"Enter a city", input_html: { value: 'Bordeaux'}%>
+        <%= f.input :city, label: false, placeholder: t('.city'), input_html: { value: 'Bordeaux'}%>
       </div>
 
       <div class='col-md-3'>
@@ -14,11 +14,11 @@
       </div>
 
       <div class='col-md-3'>
-        <%= f.input :capacity, label: false, placeholder: "Capacity", input_html: { value: '2'} %>
+        <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'} %>
       </div>
 
       <div class='col-md-3'>
-        <%= f.button :submit, "Search", class: "btn btn-danger btn-block" %>
+        <%= f.button :submit, t('.search'), class: "btn btn-danger btn-block" %>
       </div>
 
     </div>
