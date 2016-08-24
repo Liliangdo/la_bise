@@ -4,4 +4,9 @@ class ReservationPolicy < ApplicationPolicy
       scope
     end
   end
+
+  def create?
+    true
+  end
+
 end
