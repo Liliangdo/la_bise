@@ -5,7 +5,7 @@ $('.date').datepicker({
 });
 
 
-$.fn.datetimepicker.dates['fr'] = {
+$.fn.datepicker.dates['fr'] = {
     days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
     daysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
     daysMin: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"],
