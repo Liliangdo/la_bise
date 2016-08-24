@@ -1,0 +1,14 @@
+fr:
+  shared:
+    navbar:
+      profil: "Profil"
+      home: "Acccueil"
+      sign_out: "Déconnexion"
+      top_call_to_action: "Créer une soirée"
+      sign_in: "S'enregistrer"
+  pages:
+    dashboard:
+      profil: "Profil"
+      messages: "Messages"
+      events: "Évènements"
+      reservations: "Résèrvations"

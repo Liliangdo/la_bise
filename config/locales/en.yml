@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  shared:
+    navbar:
+      profil: "Profile"
+      home: "Home"
+      sign_out: "Log out"
+      top_call_to_action: "Add event"
+      sign_in: "Sign In"
+  pages:
+    dashboard:
+      profil: "Profile"
+      messages: "Messages"
+      events: "Events"
+      reservations: "Reservations"
