@@ -2,7 +2,7 @@
   <div class="row">
     <div class="hidden-xs col-sm-4">
       <div class="card" style="background-image: url('https://unsplash.it/200')">
-      <h2>Name of my event</h2>
+      <h2><%= @event.name %></h2>
       </div>
     </div>
     <div class="reservation-informations">
@@ -18,7 +18,12 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="infos">
-          Prix par personne
+          <p>
+            <strong>
+              Prix par personne :
+            </strong>
+            <%= @event.price %> €
+          </p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
@@ -36,7 +41,12 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
       <div class="">
-        Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae totam suscipit rerum magnam ut, possimus facilis eum, non, iure, accusamus at. Minima a enim consequatur accusantium eum maiores dolorum sunt.
+        <strong>
+          Description :
+        </strong>
+         <p>
+           <%= @event.description %>
+         </p>
       </div>
     </div>
 
