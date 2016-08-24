@@ -3,6 +3,8 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :create, :edit, :update]
 
   def index
+    session[:city] = params[:search][:city]
+
     @events = policy_scope(Event)
     authorize @events
 
