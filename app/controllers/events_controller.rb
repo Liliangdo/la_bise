@@ -3,14 +3,23 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :create, :edit, :update]
 
   def index
-    session[:city] = params[:search][:city]
-
     @events = policy_scope(Event)
     authorize @events
 
-    @events_map = Event.where.not(latitude: nil, longitude: nil)
+    session[:city] = params[:search][:city]
+    session[:capacity] = params[:search][:capacity]
+    session[:date] = params[:search][:date]
 
-    @hash = Gmaps4rails.build_markers(@events_map) do |event_map, marker|
+
+    if params[:search].nil?
+      @events = Event.where.not(latitude: nil, longitude: nil)
+    else
+      @search = params[:search]
+      @events = Event.near(@search[:city],5).where("capacity >= ?", @search[:capacity].to_f)
+                    .select { |p| p.available?(@search[:date]) }
+    end
+
+    @hash = Gmaps4rails.build_markers(@events) do |event, marker|
       marker.lat event_map.latitude
       marker.lng event_map.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
