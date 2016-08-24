@@ -1,21 +1,33 @@
 <div class="container">
   <div class="row">
+
     <% @events.each do |event| %>
+
       <div class="col-xs-12 col-sm-4">
+
         <%= link_to event_path(event) do %>
-          <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://realestatebaba.com/wp-content/uploads/2015/01/maria-adlersson-flat-1.jpg');">
-            <div class="card-name">
-              <h3>
-                <%= event.name %>
-              </h3>
+
+          <div class="card text-center">
+            <div class="card-polaroid">
+
+              <img src="http://www.ledarlington.com/wp-content/uploads/2015/02/happyhour.jpg">
+
+              <div class="card-infos">
+                <h3>
+                  <%= event.name %>
+                </h3>
+              </div>
+
+              <p class="card-stats">
+                <i class="fa fa-eur"></i> <%=event.price%>
+                <i class="fa fa-users"></i> <%=event.capacity%>
+                <i class="fa fa-heart"></i> <%=event.mood%>
+                </a>
+              </p>
             </div>
-            <div class="card-mood">
-              <p><%= event.mood %></p>
-            </div>
-            <div class="card-avatar">
-              <i class="fa fa-users" aria-hidden="true"></i>
-              <p> <%= event.capacity %> </p>
-            </div>
+            <p class="card-author">
+              <%=event.id%>
+            </p>
           </div>
         <% end %>
       </div>
