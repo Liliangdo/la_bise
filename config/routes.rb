@@ -5,14 +5,17 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  get '/dashboard', to: 'pages#dashboard'
-
-  resources :events, only: [:index, :show, :new, :create, :edit, :update] do
-    resources :messages, only: [:index, :new, :create]
-    resources :reviews, only: [:index, :create]
-    resources :reservations, only: [:index, :new, :create, :update, :destroy]
+  scope '(:locale)', locale: /fr/ do
+    get '/', to: 'pages#home'
+    get '/dashboard', to: 'pages#dashboard'
+    resources :events, only: [:index, :show, :new, :create, :edit, :update] do
+      resources :messages, only: [:index, :new, :create]
+      resources :reviews, only: [:index, :create]
+      resources :reservations, only: [:index, :new, :create, :update, :destroy]
+    end
   end
+
   resources :users, only: [:show, :edit, :update]
-mount Attachinary::Engine => "/attachinary"
+  mount Attachinary::Engine => "/attachinary"
 end
 
