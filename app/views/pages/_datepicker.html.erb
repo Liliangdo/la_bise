@@ -3,7 +3,7 @@
     <div class="row">
 
       <div class="col-md-3">
-        <%= f.input :city, label: false, id: "iconified", placeholder:"&#xF002;"%>
+        <%= f.input :city, label: false, id: "iconified", placeholder:"Enter a city", input_html: { value: 'Bordeaux'}%>
       </div>
 
       <div class='col-md-3'>
@@ -13,7 +13,7 @@
       </div>
 
       <div class='col-md-3'>
-        <%= f.input :capacity, label: false, placeholder: "Capacity" %>
+        <%= f.input :capacity, label: false, placeholder: "Capacity", input_html: { value: '2'} %>
       </div>
 
       <div class='col-md-3'>
