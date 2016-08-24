@@ -13,3 +13,4 @@ $.fn.datepicker.dates['fr'] = {
     monthsShort: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"],
     today: "Aujourd'hui"
 };
+
