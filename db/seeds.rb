@@ -50,7 +50,22 @@ puts "event begin"
     mood: Faker::Color.color_name,
     group_age: "rand(18..20)" + "->" + "rand(20..50)",
     option: ["Jardin", "Terrasse", "Piscine", "Garage", "Patio", "Home cinema", "Animaux", "Non-fumeur"].sample(2),
-    )
+    address:["25 rue georges Pompidou 33600 pessac",
+                            "rue de l'horloge 33600 pessac",
+                            "31b avenue du général Leclerc 33600 pessac",
+                            "72 Rue Fondaudège 33000 Bordeaux",
+                            "115 Avenue Lucien Lerousseau, 33130 Bègles",
+                            "262 cours gambetta 33400 Talence",
+                            "Place Aristide Briand 33400 Talence",
+                            "3 place de la République 33160 Saint Médard en Jalles",
+                            "15 rue Nicolas Leblanc 33160",
+                            "19 Rue Jean Jacques Rousseau 33000 Bordeaux",
+                            "134 Rue François de Sourdis 33000 Bordeaux",
+                            "37 Rue Esprit des Lois 33000 Bordeaux",
+                            "79 Rue du Loup 33000 Bordeaux",
+                            "168 Cours de l'Argonne 33000 Bordeaux",
+                            "Miroir d'eau Place de la Bourse, 33000 Bordeaux"].sample
+  )
   print "* "
 end
 

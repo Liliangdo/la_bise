@@ -6,9 +6,19 @@ class EventsController < ApplicationController
     @events = policy_scope(Event)
     authorize @events
 
-    @events_map = Event.where.not(latitude: nil, longitude: nil)
+    session[:city] = params[:search][:city]
+    session[:capacity] = params[:search][:capacity]
+    session[:date] = params[:search][:date]
 
-    @hash = Gmaps4rails.build_markers(@events_map) do |event, marker|
+    if params[:search].nil?
+      @events = Event.where.not(latitude: nil, longitude: nil)
+    else
+      @search = params[:search]
+      @events = Event.near(@search[:city],5).where("capacity >= ?", @search[:capacity].to_f)
+
+    end
+
+    @hash = Gmaps4rails.build_markers(@events) do |event, marker|
       marker.lat event.latitude
       marker.lng event.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
