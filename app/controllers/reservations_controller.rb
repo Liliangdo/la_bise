@@ -28,7 +28,7 @@ class ReservationsController < ApplicationController
   private
 
   def find_reservation
-    @reservation = Reservation.find(params[:id])
+  #  @reservation = Reservation.find(params[:event_id])
   end
 
   def find_event
