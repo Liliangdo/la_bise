@@ -10,18 +10,17 @@ class EventsController < ApplicationController
     session[:capacity] = params[:search][:capacity]
     session[:date] = params[:search][:date]
 
-
     if params[:search].nil?
       @events = Event.where.not(latitude: nil, longitude: nil)
     else
       @search = params[:search]
       @events = Event.near(@search[:city],5).where("capacity >= ?", @search[:capacity].to_f)
-                    .select { |p| p.available?(@search[:date]) }
+
     end
 
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
-      marker.lat event_map.latitude
-      marker.lng event_map.longitude
+      marker.lat event.latitude
+      marker.lng event.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
   end
