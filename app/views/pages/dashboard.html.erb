@@ -1,1 +1,34 @@
-dashboard.html.erb
+<div class="container">
+  <div class="row">
+    <div class="visible-xs hidden-sm">
+      <img src="http://placehold.it/100?text=AVATAR"><%= current_user.photo %>
+      <%= current_user.first_name %> <%= current_user.last_name %>
+      <div class="identification">
+        <%= current_user.email %>
+        <%= current_user.phone_number %>
+        <%= current_user.birth_date %> - <%= current_user.gender %>
+        <%= current_user.birth_date %>
+      </div>
+      <div class="description">
+        <%= current_user.description %>
+      </div>
+      <a href="#" class="btn btn-info">Edit</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tabs">
+      <a href="#" class="hidden-xs col-sm-3 tab active">
+        <h3>Profil</h3>
+      </a>
+      <a href="#" class="col-xs-4 col-sm-3 tab">
+        <h3>Messages</h3>
+      </a>
+      <a href="#" class="col-xs-4 col-sm-3 tab">
+        <h3>Evènements</h3>
+      </a>
+      <a href="#" class="col-xs-4 col-sm-3 tab">
+        <h3>Réservations</h3>
+      </a>
+    </div>
+  </div>
+</div>
