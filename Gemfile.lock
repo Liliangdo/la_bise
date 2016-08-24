@@ -87,6 +87,8 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
+    devise-i18n (1.1.0)
+    devise-i18n-views (0.3.7)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
@@ -168,6 +170,8 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     puma (3.6.0)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -256,6 +260,8 @@ DEPENDENCIES
   cloudinary (= 1.1.0)
   coffee-rails
   devise!
+  devise-i18n
+  devise-i18n-views
   faker
   figaro
   font-awesome-sass
@@ -270,6 +276,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
+  pundit
   rails (= 5.0.0.1)
   rails-assets-underscore!
   redis

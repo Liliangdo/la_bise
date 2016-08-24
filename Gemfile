@@ -9,6 +9,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise', github: 'plataformatec/devise'
 gem 'redis'
 
+gem 'pundit'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -19,6 +21,9 @@ gem 'autoprefixer-rails'
 
 
 gem 'faker'
+
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 gem "cloudinary", "1.1.0"
 gem "attachinary", github: "assembler/attachinary"
