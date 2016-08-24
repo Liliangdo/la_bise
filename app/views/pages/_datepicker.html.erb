@@ -1,0 +1,23 @@
+<%= simple_form_for :search, url: events_path, method: :get do |f| %>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <%= f.input :city, label: false, placeholder: "Enter a city"%>
+      </div>
+
+      <div class='col-md-3'>
+        <!-- TODO Date picker -->
+      </div>
+
+      <div class='col-md-3'>
+        <%= f.input :capacity, label: false, placeholder: "Capacity" %>
+      </div>
+
+      <div class='col-md-3'>
+        <%= f.button :submit, "Search", class: "btn btn-danger btn-block" %>
+      </div>
+
+    </div>
+  </div>
+<%end%>
