@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new(event_params)
+    @event = Event.new
   end
 
   def create
@@ -19,6 +19,7 @@ class EventsController < ApplicationController
       redirect_to dashboard_path
     else
       render :new
+    end
   end
 
   def edit
