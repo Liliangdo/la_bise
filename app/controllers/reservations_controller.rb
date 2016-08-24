@@ -2,13 +2,13 @@ class ReservationsController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:new]
   before_action :find_reservation, only: [ :create, :update, :destroy]
+  before_action :find_event, only: [ :new, :create, :available_places]
 
   def index
     @reservations = policy_scope(Reservation)
   end
 
   def new
-    @event = Event.find(params[:event_id])
     @reservation = Reservation.new
     authorize @reservation
   end
@@ -29,5 +29,9 @@ class ReservationsController < ApplicationController
 
   def find_reservation
     @reservation = Reservation.find(params[:id])
+  end
+
+  def find_event
+    @event = Event.find(params[:event_id])
   end
 end
