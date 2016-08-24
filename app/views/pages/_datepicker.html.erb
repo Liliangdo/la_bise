@@ -2,22 +2,23 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-3">
-        <%= f.input :city, label: false, placeholder:"Enter a city", input_html: { value: 'Bordeaux'}%>
+      <div class="col-xs-12 col-md-3">
+        <%= f.input :city, label: false, placeholder: t('.city'), input_html: { value: 'Bordeaux'}%>
       </div>
 
-      <div class='col-md-3'>
-        <div class="input-group date">
-          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span><input type="text" class="form-control">
+      <div class='col-xs-12 col-md-3'>
+        <div class="input-group date" data-lang="<%= I18n.locale %>" >
+          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+          <%= f.text_field :date, class: "input-sm form-control" %>
         </div>
       </div>
 
-      <div class='col-md-3'>
-        <%= f.input :capacity, label: false, placeholder: "Capacity", input_html: { value: '2'} %>
+      <div class='col-xs-12 col-md-3'>
+        <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'} %>
       </div>
 
-      <div class='col-md-3'>
-        <%= f.button :submit, "Search", class: "btn btn-danger btn-block" %>
+      <div class='col-xs-12 col-md-3'>
+        <%= f.button :submit, t('.search'), class: "btn btn-danger btn-block" %>
       </div>
 
     </div>

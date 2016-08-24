@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  shared:
+    navbar:
+      profil: "Profile"
+      home: "Home"
+      sign_out: "Log out"
+      top_call_to_action: "Add event"
+      sign_in: "Sign In"
+
+
+  pages:
+    home:
+      punchline: "Share real moment at home with amazing people like you"
+      check: "Check it out !"
+
+    datepicker:
+      city: "Enter a city"
+      capacity: "Guests"
+      search: "Search"
