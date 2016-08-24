@@ -8,9 +8,9 @@ class EventsController < ApplicationController
 
     @events_map = Event.where.not(latitude: nil, longitude: nil)
 
-    @hash = Gmaps4rails.build_markers(@events_map) do |event, marker|
-      marker.lat event.latitude
-      marker.lng event.longitude
+    @hash = Gmaps4rails.build_markers(@events_map) do |event_map, marker|
+      marker.lat event_map.latitude
+      marker.lng event_map.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
   end
