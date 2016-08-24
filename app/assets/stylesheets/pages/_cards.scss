@@ -1,12 +1,12 @@
 .card {
-  width: 400px;
+  width: 300px;
   margin-bottom: 20px;
 }
 
 .card-polaroid {
   background: white;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -16,7 +16,7 @@
 }
 
 .card-stats {
-  color: #A1A1A1;
+  color: #FE4A49;
   font-size: 14px;
   text-align: right;
   margin: 10px 0;
@@ -24,13 +24,9 @@
 .card-stats i {
   margin-left: 10px;
 }
-.card-stats a {
-  color: #A1A1A1;
-  text-decoration: none;
-}
 
-.card-stats a:hover {
-  color: #444444;
+.card-stats a {
+  color: #FE4A49;
 }
 
 .card-author {
@@ -42,20 +38,6 @@
   vertical-align: top;
 }
 
-.card-author a {
-  color: #638BBD;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.card-author a:hover {
-  color: #41618E;
-}
-
-.card-author a:hover img {
-  opacity: 0.5;
-}
-
 .card-infos {
   opacity: 0;
   position: absolute;
@@ -65,106 +47,10 @@
   left: 10px;
   height: 285px;
   transition: 100ms all ease;
+  color: black;
 }
 
 .card-infos:hover {
   opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .card, .card-index {
-//   height: 175px;
-//   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-//   background-size: cover !important;
-//   color: #FE4A49;
-//   position: relative;
-//   margin-bottom: 30px;
-//   border-radius: 5px;
-//   background-color: white;
-// }
-
-
-// .card-index {
-//   height: 250px;
-// }
-
-
-// .card-wrapper {
-//   background: #E6E6EA;
-//   padding-top: 50px;
-//   padding-bottom: 50px;
-//   margin: auto;
-// }
-// .card-mood {
-//   position: absolute;
-//   left: 5px;
-//   bottom: 5px;
-// }
-// .card-name {
-//   position: absolute;
-//   top: 5px;
-//   left: 5px;
-//   font-size: 10px;
-//   text-transform: uppercase;
-// }
-// .card-description {
-//   position: absolute;
-//   bottom: 10px;
-//   left: 10px;
-// }
-// .card-description h2 {
-//   font-size: 24px;
-// }
-// .card-description p {
-//   font-size: 13px;
-//   }
-// .card-link {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   width: 100%;
-//   z-index:2;
-//   background: black;
-//   opacity: 0;
-// }
-// .card:hover, .card-index:hover{
-//   opacity: 0.8;
-//   transition: all 300ms ease-in-out;
-//   transform: scale(1.05);
-// }
-
-// .card-avatar {
-//   position: absolute;
-//   top: 10px;
-//   right: 10px;
-// }

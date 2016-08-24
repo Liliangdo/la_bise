@@ -7,10 +7,10 @@
 
         <%= link_to event_path(event) do %>
 
-          <div class="card">
+          <div class="card text-center">
             <div class="card-polaroid">
 
-              <img src="https://d13yacurqjgara.cloudfront.net/users/28738/screenshots/2503928/drib1_1x.jpg">
+              <img src="http://www.ledarlington.com/wp-content/uploads/2015/02/happyhour.jpg">
 
               <div class="card-infos">
                 <h3>
@@ -19,14 +19,14 @@
               </div>
 
               <p class="card-stats">
-                <i class="fa fa-eye"></i><%=event.price%>
-                <i class="fa fa-comment"></i><%=event.capacity%>
-                <i class="fa fa-heart"></i><%=event.mood%>
+                <i class="fa fa-eur"></i> <%=event.price%>
+                <i class="fa fa-users"></i> <%=event.capacity%>
+                <i class="fa fa-heart"></i> <%=event.mood%>
                 </a>
               </p>
             </div>
             <p class="card-author">
-              <%=event.user_id%>
+              <%=event.id%>
             </p>
           </div>
         <% end %>
