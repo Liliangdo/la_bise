@@ -19,6 +19,7 @@ class EventsController < ApplicationController
       redirect_to dashboard_path
     else
       render :new
+    end
   end
 
   def edit

@@ -1,2 +1,10 @@
 <h1>Events#show</h1>
 <p>Find me in app/views/events/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <%= link_to "Book", new_event_reservation_path(params[:id], class: "btn btn-primary")%>
+
+    </div>
+  </div>
+</div>
