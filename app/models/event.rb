@@ -21,5 +21,9 @@ class Event < ApplicationRecord
     self.capacity - self.reservations.count
   end
 
+  def available?
+    available_places >= 1
+  end
+
 end
 
