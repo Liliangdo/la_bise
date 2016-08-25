@@ -1,9 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="search_historic">
-
+    <div class="recap hidden-xs" id="float-search">
+      <%= @event.name %>
+      <hr>
+      <div class="info">
+      <%= @event.address.split.last %>
+      </div>
+      <div class="info">
+      <%= l @event.starting_at, format: '%A %d %B' %>
+      </div>
+      <div class="info">
+      <%= l @event.starting_at, format: '%H:%M' %>
+      </div>
+      <div class="info">
+      Reserve for <%= session[:capacity] %>
+      </div>
+      <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
       <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block", id: "bottom-btn" %>
     </div>
     <div class="col-xs-12">
