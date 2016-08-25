@@ -41,4 +41,8 @@ class User < ApplicationRecord
 
     return user
   end
+
+  def username
+    "#{self.first_name} #{self.last_name[0]}"
+  end
 end

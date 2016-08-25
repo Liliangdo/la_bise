@@ -1,20 +1,24 @@
 class MessagesController < ApplicationController
 
-  before_action :find_message, only: [:new, :create]
+  before_action :find_message, only: []
 
   def index
     @messages = Message.all
   end
 
   def new
-    @message = Message.new(message_params)
+    @message_pundit = policy_scope(Message)
+    authorize @message_pundit
+    @message = Message.new
+    @event = Event.find(params[:event_id])
   end
 
   def create
     @message = Message.new(message_params)
-    @message.event = @event
+    @message.event = Event.find(params[:event_id])
+    authorize @message
     if @message.save
-      redirect_to event_path(@event)
+      redirect_to dashboard_path
     else
       render 'messages/new'
     end
@@ -27,6 +31,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:messages).permit(:content)
+    params.require(:message).permit(:content, :recipient_id, :sender_id, :event_id)
   end
 end
