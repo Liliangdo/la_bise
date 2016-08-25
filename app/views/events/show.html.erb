@@ -12,8 +12,11 @@
         <img src="http://placehold.it/100?text=AVATAR">
       </div>
       <div>
-        <%= @event.user.first_name %><br>
+        <%= @event.user.first_name %>
+        <br>
         <%= ((Date.today - @event.user.birth_date.to_date).to_i / 365.25).to_i %> years old
+        <br>
+        <%= link_to "Conctact", new_event_message_path(params[:id]), class: "btn btn-warning btn-block" %>
       </div>
     </div>
     <div class="col-xs-6">
@@ -22,7 +25,33 @@
       </div>
       <p>Price/pers: <%= @event.price %> €</p>
     </div>
-    <div class="col-xs-12">
-      <%= link_to "New Message", new_event_message_path(params[:id]), class: "btn btn-warning btn-block" %>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      EVENT options<br>
+      EVENT options<br>
+      EVENT options<br>
+      EVENT options<br>
     </div>
+    <div class="col-xs-6">
+      EVENT options<br>
+      EVENT options<br>
+      EVENT options<br>
+      EVENT options<br>
+    </div>
+    <div class="cols-xs-12">
+      <div class="description">
+        <%= @event.description %>
+      </div>
+      <div class="reviews">
+        <%= @event.user.first_name %> has "n" review(s) - moyenne
+        <div class="review-card">
+          <% @event.reviews.each do |review| %>
+            <%= review.content %>
+            <%= review.rating %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
