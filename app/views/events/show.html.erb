@@ -14,7 +14,7 @@
       <div>
         <%= @event.user.first_name %>
         <br>
-        <%= ((Date.today - @event.user.birth_date.to_date).to_i / 365.25).to_i %> years old
+        <%= @event.user.age_calculator %> years old
         <br>
         <%= link_to "Conctact", new_event_message_path(params[:id]), class: "btn btn-warning btn-block" %>
       </div>
@@ -44,19 +44,9 @@
         <%= @event.description %>
       </div>
       <div class="reviews">
-        <%= @event.user.first_name %> has <% if @event.reviews.count == 0%>
-          <%= "no review yet" %>
-        <% elsif @event.reviews.count == 1 %>
-          1 <%= "review" %>
-        <% else %>
-          <%= @event.reviews.count %> <%= "reviews" %>
-        <% end %>
-         - MOYENNE :
-        <% sum = 0 %>
-        <% @event.reviews.each do |review| %>
-          <% sum += review.rating %>
-        <% end %>
-        <%= (sum / @event.reviews.count).round %>
+        <%= @event.user.first_name %> has <%= total_reviews(@event) %>
+         - <%= @event.average_reviews %>
+
         <div class="review-card">
           <% @event.reviews.each do |review| %>
             <%= review.content %>
