@@ -1,5 +1,8 @@
 <div class="container">
   <div class="row">
+    <div class="search_historic">
+
+    </div>
     <div class="col-xs-12">
       <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block", id: "bottom-btn" %>
     </div>
@@ -27,32 +30,37 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-6">
-      EVENT options<br>
-      EVENT options<br>
+    <div class="col-xs-6 col-sm-3">
       EVENT options<br>
       EVENT options<br>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-6 col-sm-3">
       EVENT options<br>
       EVENT options<br>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+      EVENT options<br>
+      EVENT options<br>
+    </div>
+    <div class="col-xs-6 col-sm-3">
       EVENT options<br>
       EVENT options<br>
     </div>
     <div class="cols-xs-12">
       <div class="description">
-        <%= @event.description %>
+        <%= @event.description %><br>
+        Condition d'annulation :
       </div>
       <div class="reviews">
         <%= @event.user.first_name %> has <%= total_reviews(@event) %>
-         - <%= @event.average_reviews %>
+         - average : <%= @event.average_reviews %>
 
-        <div class="review-card">
-          <% @event.reviews.each do |review| %>
+        <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
+          <div class="review-card">
             <%= review.content %>
             <%= review.rating %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
       </div>
     </div>
     <div class="cols-xs-12 bottom-space"></div>

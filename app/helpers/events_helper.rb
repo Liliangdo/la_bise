@@ -1,4 +1,5 @@
 module EventsHelper
+
   def total_reviews(event)
     if event.reviews.count == 0
       "no review yet"
@@ -8,4 +9,5 @@ module EventsHelper
      "#{event.reviews.count} reviews"
     end
   end
+
 end
