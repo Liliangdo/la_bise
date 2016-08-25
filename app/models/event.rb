@@ -25,8 +25,17 @@ class Event < ApplicationRecord
     available_places >= 1
   end
 
+
   def confirmed_users
     self.reservations.map { |r| r.user if r.confirmed? }
+
+  def average_reviews
+    return "no review rating" if self.reviews.count == 0
+    sum = 0
+    self.reviews.each do |review|
+     sum += review.rating
+    end
+    (sum / self.reviews.count).round
   end
 
 end

@@ -42,7 +42,13 @@ class User < ApplicationRecord
     return user
   end
 
+
   def username
     "#{self.first_name} #{self.last_name[0]}"
   end
+
+  def age_calculator
+    ((Date.today - self.birth_date.to_date).to_i / 365.25).to_i
+  end
+
 end
