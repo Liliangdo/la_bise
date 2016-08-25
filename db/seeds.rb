@@ -107,10 +107,17 @@ puts "review seed end"
 puts "message begin"
 
 5.times do
+
+  users = User.all
+  sender_id = users.sample.id
+  recipient_id = users.reject { |user| user.id == sender_id }.sample.id
+
+
   Message.create(
     content: Faker::Lorem.sentence,
     event_id: Event.all.sample.id,
-    user_id: User.all.sample.id
+    sender_id: sender_id,
+    recipient_id: recipient_id
     )
   print "* "
 end
