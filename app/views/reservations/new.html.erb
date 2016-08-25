@@ -35,6 +35,7 @@
       </div>
       <div>
         <%= simple_form_for [@event, @reservation] do |f| %>
+        <%= f.error_notification %>
         <%= f.input :guest,
                     label: "Nombre de places souhaitées",
                     collection: 1..@event.available_places
