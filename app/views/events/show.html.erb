@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-6">
-
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in egestas ligula, ac congue magna. Curabitur elementum diam in vehicula imperdiet. Nullam ligula eros, dictum non sem sit amet, laoreet laoreet sapien. Fusce justo turpis, ultricies quis convallis iaculis, placerat quis ipsum. Sed malesuada sed massa pretium hendrerit. Sed porta sodales pharetra. Aliquam consequat convallis maximus.
-
-Aliquam condimentum metus vitae elit venenatis, a dignissim est vehicula. Donec vel viverra orci. Fusce eget nulla massa. Nam tristique a erat at molestie. Integer a finibus velit. In id gravida justo, non sodales dolor. Mauris laoreet lorem ut lacinia finibus. Donec tristique urna vel dignissim interdum. Cras ultrices mauris sit amet tortor tempus, a placerat nibh aliquet. Nulla pellentesque lacinia lorem, eget consequat elit mollis non. Donec ut pretium elit. Duis vitae dolor at sapien eleifend placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a hendrerit magna.
-
-Suspendisse condimentum nibh eget euismod vestibulum. In pulvinar magna ac iaculis efficitur. Etiam non semper leo. Curabitur vulputate dolor ut ipsum ullamcorper efficitur. Etiam sit amet ante ut lectus luctus euismod. Suspendisse ut dapibus orci. Nunc egestas vulputate ligula ac convallis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam quis lectus quis tortor pharetra venenatis quis mollis risus.
-
-Quisque quis sem ligula. Cras laoreet, velit a fermentum tristique, turpis augue vestibulum erat, id viverra nisl erat id arcu. Morbi eget mauris eu elit tincidunt tincidunt. Ut cursus mollis dictum. Etiam aliquam eros ut est maximus, ac consequat ipsum tristique. Aenean rutrum ligula quis purus lobortis bibendum. Morbi bibendum mi nec rutrum maximus.
-
-Ut in elit condimentum, hendrerit enim ac, pulvinar quam. Quisque facilisis, neque quis congue pretium, urna nisi pellentesque orci, ac dapibus velit purus non magna. Pellentesque non nulla gravida, vestibulum nunc in, varius ligula. Nulla in tincidunt est. Maecenas ac orci justo. Curabitur nisl felis, facilisis at nisl ac, ultricies consectetur metus. Pellentesque mattis est cursus nibh pretium tincidunt. Proin et consectetur odio. Proin elementum eu nunc cursus viverra.</p>
-
+    <div class="col-xs-12">
       <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block", id: "bottom-btn" %>
     </div>
-  </div>
+    <div class="col-xs-12">
+      SLID IMAGE
+      <h4><%= @event.name %></h4>
+    </div>
+    <div class="col-xs-6">
+
+    </div>
+    <div class="col-xs-6">
+
+    </div>
+    <div class="col-xs-12">
+      <%= link_to "New Message", new_event_message_path(params[:id]), class: "btn btn-warning btn-block" %>
+    </div>
 </div>
