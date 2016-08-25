@@ -9,5 +9,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @events = policy_scope(Event)
+    # have informations about my reservation
+    @reservations = policy_scope(Reservation)
   end
 end
