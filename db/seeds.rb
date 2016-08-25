@@ -76,11 +76,12 @@ puts "event seed end"
 puts "reservation begin"
 
 10.times do
-  Reservation.create(
+  reservations = Reservation.new(
     user_id: User.all.sample.id,
     event_id: Event.all.sample.id,
-    ['accepted_at', 'refused_at', 'canceled_at'].sample.to_sym => Faker::Time.backward(5)
+    accepted_at: Faker::Time.backward(5)
     )
+  reservations.save
   print "* "
 end
 
