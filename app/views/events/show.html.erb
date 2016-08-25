@@ -44,7 +44,19 @@
         <%= @event.description %>
       </div>
       <div class="reviews">
-        <%= @event.user.first_name %> has "n" review(s) - moyenne
+        <%= @event.user.first_name %> has <% if @event.reviews.count == 0%>
+          <%= "no review yet" %>
+        <% elsif @event.reviews.count == 1 %>
+          1 <%= "review" %>
+        <% else %>
+          <%= @event.reviews.count %> <%= "reviews" %>
+        <% end %>
+         - MOYENNE :
+        <% sum = 0 %>
+        <% @event.reviews.each do |review| %>
+          <% sum += review.rating %>
+        <% end %>
+        <%= (sum / @event.reviews.count).round %>
         <div class="review-card">
           <% @event.reviews.each do |review| %>
             <%= review.content %>
@@ -53,5 +65,6 @@
         </div>
       </div>
     </div>
+    <div class="cols-xs-12 bottom-space"></div>
   </div>
 </div>
