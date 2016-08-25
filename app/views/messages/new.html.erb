@@ -10,7 +10,7 @@
                 <%= @message.errors.full_messages.join(" ") %>
                <% end %>
             <%= f.input :content %>
-            <%= f.association :recipient, collection: @event.confirmed_users, label_method: :first_name %>
+            <%= f.association :recipient, collection: @event.confirmed_users, label_method: :username %>
             <%= f.input :sender_id, as: :hidden, input_html: { value: current_user.id } %>
             <%= f.button :submit, class: "space btn-block btn-primary" %>
         <% end %>
