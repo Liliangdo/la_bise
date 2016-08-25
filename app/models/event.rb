@@ -25,5 +25,9 @@ class Event < ApplicationRecord
     available_places >= 1
   end
 
+  def confirmed_users
+    self.reservations.map { |r| r.user if r.confirmed? }
+  end
+
 end
 

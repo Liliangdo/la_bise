@@ -4,4 +4,8 @@ class Reservation < ApplicationRecord
 
   validates :guest, presence: true, numericality: true
 
+  def confirmed?
+    !self.accepted_at.nil?
+  end
+
 end
