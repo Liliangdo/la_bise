@@ -7,8 +7,10 @@ class User < ApplicationRecord
 
   has_many :reservations
   has_many :events, through: :reservations
-  has_many :messages, through: :events
+  has_many :messages_sent, class_name: "Message", foreign_key: :sender_id
+  has_many :messages_received, class_name: "Message", foreign_key: :recipient_id
   has_many :reviews, through: :events
+
 
   # validates :first_name, presence: true
   # validates :last_name, presence: true
