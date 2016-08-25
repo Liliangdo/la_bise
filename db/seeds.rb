@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# ActiveRecord::Base.logger = Logger.new(STDOUT)
+
+
 Review.destroy_all
 Message.destroy_all
 Reservation.destroy_all
@@ -76,12 +79,13 @@ puts "event seed end"
 puts "reservation begin"
 
 10.times do
-  reservations = Reservation.new(
+  reservation = Reservation.new(
     user_id: User.all.sample.id,
     event_id: Event.all.sample.id,
-    accepted_at: Faker::Time.backward(5)
-    )
-  reservations.save
+    ['accepted_at', 'refused_at', 'canceled_at'].sample.to_sym => Faker::Time.backward(5),
+    guest: rand(1..5)
+  )
+  reservation.save
   print "* "
 end
 

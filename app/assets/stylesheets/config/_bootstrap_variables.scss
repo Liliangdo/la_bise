@@ -8,20 +8,38 @@ $font-family-sans-serif:  $base-font;
 $body-bg:                 white;
 $font-size-base:          $base-size;
 $line-height-base:        $base-height;
-$headings-font-family:    $header-font;
-
-// Semantic color scheme
-$brand-primary:   $blue;
-$brand-success:   $green;
-$brand-info:      $yellow;
-$brand-danger:    $red;
+$headings-font-family:    $header-font;// Semantic color scheme
+$brand-primary:   $bise-blue;
+$brand-success:   $bise-purple;
+$brand-info:      $bise-yellow;
+$brand-danger:    $bise-red;
 $brand-warning:   $orange;
-$brand-bise-red:  $bise-red;
-$brand-bise-blue: $bise-blue;
-$brand-bise-yellow: $bise-yellow;
-$brand-bise-purple: $bise-purple;
+
 
 // Buttons / inputs radius
 $border-radius-base:  2px;
 $border-radius-large: 2px;
 $border-radius-small: 2px;
+
+
+// $input-border-focus: $bise-purple;
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  box-shadow: none;
+  outline: 0 none;
+}
