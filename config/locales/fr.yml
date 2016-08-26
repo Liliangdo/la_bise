@@ -6,6 +6,7 @@ fr:
       sign_out: "Déconnexion"
       add_event: "Créer une soirée"
       sign_in: "Connexion"
+      dashboard: "Tableau de bord"
 
 
   pages:
