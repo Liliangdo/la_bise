@@ -15,7 +15,6 @@ class EventsController < ApplicationController
     else
       @search = params[:search]
       @events = Event.near(@search[:city],5).where("capacity >= ?", @search[:capacity].to_f)
-
     end
 
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
@@ -29,12 +28,18 @@ class EventsController < ApplicationController
   end
 
   def new
+    if current_user.first_name.blank? || current_user.birth_date.blank?
+      session[:retake_create_event] = true
+      redirect_to edit_user_registration_path, alert: "Please fill in the fields  to create an event "
+    end
     @event = Event.new
     authorize @event
   end
 
   def create
     @event = Event.new(event_params)
+    @event.user = current_user
+    authorize @event
     if @event.save
       redirect_to dashboard_path
     else
@@ -65,6 +70,9 @@ class EventsController < ApplicationController
       :house_type,
       :capacity,
       :starting_at,
+      :address,
+      :mood,
+      :option,
       photos: [] )
   end
 end

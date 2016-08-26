@@ -6,6 +6,7 @@ class Event < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
+  validates :address, presence: true
   validates :price, presence: true
   validates :house_type, presence: true
   validates :capacity, presence: true
@@ -14,6 +15,7 @@ class Event < ApplicationRecord
   has_attachments :photos, maximum: 5
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+
 
 
 

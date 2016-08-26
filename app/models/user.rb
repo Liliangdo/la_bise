@@ -12,9 +12,10 @@ class User < ApplicationRecord
   has_many :reviews, through: :events
 
 
-  # validates :first_name, presence: true
+  validates :first_name, presence: true, on: :update
+  validates :birth_date, presence: true, on: :update
+
   # validates :last_name, presence: true
-  # validates :birth_date, presence: true
   # validates :address, presence: true
   # validates :gender, presence: true
   # validates :phone_number, presence: true
