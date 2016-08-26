@@ -38,3 +38,14 @@ en:
       city: "Enter a city"
       capacity: "Guests"
       search: "Search"
+
+  events:
+    show:
+      age: "years old"
+      price: "Price/guest:"
+      cancelrules: "Cancel rules:"
+      no_review: "Not rated yet"
+      reviews:
+        zero: "Host not rated yet"
+        one: "opinion"
+        other: "opinions"

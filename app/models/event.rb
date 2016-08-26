@@ -31,7 +31,6 @@ class Event < ApplicationRecord
   end
 
   def average_reviews
-    return "no review rating" if self.reviews.count == 0
     sum = 0
     self.reviews.each do |review|
      sum += review.rating
