@@ -1,25 +1,26 @@
-    <% @events.each do |event| %>
-      <p> <%= event.name %> </p>
-      <p> <%= event.description %> </p>
-      <p> <%= event.price %> </p>
-      <p> <%= event.mood %> </p>
-      <p> <%= event.group_age %> </p>
-      <p> <%= event.option %> </p>
-      <p> <%= event.house_type %> </p>
-      <p> <%= event.capacity %> </p>
-      <p> <%= event.starting_at %> </p>
-      <p> <%= event.address %> </p>
+<% @events.each do |event| %>
+  <div class="col-xs-12 col-sm-8">
+    <h2><%= event.name %> </h2>
+    <h4><%= event.description %></h4>
 
-      <% event.reservations.each do |resa|%>
-        <%= resa.user.first_name %>
-             <%= resa.event.price * resa.guest %>
-             <%= resa.guest %>
-        <div>
-          <%= link_to "Deny", dashboard_path, class: "btn btn-danger pull-right" %>
-          <%= link_to "Accept", dashboard_path, class: "btn btn-success pull-right" %>
-        </div>
-        <% end %>
+    <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= l event.starting_at, format: :short %></p>
+
+    <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= event.address %></p>
+
+    <p><i class="fa fa-circle-o" aria-hidden="true"></i> <%= event.mood %></p>
+    <p><i class="fa fa-angellist" aria-hidden="true"></i> <%= event.group_age %> old</p>
+    <p><i class="fa fa-home" aria-hidden="true"></i> <%= event.house_type %></p>
+    <p><i class="fa fa-users"></i> <%= event.capacity %></p>
+    <p> <i class="fa fa-eur"></i> <%= event.price %></p>
+    <p> <i class="fa fa-gift" aria-hidden="true"></i> <%= event.option %></p>
 
 
-
+    <% event.reservations.each do |resa|%>
+      <br>
+      <%= resa.user.first_name %> is bringing <%= resa.guest %> for <%= resa.event.price * resa.guest %>€ .
+      <%= link_to "Deny", dashboard_path, class: "btn btn-danger pull-right" %>
+      <%= link_to "Accept", dashboard_path, class: "btn btn-success pull-right" %>
+      <br>
     <% end %>
+  </div>
+<% end %>
