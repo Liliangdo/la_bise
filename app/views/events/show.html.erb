@@ -13,9 +13,9 @@
       <%= l(@event.starting_at, format: '%H:%M') %>
       </div>
       <div class="info">
-      Reserve for <%= session[:capacity] %>
+      <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
       </div>
-      <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
+      <%= link_to t('.book'), new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
     </div>
     <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
       <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block", id: "bottom-btn" %>

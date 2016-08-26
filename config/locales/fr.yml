@@ -20,6 +20,11 @@ fr:
 
   events:
     show:
+      peoples:
+        zero: ""
+        one: "personne"
+        other: "personnes"
+      book: "Réserver"
       age: "ans"
       price: "Prix/personne :"
       cancelrules: "Conditions d'anulation:"

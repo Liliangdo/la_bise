@@ -41,6 +41,11 @@ en:
 
   events:
     show:
+      peoples:
+        zero: ""
+        one: "guest"
+        other: "guests"
+      book: "Book"
       age: "years old"
       price: "Price/guest:"
       cancelrules: "Cancel rules:"
