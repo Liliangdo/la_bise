@@ -1,0 +1,20 @@
+<li>
+  <%= link_to edit_user_registration_path do %>
+    <i class="fa fa-user"></i> <%= t('.profil') %>
+  <% end %>
+</li>
+<li>
+  <%= link_to root_path do %>
+    <i class="fa fa-home"></i>  <%= t('.home') %>
+  <% end %>
+</li>
+<li>
+  <%= link_to dashboard_path do %>
+    <i class="fa fa-tachometer"></i>  <%= t('.dashboard') %>
+  <% end %>
+</li>
+<li>
+  <%= link_to destroy_user_session_path, method: :delete do %>
+    <i class="fa fa-sign-out"></i>  <%= t('.sign_out') %>
+  <% end %>
+</li>
