@@ -7,15 +7,15 @@
       <%= @event.address.split.last %>
       </div>
       <div class="info">
-      <%= l @event.starting_at, format: '%A %d %B' %>
+      <%= l(@event.starting_at, format: '%A %d %B') %>
       </div>
       <div class="info">
-      <%= l @event.starting_at, format: '%H:%M' %>
+      <%= l(@event.starting_at, format: '%H:%M') %>
       </div>
       <div class="info">
-      Reserve for <%= session[:capacity] %>
+      <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
       </div>
-      <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
+      <%= link_to t('.book'), new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
     </div>
     <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
       <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block", id: "bottom-btn" %>
@@ -30,18 +30,29 @@
         <img src="http://placehold.it/100?text=AVATAR">
       </div>
       <div>
-        <%= @event.user.first_name %>
+        <%= @event.user.first_name %> <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, new_event_message_path(params[:id]) %>
         <br>
-        <%= @event.user.age_calculator %> years old
-        <br>
-        <%= link_to "Conctact", new_event_message_path(params[:id]), class: "btn btn-warning btn-block" %>
+        <%= @event.user.age_calculator %> <%= t('.age') %>
+
+
+
+
+        <div class="reviews">
+          <i class="fa fa-star" asria-hidden="true"></i>
+          <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong>
+          <%= t('.reviews', count: @event.reviews.size) %>
+        </div>
+
+
+
+
       </div>
     </div>
     <div class="col-xs-6">
       <div class="infos">
-        <%= l @event.starting_at, format: '%A %d %B | %H:%M' %>
+        <%= l(@event.starting_at, format: '%A %d %B') %> | <%= l(@event.starting_at, format: '%H %M') %>
       </div>
-      <p>Price/pers: <%= @event.price %> €</p>
+      <p><%= t('.price') %> <%= @event.price %> €</p>
     </div>
   </div>
   <div class="row">
@@ -64,19 +75,14 @@
     <div class="cols-xs-12">
       <div class="description">
         <%= @event.description %><br>
-        Condition d'annulation :
+        <%= t('.cancelrules') %> CALL THE EVENT.CANCELRULES
       </div>
-      <div class="reviews">
-        <%= @event.user.first_name %> has <%= total_reviews(@event) %>
-         - average : <%= @event.average_reviews %>
-
-        <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
-          <div class="review-card">
-            <%= review.content %>
-            <%= review.rating %>
-          </div>
-        <% end %>
-      </div>
+      <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
+        <div class="review-card">
+          <%= review.content %>
+          <%= stars(review.rating) %>
+        </div>
+      <% end %>
     </div>
     <div class="cols-xs-12 bottom-space"></div>
   </div>

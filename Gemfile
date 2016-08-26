@@ -25,6 +25,8 @@ gem 'faker'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+gem "rails-i18n"
+
 gem 'rails-assets-bootstrap-datepicker', source: 'https://rails-assets.org'
 
 gem "cloudinary", "1.1.0"

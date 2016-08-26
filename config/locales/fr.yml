@@ -17,3 +17,19 @@ fr:
       city: "Entrer une ville"
       capacity: "Invités"
       search: "Rechercher"
+
+  events:
+    show:
+      peoples:
+        zero: ""
+        one: "personne"
+        other: "personnes"
+      book: "Réserver"
+      age: "ans"
+      price: "Prix/personne :"
+      cancelrules: "Conditions d'anulation:"
+      no_review: "Pas encore noté"
+      reviews:
+        zero: "l'Hôte n'a aucune note"
+        one: "avis"
+        other: "avis"
