@@ -3,8 +3,9 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   before_action :authenticate_user!
-  include Pundit
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
+  include Pundit
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
@@ -23,9 +24,16 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
 
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birth_date])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birth_date])
+  end
+
+
   private
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /^(active_)?admin/
   end
+
 end

@@ -1,2 +1,29 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+
+  <div class=" card wrapper-new-event">
+    <div class="container">
+      <h1 class="text-center">Create your event!</h1>
+        <div class="row">
+          <div class="col-sm-offset-4 col-md-4">
+            <%= simple_form_for(@event) do |f| %>
+                  <%= f.error_notification %>
+                    <% if @event.errors.any? %>
+                        <%= @event.errors.full_messages.join(" ") %>
+                        <% end %>
+                  <%= f.input :photos, as: :attachinary,label: "Upload a beautiful Event's Picture", error: 'Picture is mandatory, please specify one' %>
+                  <%= f.input :name,label: 'Add an Event Name', error: 'Event Name is mandatory, please specify one'%>
+                  <%= f.input :address %>
+                  <%= f.input :starting_at %>
+                  <%= f.input :price %>
+                  <%= f.input :description %>
+                  <%= f.input :capacity %>
+                  <%= f.input :mood, collection: [ "Electro", "Pop", "Funk","Jazz","Cozy","Rap US"]%>
+                  <%= f.input :house_type, collection: [ "Studio", "Loft", "Flat","Private Garden","Rooftop","House","Villa"] %>
+                  <%= f.input :option %>
+                  <%= f.button :submit, class: "space btn-block btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
