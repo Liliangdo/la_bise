@@ -28,6 +28,7 @@ class Event < ApplicationRecord
 
   def confirmed_users
     self.reservations.map { |r| r.user if r.confirmed? }
+  end
 
   def average_reviews
     return "no review rating" if self.reviews.count == 0
