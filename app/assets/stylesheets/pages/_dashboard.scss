@@ -41,10 +41,10 @@
 }
 
 .picture-event {
-  height: 50px;
-  width: 50px;
+  height: 150px;
   border-radius: 5px;
   box-shadow: 0 0 10px #222;
+  background-size: cover;
 
 }
 
@@ -62,6 +62,29 @@
 
 .refused {
   color: $bise-purple;
+}
+// ---
+
+.reservation-fontawesome {
+  font-size: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+
+.wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.gray-bg {
+  background-color: red;
+}
+
+.container-informations p,i,h4{
+  color: $gray;
 }
 
 @media (max-width: 767px) {

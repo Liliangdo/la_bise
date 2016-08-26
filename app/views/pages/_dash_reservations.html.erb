@@ -1,26 +1,45 @@
-<% @reservations.each do |reservation|%>
-          <div class="col-xs-12 col-sm-8">
-            <div  class="picture-event" style="background-image: url('http://psquareweddings.com/wp-content/uploads/2014/10/Event-management-post-1.png');">
-
+<div class="container">
+  <% @reservations.each do |reservation|%>
+    <div class="row">
+      <div class="wrapper">
+          <div class="col-xs-12 col-sm-4">
+            <div  class="picture-event" style="background-image: url('https://unsplash.it/<%=rand(200..220)%>');">
             </div>
-            <p> <%= reservation.event.name %> </p>
-            <p> <%= l reservation.event.starting_at, format: :short %> </p>
-            <p> Nombre de participants : <%= reservation.guest %> </p>
-            <p> Prix payé : <%= (reservation.guest * reservation.event.price * 1.15).round %> </p>
-            <% if reservation.confirmed? %>
-              <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
-            <%end%>
-
-            <% if reservation.refused? %>
-              <i class="fa fa-times refused" aria-hidden="true"></i>
-            <%end%>
-
-            <% if reservation.pending? %>
-              <i class="fa fa-pause pending" aria-hidden="true"></i>
-            <%end%>
-
           </div>
           <div class="col-xs-12 col-sm-4">
-            <%= link_to "Cancel", dashboard_path, class: "btn btn-danger btn-block" %>
+            <div class="container-informations">
+              <p> <strong> <%= reservation.event.name %> </strong> </p>
+              <p>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <%= l reservation.event.starting_at, format: :short %>
+              </p>
+              <h4>
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <%= reservation.guest %>
+              </h4>
+              <h4>
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <%= (reservation.guest * reservation.event.price * 1.15).round %> €
+              </h4>
+            </div>
           </div>
-        <% end %>
+          <div class="col-xs-12 col-sm-4">
+            <div class="reservation-fontawesome">
+              <% if reservation.confirmed? %>
+                <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
+              <% end %>
+
+              <% if reservation.refused? %>
+                <i class="fa fa-times refused" aria-hidden="true"></i>
+              <% end %>
+
+              <% if reservation.pending? %>
+                <i class="fa fa-pause pending" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to "Cancel", dashboard_path, class: "btn btn-danger btn-lg" %>
+            </div>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
