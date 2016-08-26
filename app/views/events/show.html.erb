@@ -21,68 +21,67 @@
       <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block", id: "bottom-btn" %>
     </div>
     <div class="col-xs-12">
-      <img src="http://placehold.it/350x150">
-      <br>(SLID IMAGE)
+      <div class="head_picture"></div>
       <h4><%= @event.name %></h4>
     </div>
     <div class="col-xs-6">
-      <div>
-        <img src="http://placehold.it/100?text=AVATAR">
-      </div>
-      <div>
-        <%= @event.user.first_name %> <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, new_event_message_path(params[:id]) %>
-        <br>
-        <%= @event.user.age_calculator %> <%= t('.age') %>
-
-
-
-
-        <div class="reviews">
-          <i class="fa fa-star" asria-hidden="true"></i>
-          <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong>
-          <%= t('.reviews', count: @event.reviews.size) %>
+      <div class="owner_card">
+        <div>
+          <img class="avatar-large" src="http://placehold.it/100?text=AVATAR">
         </div>
-
-
-
-
+        <div>
+          <%= @event.user.first_name %> <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, new_event_message_path(params[:id]) %>
+          <br>
+          <%= @event.user.age_calculator %> <%= t('.age') %>
+          <div class="reviews">
+            <i class="fa fa-star" asria-hidden="true"></i>
+            <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong>
+            <%= t('.reviews', count: @event.reviews.size) %>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-xs-6">
       <div class="infos">
-        <%= l(@event.starting_at, format: '%A %d %B') %> | <%= l(@event.starting_at, format: '%H %M') %>
+        <%= l(@event.starting_at, format: '%A %d %B') %> | <%= l(@event.starting_at, format: '%H:%M') %>
       </div>
       <p><%= t('.price') %> <%= @event.price %> €</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-6 col-sm-3">
-      EVENT options<br>
-      EVENT options<br>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      EVENT options<br>
-      EVENT options<br>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      EVENT options<br>
-      EVENT options<br>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      EVENT options<br>
-      EVENT options<br>
+    <div class="put_spaces">
+      <div class="col-xs-6 col-sm-3">
+        EVENT options<br>
+        EVENT options<br>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        EVENT options<br>
+        EVENT options<br>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        EVENT options<br>
+        EVENT options<br>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        EVENT options<br>
+        EVENT options<br>
+      </div>
     </div>
     <div class="cols-xs-12">
-      <div class="description">
-        <%= @event.description %><br>
-        <%= t('.cancelrules') %> CALL THE EVENT.CANCELRULES
-      </div>
-      <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
-        <div class="review-card">
-          <%= review.content %>
-          <%= stars(review.rating) %>
+      <div class="put_spaces">
+        <div class="description">
+          <%= @event.description %><br>
+          <%= t('.cancelrules') %> CALL THE EVENT.CANCELRULES
         </div>
-      <% end %>
+      </div>
+      <div class="put_spaces">
+        <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
+          <div class="review-card">
+            <%= review.content %>
+            <%= stars(review.rating) %>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="cols-xs-12 bottom-space"></div>
   </div>
