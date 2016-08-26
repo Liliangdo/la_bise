@@ -1,2 +1,25 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="wrapper-new-event">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-3">
+        <%= simple_form_for(@event) do |f| %>
+              <%= f.error_notification %>
+                <% if @event.errors.any? %>
+                  <%= @event.errors.full_messages.join(" ") %>
+                 <% end %>
+              <%= f.input :photos, as: :attachinary %>
+              <%= f.input :name %>
+              <%= f.input :address %>
+              <%= f.input :starting_at %>
+              <%= f.input :price %>
+              <%= f.input :description %>
+              <%= f.input :capacity %>
+              <%= f.input :mood, collection: [ "Electro", "Pop", "Funk","Jazz","Cozy","Rap US"]%>
+              <%= f.input :house_type, collection: [ "Studio", "Loft", "Flat","Private Garden","Rooftop","House","Villa"] %>
+              <%= f.input :option, as: :check_boxes %>
+              <%= f.button :submit, class: "space btn-block btn-success" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

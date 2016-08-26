@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :new]
-  before_action :find_event, only: [:show, :create, :edit, :update]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :find_event, only: [:show, :edit, :update]
 
   def index
     @events = policy_scope(Event)
@@ -30,6 +30,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    authorize @event
   end
 
   def create
@@ -57,7 +58,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:events).permit(
+    params.require(:event).permit(
       :name,
       :description,
       :price,
