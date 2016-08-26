@@ -42,18 +42,17 @@
   </div>
   <div class="tab-content hidden" id="reservations">
     INSERT MY RESERVATIONS INDEX VIEW
-    <%= @reservations.each do |reservation| %>
-      <p> User id : <%= reservation.user_id %> </p>
-      <p> Event id : <%= reservation.event_id %> </p>
-      <p> Accepted at : <%= reservation.accepted_at %> </p>
-      <p> Refused at : <%= reservation.refused_at %> </p>
-      <p> Canceled at: <%= reservation.canceled_at %> </p>
-      <p> Number of guest : <%= reservation.guest %> </p>
+    <% @reservations.each do |reservation|%>
+      <p> <%= reservation.user_id %> </p>
+      <p> <%= reservation.event_id %> </p>
+      <p> <%= reservation.accepted_at %> </p>
+      <p> <%= reservation.refused_at %> </p>
+      <p> <%= reservation.canceled_at %> </p>
     <% end %>
   </div>
   <div class="tab-content hidden" id="events">
     INSERT MY EVENTS EDIT VIEW
-    <%= @events.each do |event| %>
+    <% @events.each do |event| %>
       <p> <%= event.user_id %> </p>
       <p> <%= event.name %> </p>
       <p> <%= event.description %> </p>
