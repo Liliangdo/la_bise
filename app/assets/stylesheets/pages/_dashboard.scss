@@ -3,7 +3,8 @@
 }
 
 .tabs {
-  background: #53443F;
+  background: white;
+  border-color: $bise-blue;
   display: flex;
   padding: 10px 10px 0 10px;
   display: flex;
@@ -23,7 +24,7 @@
 }
 
 .tab {
-  background: #756A66;
+  background: $bise-blue;
   flex: 0 0 25%;
   text-align: center;
   padding: 20px 0;
@@ -35,8 +36,8 @@
     border-radius: 0 10px 0 0;
   }
   &.active {
-    background: white;
-    color: black;
+    background: $bise-yellow;
+    color: white;
   }
 }
 
