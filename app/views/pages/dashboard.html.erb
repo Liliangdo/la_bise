@@ -41,29 +41,13 @@
     INSERT MY MESSAGES INDEX VIEW
   </div>
   <div class="tab-content hidden" id="reservations">
-    INSERT MY RESERVATIONS INDEX VIEW
-    <% @reservations.each do |reservation|%>
-      <p> <%= reservation.user_id %> </p>
-      <p> <%= reservation.event_id %> </p>
-      <p> <%= reservation.accepted_at %> </p>
-      <p> <%= reservation.refused_at %> </p>
-      <p> <%= reservation.canceled_at %> </p>
-    <% end %>
+    <div class="container">
+      <div class="row">
+        <%= render 'dash_reservations'%>
+      </div>
+    </div>
   </div>
   <div class="tab-content hidden" id="events">
-    INSERT MY EVENTS EDIT VIEW
-    <% @events.each do |event| %>
-      <p> <%= event.user_id %> </p>
-      <p> <%= event.name %> </p>
-      <p> <%= event.description %> </p>
-      <p> <%= event.price %> </p>
-      <p> <%= event.mood %> </p>
-      <p> <%= event.group_age %> </p>
-      <p> <%= event.option %> </p>
-      <p> <%= event.house_type %> </p>
-      <p> <%= event.capacity %> </p>
-      <p> <%= event.starting_at %> </p>
-      <p> <%= event.address %> </p>
-    <% end %>
+    <%= render 'dash_events' %>
   </div>
 </div>
