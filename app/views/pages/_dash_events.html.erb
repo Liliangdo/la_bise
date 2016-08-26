@@ -1,0 +1,25 @@
+    <% @events.each do |event| %>
+      <p> <%= event.name %> </p>
+      <p> <%= event.description %> </p>
+      <p> <%= event.price %> </p>
+      <p> <%= event.mood %> </p>
+      <p> <%= event.group_age %> </p>
+      <p> <%= event.option %> </p>
+      <p> <%= event.house_type %> </p>
+      <p> <%= event.capacity %> </p>
+      <p> <%= event.starting_at %> </p>
+      <p> <%= event.address %> </p>
+
+      <% event.reservations.each do |resa|%>
+        <%= resa.user.first_name %>
+             <%= resa.event.price * resa.guest %>
+             <%= resa.guest %>
+        <div>
+          <%= link_to "Deny", dashboard_path, class: "btn btn-danger pull-right" %>
+          <%= link_to "Accept", dashboard_path, class: "btn btn-success pull-right" %>
+        </div>
+        <% end %>
+
+
+
+    <% end %>

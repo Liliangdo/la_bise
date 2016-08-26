@@ -1,0 +1,26 @@
+<% @reservations.each do |reservation|%>
+          <div class="col-xs-12 col-sm-8">
+            <div  class="picture-event" style="background-image: url('http://psquareweddings.com/wp-content/uploads/2014/10/Event-management-post-1.png');">
+
+            </div>
+            <p> <%= reservation.event.name %> </p>
+            <p> <%= l reservation.event.starting_at, format: :short %> </p>
+            <p> Nombre de participants : <%= reservation.guest %> </p>
+            <p> Prix payé : <%= (reservation.guest * reservation.event.price * 1.15).round %> </p>
+            <% if reservation.confirmed? %>
+              <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
+            <%end%>
+
+            <% if reservation.refused? %>
+              <i class="fa fa-times refused" aria-hidden="true"></i>
+            <%end%>
+
+            <% if reservation.pending? %>
+              <i class="fa fa-pause pending" aria-hidden="true"></i>
+            <%end%>
+
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <%= link_to "Cancel", dashboard_path, class: "btn btn-danger btn-block" %>
+          </div>
+        <% end %>

@@ -3,7 +3,7 @@ module ApplicationHelper
     if event.photos?
       cl_image_path(event.photos.path)
     else
-      "http://twindolphinpools.com/wp-content/uploads/2014/06/Ducky3.jpg"
+      "http://psquareweddings.com/wp-content/uploads/2014/10/Event-management-post-1.png"
     end
   end
 end

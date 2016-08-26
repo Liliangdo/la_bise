@@ -40,6 +40,30 @@
   }
 }
 
+.picture-event {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #222;
+
+}
+
+.confirmed {
+  color: $bise-blue;
+}
+
+.pending {
+  color: $bise-yellow;
+}
+
+.canceled {
+  color: $bise-red;
+}
+
+.refused {
+  color: $bise-purple;
+}
+
 @media (max-width: 767px) {
   .mob-cond {
     border-radius: 10px 0 0 0;

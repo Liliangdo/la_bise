@@ -8,4 +8,11 @@ class Reservation < ApplicationRecord
     !self.accepted_at.nil?
   end
 
+  def refused?
+    !self.refused_at.nil?
+  end
+
+  def pending?
+    !confirmed? && !refused?
+  end
 end
