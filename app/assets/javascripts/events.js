@@ -15,3 +15,6 @@ $('.date').datepicker({
   language: $(".date").data("lang")
 });
 
+function chooseFile() {
+  $("#event_photos").click();
+}
