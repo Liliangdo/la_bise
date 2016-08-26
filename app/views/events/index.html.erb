@@ -1,43 +1,33 @@
 
-<div class="container">
-  <h1 class="text-center title-index"> Event available in <%= session[:city] %>  </h1>
-  <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-              <% @events.each do |event| %>
-                <%= link_to event_path(event) do %>
-                  <div class="card text-center">
-                    <div class="card-polaroid">
-                      <img src="http://www.ledarlington.com/wp-content/uploads/2015/02/happyhour.jpg">
+<div class="fluid-container events-index">
 
-                      <div class="card-infos">
-                        <h3>
-                          <%= event.name %>
-                        </h3>
-                      </div>
-                      <p class="card-stats">
-                        <i class="fa fa-eur"></i> <%=event.price%>
-                        <i class="fa fa-users"></i> <%=event.capacity%>
-                        <i class="fa fa-heart"></i> <%=event.mood%>
-                        </a>
-                      </p>
-                    </div>
-                    <p class="card-author">
-                      <%=event.id%>
-                    </p>
-                    </div>
-                <% end %>
-              <% end %>
+    <div class="col-xs-12 col-md-6 cards-container">
+      <h1 class="text-center title-index">Event available in <%= session[:city] %></h1>
+      <% @events.each do |event| %>
+        <%= link_to event_path(event) do %>
+          <div class="card text-center">
+            <div class="card-polaroid">
+              <img src="http://www.ledarlington.com/wp-content/uploads/2015/02/happyhour.jpg">
+              <div class="card-infos">
+                <h3><%= event.name %></h3>
+              </div>
+              <p class="card-stats">
+                <i class="fa fa-eur"></i> <%=event.price%>
+                <i class="fa fa-users"></i> <%=event.capacity%>
+                <i class="fa fa-heart"></i> <%=event.mood%>
+                </a>
+              </p>
             </div>
+            <p class="card-author"><%=event.id%></p>
           </div>
-        </div>
-      </div>
-    <div class="col-xs-12 col-md-6">
-      <div class="map" id="map" ></div>
+        <% end %>
+      <% end %>
     </div>
-  </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="map" id="map" style="height: 100vh;"></div>
+    </div>
+
+</div>
 
 <% content_for(:after_js) do %>
     <script>
@@ -57,7 +47,7 @@
 
     </script>
   <% end %>
-</div>
+
 
 
 
