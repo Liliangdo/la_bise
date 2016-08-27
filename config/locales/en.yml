@@ -19,7 +19,14 @@ en:
       capacity: "Guests"
       search: "Search"
     dashboard:
-      profil: "Here's the profil page"
+      profil: "Profil"
+      profil-message: "Welcome message on profil page"
+      messages: "Messages"
+      events: "Events"
+      reservations: "Reservations"
+    dash_reservations:
+      cancel: "Cancel"
+      pending: "Pending"
 
   events:
     show:

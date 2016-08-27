@@ -19,7 +19,14 @@ fr:
       capacity: "Invités"
       search: "Rechercher"
     dashboard:
-      profil: "Ici la page du profil"
+      profil: "Profile"
+      profil-message: "Message de bienvenue sur la page du progil"
+      messages: "Messages"
+      events: "Evénements"
+      reservations: "Réservations"
+    dash_reservations:
+      cancel: "Annuler"
+      pending: "En attente"
 
   events:
     show:
