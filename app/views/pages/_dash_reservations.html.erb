@@ -37,7 +37,7 @@
                 <i class="fa fa-pause pending" aria-hidden="true"></i>
               <% end %>
 
-              <%= simple_form_for [reservation.event, reservation] do |f| %>
+              <%= simple_form_for ([reservation.event, reservation]) do |f| %>
                 <%= f.input :canceled_at,
                             as: :hidden,
                             input_html: {value: Time.now} %>
