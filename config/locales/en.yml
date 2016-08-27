@@ -12,7 +12,10 @@ en:
   pages:
     home:
       punchline: "Share real moment at home with amazing people like you"
-      check: "Check it out !"
+      check: "They are waiting for you!"
+      icon1: "We check each profile of our entire comunity"
+      icon2: "Spend unique moments in solos or with friends, make real and friendly meetings"
+      icon3: "Organize and become the master of the place, infinite possibility is offered to you. You choose your guests"
 
     datepicker:
       city: "Enter a city"

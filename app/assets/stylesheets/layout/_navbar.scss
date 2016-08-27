@@ -27,7 +27,7 @@
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 50px;
+  width: 150px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -50,7 +50,7 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: $bise-blue;
+  color: $bise-red;
   text-decoration: none;
 }
 
@@ -66,9 +66,9 @@
   border: 2px solid $gray-light;
 }
 .navbar-wagon-button:hover {
-  color: $bise-blue;
+  color: $bise-red;
   background: $gray-dark;
-  border-color: $bise-blue;
+  border-color: $bise-red;
 }
 
 /* Navbar search form */

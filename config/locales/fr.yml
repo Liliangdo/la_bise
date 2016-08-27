@@ -12,8 +12,10 @@ fr:
   pages:
     home:
       punchline: "Venez fumer des champignons !"
-      check: "Voyez donc !"
-
+      check: "ils n'attendent que vous!"
+      icon1: "Nous avons verifier chaque profils de l'ensemble de notre comunauté"
+      icon2: "Passez des moments unique ,en solos avec des amis, faites des rencontres réels et conviviale. "
+      icon3: "Organiser, devenez le maitre des lieux, des possibilité infinis s’offre à vous. Vous choisissez vos invités et pouvez chatter avec eux ! Votre adresse n’est communiqué qu’aux participants validés"
     datepicker:
       city: "Entrer une ville"
       capacity: "Invités"
