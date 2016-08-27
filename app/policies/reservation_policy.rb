@@ -9,4 +9,8 @@ class ReservationPolicy < ApplicationPolicy
     true
   end
 
+  def update?
+    true
+  end
+
 end

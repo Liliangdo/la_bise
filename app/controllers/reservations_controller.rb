@@ -1,8 +1,8 @@
 class ReservationsController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:new]
-  #before_action :find_reservation, only: [ :create, :update, :destroy]
-  before_action :find_event, only: [ :new, :create, :available_places]
+  before_action :find_reservation, only: [ :create, :update, :destroy]
+  before_action :find_event, only: [ :new, :create, :update, :available_places]
 
   def index
     @reservations = policy_scope(Reservation)
@@ -26,7 +26,9 @@ class ReservationsController < ApplicationController
   end
 
   def update
-
+    @reservation.update(params_reservation)
+    authorize @reservation
+    redirect_to dashboard_path
   end
 
   def destroy
@@ -36,7 +38,7 @@ class ReservationsController < ApplicationController
   private
 
   def find_reservation
-  #  @reservation = Reservation.find(params[:event_id])
+    @reservation = Reservation.find(params[:id])
   end
 
   def find_event
@@ -44,6 +46,6 @@ class ReservationsController < ApplicationController
   end
 
   def params_reservation
-    params.require(:reservation).permit(:user_id, :event_id, :guest )
+    params.require(:reservation).permit(:user_id, :event_id, :canceled_at, :accepted_at, :refused_at, :guest )
   end
 end

@@ -36,7 +36,14 @@
               <% if reservation.pending? %>
                 <i class="fa fa-pause pending" aria-hidden="true"></i>
               <% end %>
-              <%= link_to "Cancel", dashboard_path, class: "btn btn-danger btn-lg" %>
+
+              <%= simple_form_for [reservation.event, reservation] do |f| %>
+                <%= f.input :canceled_at,
+                            as: :hidden,
+                            input_html: {value: Time.now} %>
+                <%= f.button :submit, '.cancel', class: "btn btn-danger btn-lg" %>
+              <% end %>
+
             </div>
           </div>
         </div>
