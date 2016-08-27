@@ -18,6 +18,15 @@ en:
       city: "Enter a city"
       capacity: "Guests"
       search: "Search"
+    dashboard:
+      profil: "Profil"
+      profil-message: "Welcome message on profil page"
+      messages: "Messages"
+      events: "Events"
+      reservations: "Reservations"
+    dash_reservations:
+      cancel: "Cancel"
+      pending: "Pending"
 
   events:
     show:
@@ -34,3 +43,8 @@ en:
         zero: "Host not rated yet"
         one: "opinion"
         other: "opinions"
+      reservations:
+        id:
+          new:
+            available_places: "Free places : "
+

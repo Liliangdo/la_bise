@@ -18,6 +18,15 @@ fr:
       city: "Entrer une ville"
       capacity: "Invités"
       search: "Rechercher"
+    dashboard:
+      profil: "Profile"
+      profil-message: "Message de bienvenue sur la page du progil"
+      messages: "Messages"
+      events: "Evénements"
+      reservations: "Réservations"
+    dash_reservations:
+      cancel: "Annuler"
+      pending: "En attente"
 
   events:
     show:
@@ -34,3 +43,6 @@ fr:
         zero: "l'Hôte n'a aucune note"
         one: "avis"
         other: "avis"
+      reservations:
+        new:
+          available_places: "Places libres : "
