@@ -17,11 +17,24 @@
     <p> <i class="fa fa-gift" aria-hidden="true"></i> <%= event.option %></p>
 
 
-    <% event.reservations.each do |resa|%>
+    <% event.reservations.each do |reservation|%>
       <br>
-      <%= resa.user.first_name %> is bringing <%= resa.guest %> for <%= resa.event.price * resa.guest %>€ .
-      <%= link_to "Deny", dashboard_path, class: "btn btn-danger pull-right" %>
-      <%= link_to "Accept", dashboard_path, class: "btn btn-success pull-right" %>
+      <%= reservation.user.first_name %> is bringing <%= reservation.guest %> for <%= reservation.event.price * reservation.guest %>€ .
+
+      <%= simple_form_for [event, reservation] do |f| %>
+        <%= f.input :refused_at,
+                    as: :hidden,
+                    input_html: {value: Time.now} %>
+        <%= f.button :submit, t('.deny'), class: "btn btn-danger pull-right" %>
+      <% end %>
+
+      <%= simple_form_for [event, reservation] do |f| %>
+        <%= f.input :accepted_at,
+                    as: :hidden,
+                    input_html: {value: Time.now} %>
+        <%= f.button :submit, t('.accept'), class: "btn btn-success pull-right" %>
+      <% end %>
+
       <br>
     <% end %>
   </div>

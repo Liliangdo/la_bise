@@ -27,6 +27,9 @@ fr:
     dash_reservations:
       cancel: "Annuler"
       pending: "En attente"
+    dash_events:
+      deny: "Refuser"
+      accept: "Accepter"
 
   events:
     show:
@@ -44,5 +47,8 @@ fr:
         one: "avis"
         other: "avis"
       reservations:
-        new:
-          available_places: "Places libres : "
+        id:
+          new:
+            available_places: "Places libres : "
+
+
