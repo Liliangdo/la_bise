@@ -27,6 +27,9 @@ en:
     dash_reservations:
       cancel: "Cancel"
       pending: "Pending"
+    dash_events:
+      deny: "Deny"
+      accept: "Accept"
 
   events:
     show:
