@@ -54,5 +54,9 @@
 }
 
 .rules-banner {
-  background-color: #F2F2F2 ;
+  background-color: white;
+}
+.value-proposition:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;
 }
