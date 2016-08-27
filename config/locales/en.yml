@@ -6,6 +6,7 @@ en:
       sign_out: "Log out"
       add_event: "Add event"
       sign_in: "Sign In"
+      dashboard: "Dashboard"
 
 
   pages:
