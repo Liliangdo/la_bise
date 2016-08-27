@@ -17,6 +17,8 @@ fr:
       city: "Entrer une ville"
       capacity: "Invités"
       search: "Rechercher"
+    dashboard:
+      profil: "Ici la page du profil"
 
   events:
     show:
@@ -33,3 +35,6 @@ fr:
         zero: "l'Hôte n'a aucune note"
         one: "avis"
         other: "avis"
+      reservations:
+        new:
+          available_places: "Places libres : "
