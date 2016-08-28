@@ -48,9 +48,8 @@ fr:
       age: "ans"
       price: "Prix/personne :"
       cancelrules: "Conditions d'anulation:"
-      no_review: "Pas encore noté"
       reviews:
-        zero: "l'Hôte n'a aucune note"
+        zero: "l'Hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
       reservations:
