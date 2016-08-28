@@ -32,6 +32,11 @@ fr:
       accept: "Accepter"
       accepted_at: "Accepté à : "
       refused_at: "Refusé à : "
+      bringing: "amene"
+      guests:
+        zero: ""
+        one: "personne"
+        other: "personnes"
 
   events:
     show:

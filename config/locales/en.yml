@@ -32,6 +32,11 @@ en:
       accept: "Accept"
       accepted_at: "Accepted at : "
       refused_at: "Refused at : "
+      bringing: "is bringing"
+      guests:
+        zero: "no guests"
+        one: "guest"
+        other: "guests"
 
   events:
     show:
