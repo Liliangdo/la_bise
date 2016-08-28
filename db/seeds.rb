@@ -94,7 +94,7 @@ puts "reservation seed end"
 
 puts "review begin"
 
-5.times do
+40.times do
   Review.create(
     event_id: Event.all.sample.id,
     user_id: User.all.sample.id,
