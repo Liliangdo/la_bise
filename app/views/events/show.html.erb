@@ -35,10 +35,12 @@
         <%= render 'pages/datepicker' %>
       </h1>
     </div>
+  </div>
+  <div class="row">
     <div class="col-xs-12">
       <div class="head_picture"></div>
       <h3 class="text-center"><%= @event.name %></h3>
-      <p class="text-center"><%= l(@event.starting_at, format: '%A %d %B') %> | <%= l(@event.starting_at, format: '%H:%M') %></p>
+      <p class="text-center"><%= l(@event.starting_at, format: '%A %d %B') %> - <%= l(@event.starting_at, format: '%H:%M') %></p>
     </div>
     <div class="col-xs-12 col-sm-4">
       <div class="host_card">
@@ -61,8 +63,11 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-7">
-      <p class="text-center price"><strong><%= t('.price') %></strong> <%= @event.price %> €</p>
+    <div class="col-xs-12 col-sm-8">
+      <div class="text-center">
+        <p class=" price"><strong><%= t('.price') %></strong> <%= @event.price %> €</p>
+        <p><%= t('.available_places') %> <%=  @event.available_places %></p>
+      </div>
     </div>
   </div>
   <div class="row">

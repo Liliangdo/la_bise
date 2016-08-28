@@ -57,8 +57,8 @@ en:
         zero: "Host not rated yet"
         one: "opinion"
         other: "opinions"
-      reservations:
-        id:
-          new:
-            available_places: "Free places : "
+
+  reservations:
+      new:
+        available_places: "Free places : "
 
