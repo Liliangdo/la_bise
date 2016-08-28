@@ -23,15 +23,18 @@ en:
       city: "Enter a city"
       capacity: "Guests"
       search: "Search"
+
     dashboard:
       profil: "Profil"
       profil-message: "Welcome message on profil page"
       messages: "Messages"
       events: "Events"
       reservations: "Reservations"
+
     dash_reservations:
       cancel: "Cancel"
       pending: "Pending"
+
     dash_events:
       deny: "Deny"
       accept: "Accept"
@@ -43,6 +46,7 @@ en:
         one: "guest"
         other: "guests"
 
+
   events:
     show:
       peoples:
@@ -52,11 +56,16 @@ en:
       book: "Book"
       age: "years old"
       price: "Price/guest:"
+      available_places:
+        zero: "no places left"
+        one: "place left"
+        other: "available places"
       cancelrules: "Cancel rules:"
       reviews:
         zero: "Host not rated yet"
         one: "opinion"
         other: "opinions"
+
 
   reservations:
       new:

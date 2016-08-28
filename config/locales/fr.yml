@@ -46,6 +46,7 @@ fr:
         one: "personne"
         other: "personnes"
 
+
   events:
     show:
       peoples:
@@ -55,11 +56,16 @@ fr:
       book: "Réserver"
       age: "ans"
       price: "Prix/personne :"
+      available_places:
+        zero: "plus de place disponible"
+        one: "dernière place disponible"
+        other: "places disponibles"
       cancelrules: "Conditions d'anulation:"
       reviews:
-        zero: "l'Hôte n'a pas encore été noté"
+        zero: "l'hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
+
 
   reservations:
       new:
