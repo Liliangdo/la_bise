@@ -25,7 +25,14 @@
   background-color: #FFCC00;
 }
 .review-card {
-
+  margin: 25px;
+  .review-rating {
+    text-align: right;
+  }
+  .review-date {
+    color: $gray-light;
+    font-size: 0.8em;
+  }
 }
 
 

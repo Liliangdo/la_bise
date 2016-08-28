@@ -1,4 +1,6 @@
 fr:
+  colon: " :"
+
   shared:
     navbar:
       profil: "Profil"

@@ -56,7 +56,7 @@
             <i class="fa fa-star" asria-hidden="true"></i> <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong> - <%= @event.reviews.count != 0 ? @event.reviews.count : ""  %> <%= t('.reviews', count: @event.reviews.count) %>
           </div>
           <div class="media-right">
-            <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, new_event_message_path(params[:id]) %>
+            <%= link_to '<i class="fa fa-comments" aria-hidden="true"></i>'.html_safe, new_event_message_path(params[:id]) %>
           </div>
         </div>
       </div>
@@ -93,11 +93,15 @@
         <div class="review-card card-polaroid">
           <div class="media">
             <div class="media-left">
-              <img src="http://placehold.it/100?text=MERDE!!">
+              REVIEW'S OWNER AVATAR
             </div>
             <div class="media-body">
-              <%= review.content %>
-              <%= stars(review.rating) %>
+              <strong><%= review.user.first_name %></strong><%= t('colon') %> <%= review.content %>
+              <br>
+              <span class="review-date"><%= l(review.created_at, format: '%A %d %B') %></span>
+              <div class="review-rating">
+                <%= stars(review.rating) %>
+              </div>
             </div>
           </div>
         </div>
