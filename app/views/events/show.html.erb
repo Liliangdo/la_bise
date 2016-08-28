@@ -1,24 +1,39 @@
+<div class="top-space"></div>
+
+<!-- floating recap for laptop on the right -->
+
+<div class="recap hidden-xs" id="float-search">
+  <%= @event.name %>
+  <hr>
+  <div class="info">
+  <%= @event.address.split.last %>
+  </div>
+  <div class="info">
+  <%= l(@event.starting_at, format: '%A %d %B') %>
+  </div>
+  <div class="info">
+  <%= l(@event.starting_at, format: '%H:%M') %>
+  </div>
+  <div class="info">
+  <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
+  </div>
+  <%= link_to t('.book'), new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
+</div>
+
+<!-- Floating bottom booking button for mobile devise -->
+
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+  <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning", id: "bottom-btn" %>
+</div>
+
+<!-- Page content -->
+
 <div class="container">
   <div class="row">
-    <div class="recap hidden-xs" id="float-search">
-      <%= @event.name %>
-      <hr>
-      <div class="info">
-      <%= @event.address.split.last %>
-      </div>
-      <div class="info">
-      <%= l(@event.starting_at, format: '%A %d %B') %>
-      </div>
-      <div class="info">
-      <%= l(@event.starting_at, format: '%H:%M') %>
-      </div>
-      <div class="info">
-      <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
-      </div>
-      <%= link_to t('.book'), new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
-    </div>
-    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-      <%= link_to "Book", new_event_reservation_path(params[:id]), class: "btn btn-warning", id: "bottom-btn" %>
+    <div class="hidden-xs">
+      <h1 class="text-center">
+        <%= render 'pages/datepicker' %>
+      </h1>
     </div>
     <div class="col-xs-12">
       <div class="head_picture"></div>
@@ -83,6 +98,6 @@
         <% end %>
       </div>
     </div>
-    <div class="cols-xs-12 bottom-space"></div>
+    <div class="bottom-space hidden-sm hidden-md hidden-lg"></div>
   </div>
 </div>
