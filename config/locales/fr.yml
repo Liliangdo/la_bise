@@ -29,6 +29,16 @@ fr:
     dash_reservations:
       cancel: "Annuler"
       pending: "En attente"
+    dash_events:
+      deny: "Refuser"
+      accept: "Accepter"
+      accepted_at: "Accepté à : "
+      refused_at: "Refusé à : "
+      bringing: "amene"
+      guests:
+        zero: ""
+        one: "personne"
+        other: "personnes"
 
   events:
     show:
@@ -40,11 +50,13 @@ fr:
       age: "ans"
       price: "Prix/personne :"
       cancelrules: "Conditions d'anulation:"
-      no_review: "Pas encore noté"
       reviews:
-        zero: "l'Hôte n'a aucune note"
+        zero: "l'Hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
       reservations:
-        new:
-          available_places: "Places libres : "
+        id:
+          new:
+            available_places: "Places libres : "
+
+

@@ -15,4 +15,8 @@ class Reservation < ApplicationRecord
   def pending?
     !confirmed? && !refused?
   end
+
+  def answered?
+    confirmed? || refused?
+  end
 end

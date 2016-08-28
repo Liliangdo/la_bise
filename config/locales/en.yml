@@ -30,6 +30,16 @@ en:
     dash_reservations:
       cancel: "Cancel"
       pending: "Pending"
+    dash_events:
+      deny: "Deny"
+      accept: "Accept"
+      accepted_at: "Accepted at : "
+      refused_at: "Refused at : "
+      bringing: "is bringing"
+      guests:
+        zero: "no guests"
+        one: "guest"
+        other: "guests"
 
   events:
     show:
@@ -41,7 +51,6 @@ en:
       age: "years old"
       price: "Price/guest:"
       cancelrules: "Cancel rules:"
-      no_review: "Not rated yet"
       reviews:
         zero: "Host not rated yet"
         one: "opinion"
