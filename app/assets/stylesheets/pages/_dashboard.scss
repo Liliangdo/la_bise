@@ -49,6 +49,14 @@
 
 }
 
+.picture-event-show {
+  height: 210px;
+  width:210px;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #222;
+}
+
 .confirmed {
   color: $bise-blue;
 }
@@ -80,6 +88,13 @@
   padding-bottom: 20px;
 }
 
+.event {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #222;
+  padding-bottom: 15px;
+}
+
 .gray-bg {
   background-color: red;
 }
@@ -93,3 +108,13 @@
     border-radius: 10px 0 0 0;
   }
 }
+
+.button {
+  margin-right: 20px;
+}
+
+.user_pic {
+  height: 20px;
+  width: 20px;
+}
+
