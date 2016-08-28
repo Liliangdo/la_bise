@@ -30,6 +30,8 @@ en:
     dash_events:
       deny: "Deny"
       accept: "Accept"
+      accepted_at: "Accepted at : "
+      refused_at: "Refused at : "
 
   events:
     show:
