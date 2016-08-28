@@ -8,12 +8,31 @@
 .event-description h4 {
   text-align: center;
 }
-.owner_card {
+.host_card {
   width: 100%;
   background-color: #FEFEFE;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  .media-right {
+    font-size: 3em;
+    padding-right: 15px;
+  }
 }
+.price {
+  font-size: 1.3em;
+}
+.options {
+  background-color: #CC00FF;
+}
+.description {
+  background-color: #FFCC00;
+}
+.review-card {
+
+}
+
+
 .put_spaces {
   padding: 20px;
 }

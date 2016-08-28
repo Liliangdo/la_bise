@@ -48,7 +48,6 @@ en:
       age: "years old"
       price: "Price/guest:"
       cancelrules: "Cancel rules:"
-      no_review: "Not rated yet"
       reviews:
         zero: "Host not rated yet"
         one: "opinion"
