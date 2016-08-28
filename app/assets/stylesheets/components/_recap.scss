@@ -3,12 +3,13 @@
   padding: 20px;
   position: fixed;
   z-index: 1;
-  top: 25%;
-  right: 10px;
-  border-radius: 5px;
+  top: 20%;
+  right: 0px;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
   .info {
-  background-color: #F9FAFB;
-  margin: 5px 0px;
-  padding: 5px 5px ;
+  background-color: white;
+  margin: 9px 0px;
+  padding: 5px 10px ;
   }
 }

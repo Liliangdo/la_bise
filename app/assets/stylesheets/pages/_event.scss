@@ -21,13 +21,21 @@
   font-size: 1.3em;
 }
 .options {
-  background-color: #CC00FF;
+  margin: 20px;
+  text-align: center;
 }
 .event-description {
-  background-color: #FFCC00;
+  background-color: white;
+  padding: 15px;
+  .cancel {
+    color: $red;
+  }
 }
 .review-card {
   margin: 25px;
+  .review-owner {
+    color: $bise-red;
+  }
   .review-rating {
     text-align: right;
   }
@@ -36,12 +44,6 @@
     font-size: 0.8em;
   }
 }
-
-
-.put_spaces {
-  padding: 20px;
-}
-
 
 .top-space {
   margin-top: 60px;
