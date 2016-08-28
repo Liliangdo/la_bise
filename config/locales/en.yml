@@ -30,6 +30,11 @@ en:
     dash_events:
       deny: "Deny"
       accept: "Accept"
+      bringing: "is bringing"
+      guests:
+        zero: "no guests"
+        one: "guest"
+        other: "guests"
 
   events:
     show:
