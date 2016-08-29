@@ -1,0 +1,53 @@
+#form-registration {
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: white;
+
+  h2 {
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  ul {
+    list-style:none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+  }
+
+
+  abbr {
+    display: none;
+  }
+
+  .btn {
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  .description {
+    resize: none;
+  }
+  .glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+  }
+
+  .glowing-border:focus {
+    outline: none;
+    border-color: $bise-yellow;
+  }
+
+  .btn-primary {
+    margin-top: 10px;
+  }
+
+}
+
