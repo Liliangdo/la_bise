@@ -1,0 +1,13 @@
+.social-networks {
+  padding-top: 40px;
+  .social-icon {
+    font-size: 30px;
+    letter-spacing: 20px;
+    :hover {
+      color: $bise-red;
+    }
+    i {
+      color: white;
+    }
+  }
+}
