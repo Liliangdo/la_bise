@@ -20,7 +20,7 @@ class Event < ApplicationRecord
 
 
   def available_places
-    self.capacity - self.reservations.count
+    self.capacity - self.reservations.where(canceled_at: nil).sum(:guest)
   end
 
   def available?
