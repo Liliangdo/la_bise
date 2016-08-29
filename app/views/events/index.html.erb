@@ -9,7 +9,7 @@
           <%= link_to event_path(event) do %>
             <div class="card text-center">
               <div class="card-polaroid">
-                <img src="http://www.ledarlington.com/wp-content/uploads/2015/02/happyhour.jpg">
+                <%=helper_picture_tag(event) %>
                 <div class="card-infos">
                   <h3>
                     <%= event.name %>
