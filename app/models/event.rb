@@ -40,5 +40,9 @@ class Event < ApplicationRecord
     (sum / self.reviews.count).round
   end
 
+  def canceled?
+    !self.canceled_at.nil?
+  end
+
 end
 

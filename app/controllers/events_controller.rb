@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :find_event, only: [:show, :edit, :update]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = policy_scope(Event)
@@ -55,6 +55,11 @@ class EventsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def destroy
+    @event.update(event_params)
+    redirect_to dashboard_path
+  end
+
   private
 
   def find_event
@@ -73,6 +78,7 @@ class EventsController < ApplicationController
       :address,
       :mood,
       :option,
+      :canceled_at,
       photos: [] )
   end
 end

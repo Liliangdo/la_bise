@@ -47,14 +47,17 @@ fr:
       cancel: "Annuler"
       pending: "En attente"
       canceled_at: "Annulé à : "
+      event_cancel: "Désolé, l'événement est annulé, vous allez être remboursé"
 
     dash_events:
       deny: "Refuser"
       accept: "Accepter"
       accepted_at: "Accepté à : "
       refused_at: "Refusé à : "
-      canceled_by_user: "Réservation annulée par le participant à :"
       bringing: "amène"
+      canceled_by_user: "Réservation annulée par le participant à :"
+      canceled_by_host: "Vous avez annulé cet événement le "
+      cancel: "Annuler"
       guests:
         zero: ""
         one: "personne"
@@ -79,6 +82,22 @@ fr:
         zero: "l'hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
+    edit:
+      title_update: "Mettre à jour votre événement"
+      title_create: "Créé votre événement"
+    form_event:
+      upload: "Téléchargez une superbe photo de votre événement"
+      upload_error: "La photo est obligatoire, ajoutez une photo s'il vous plait"
+      name: "Ajoutez un nom"
+      name_error: "Nom obligatoire, ajoutez en un !"
+      address: "Adresse"
+      starting: "Date et heure"
+      price: "Prix par personne"
+      description: "Description"
+      capacity: "Capacité"
+      mood: "Ambiance"
+      house_type: "Type d'endroit"
+      option: "Options"
 
 
   reservations:
