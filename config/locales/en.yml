@@ -44,9 +44,11 @@ en:
       reservations: "Reservations"
 
     dash_reservations:
+      confirmed: "Confirmed"
+      refused: "Refused"
       cancel: "Cancel"
       pending: "Pending"
-      canceled_at: "Canceled at: "
+      canceled_at: "Canceled the: "
       event_cancel: "Sorry, this event is cancelling. You'll be refund"
 
     dash_events:
