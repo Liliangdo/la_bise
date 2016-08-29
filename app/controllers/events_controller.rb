@@ -8,13 +8,19 @@ class EventsController < ApplicationController
 
     session[:city] = params[:search][:city]
     session[:capacity] = params[:search][:capacity]
-    session[:date] = params[:search][:date]
+
+    d = params[:search][:date].split('/')
+    d = (d[1] + '/' + d[0] + '/' +d[2]).to_date
+    session[:date] = d
 
     if params[:search].nil?
       @events = Event.where.not(latitude: nil, longitude: nil)
     else
       @search = params[:search]
-      @events = Event.near(@search[:city],5).where("capacity >= ?", @search[:capacity].to_f)
+      @events = Event.near(@search[:city],5)
+                      .where("capacity >= ?", @search[:capacity].to_f)
+                      .where("starting_at >= ?", session[:date])
+                      .where("starting_at <= ?", session[:date] + 2)
     end
 
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
