@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   def new
     if current_user.first_name.blank? || current_user.birth_date.blank?
       session[:retake_create_event] = true
-      redirect_to edit_user_registration_path, alert: "Please fill in the fields  to create an event "
+      redirect_to edit_user_registration_path, alert: "Please fill in the fields to create an event "
     end
     @event = Event.new
     authorize @event
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
     @event.user = current_user
     authorize @event
     if @event.save
-      redirect_to dashboard_path
+      redirect_to dashboard_path, notice: "You have successfully created an event."
     else
       render :new
     end
