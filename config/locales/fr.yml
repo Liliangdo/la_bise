@@ -33,13 +33,15 @@ fr:
     dash_reservations:
       cancel: "Annuler"
       pending: "En attente"
+      canceled_at: "Annulé à : "
 
     dash_events:
       deny: "Refuser"
       accept: "Accepter"
       accepted_at: "Accepté à : "
       refused_at: "Refusé à : "
-      bringing: "amene"
+      canceled_by_user: "Réservation annulée par le participant à :"
+      bringing: "amène"
       guests:
         zero: ""
         one: "personne"
