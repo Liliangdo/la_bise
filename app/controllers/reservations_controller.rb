@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     @reservation.user = @current_user
     @reservation.event = @event
     if @reservation.save
-      redirect_to root_path
+      redirect_to dashboard_path, notice: "Your reservation was successfully booked."
     else
       render :new
     end
