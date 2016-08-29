@@ -42,7 +42,7 @@
                   <%= f.input :canceled_at,
                               as: :hidden,
                               input_html: {value: Time.now} %>
-                  <%= f.button :submit, t('.cancel'), class: "btn btn-danger btn-lg" %>
+                  <%= f.button :submit, t('.cancel'), class: "btn btn-danger btn-lg", style: "margin-bottom: 7px; padding: 3px 15px" %>
                 <% end %>
                 </div>
               <% else %>

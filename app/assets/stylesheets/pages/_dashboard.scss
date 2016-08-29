@@ -3,10 +3,10 @@
 }
 
 .tabs {
-  background: white;
+  background: #f4f4f4;
   border-color: $bise-blue;
   display: flex;
-  padding: 100px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   display: flex;
   h3 {
     font-size: 17px;
@@ -75,12 +75,10 @@
 // ---
 
 .reservation-fontawesome {
-  font-size: 60px;
+  font-size: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-
 }
 
 .wrapper {
