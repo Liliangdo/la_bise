@@ -50,6 +50,10 @@
                             input_html: {value: Time.now} %>
                 <%= f.button :submit, t('.accept'), class: "btn btn-success pull-right" %>
               <% end %>
+            <% elsif reservation.canceled? %>
+              <p>
+                <%= ('.canceled_by_user') %> <%= l reservation.canceled_at, format: :short %>
+              </p>
             <% else %>
               <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
               <%= l reservation.updated_at, format: :short %>

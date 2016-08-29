@@ -42,6 +42,7 @@ en:
       accepted_at: "Accepted at : "
       refused_at: "Refused at : "
       bringing: "is bringing"
+      canceled_by_user: "Reservation canceled by the user at:"
       guests:
         zero: "no guests"
         one: "guest"

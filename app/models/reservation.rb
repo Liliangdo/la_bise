@@ -17,7 +17,7 @@ class Reservation < ApplicationRecord
   end
 
   def answered?
-    confirmed? || refused?
+    confirmed? || refused? || canceled?
   end
 
   def canceled?
