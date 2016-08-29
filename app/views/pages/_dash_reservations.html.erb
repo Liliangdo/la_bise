@@ -28,14 +28,17 @@
               <% if not reservation.canceled? %>
                 <div class="reservation-fontawesome">
                 <% if reservation.confirmed? %>
+                  <p class="confirmed"><%= t('.confirmed') %></p>
                   <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
                 <% end %>
 
                 <% if reservation.refused? %>
+                  <p class="refused"><%= t('.refused') %></p>
                   <i class="fa fa-times refused" aria-hidden="true"></i>
                 <% end %>
 
                 <% if reservation.pending? %>
+                  <p class="pending"><%= t('.pending') %></p>
                   <i class="fa fa-pause pending" aria-hidden="true"></i>
                 <% end %>
                 <%= simple_form_for([reservation.event, reservation], remote: false, method: "patch") do |f| %>
@@ -46,12 +49,12 @@
                 <% end %>
                 </div>
               <% else %>
-                <p>
+                <p class="canceled">
                   <%= t('.canceled_at')%> <%= l reservation.canceled_at, format: :short %>
                 </p>
               <% end %>
             <% else %>
-              <p>
+              <p class="canceled">
                 <%= t('.event_cancel') %>
               </p>
             <% end %>

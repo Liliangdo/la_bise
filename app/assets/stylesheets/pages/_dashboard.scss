@@ -79,6 +79,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  p{
+    margin: 10px 5px 10px;
+    font-size: 20px;
+  }
 }
 
 .wrapper {
@@ -115,4 +119,3 @@
   height: 20px;
   width: 20px;
 }
-
