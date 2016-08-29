@@ -10,14 +10,27 @@ fr:
       sign_in: "Connexion"
       dashboard: "Tableau de bord"
 
+    footer:
+      who: "Qui sommes-nous ?"
+      contact_us: "Contactez-nous !"
+      partners: "Partenaires"
+      press: "Presse"
+      help: "Help!"
+      faq: "FAQ"
+      manual: "Mode d'emploi"
+      credits: "CGU | CGV | Crédits"
+      security: "Sécurité"
+      super_quote: "Nous sommes une bande de développeurs qui aimons faire de nouvelles rencontres : nous avons conçu La Bise afin que chacun puisse organiser sa soirée et se découvrir de nouveaux amis."
+
 
   pages:
     home:
       punchline: "Des rencontres directement chez les autres"
-      check: "Ils n'attendent que vous!"
-      icon1: "Nous avons verifier chaque profils de l'ensemble de notre comunauté"
-      icon2: "Passez des moments unique faites des rencontres réels et conviviale. "
-      icon3: "Vous etes maitre de soirée, choisissez vos invités et chatter avec eux !"
+      check: "Ils n'attendent que vous !"
+      icon1: "Nous avons verifiés chaque profil de l'ensemble de notre comunauté"
+      icon2: "Passez des moments uniques faits des rencontres réels et conviviales."
+      icon3: "Vous êtes maître de soirée, choisissez vos invités et chattez avec eux !"
+
     datepicker:
       city: "Entrer une ville"
       capacity: "Invités"
@@ -61,7 +74,7 @@ fr:
         zero: "plus de place disponible"
         one: "dernière place disponible"
         other: "places disponibles"
-      cancelrules: "Conditions d'anulation:"
+      cancelrules: "Conditions d'anulation :"
       reviews:
         zero: "l'hôte n'a pas encore été noté"
         one: "avis"

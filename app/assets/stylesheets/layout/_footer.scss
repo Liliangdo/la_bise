@@ -1,1 +1,24 @@
-// Your footer style
+#footer {
+  background-image: image-url('footer.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  // height: 330px;
+  color: white;
+  padding: 40px 0 0 0;
+  font-size: 0.9em;
+  .footer-titles {
+    color: white;
+  }
+  .no-decoration-list {
+    list-style: none;
+    padding-left: 0;
+    a {
+      color: white;
+      &:hover {
+      color: $bise-red;
+      text-decoration: none;
+      }
+    }
+  }
+}

@@ -10,14 +10,26 @@ en:
       sign_in: "Sign In"
       dashboard: "Dashboard"
 
+    footer:
+      who: "Who are we?"
+      contact_us: "Contact us!"
+      partners: "Partners"
+      press: "Press"
+      help: "Help!"
+      faq: "FAQ"
+      manual: "Manual"
+      credits: "Terms of Us | GCS | Credits"
+      security: "Security"
+      super_quote: "We are a team of developers who loves to meet new people: we designed La Bise so everyone can organize a party and make new friends."
+
 
   pages:
     home:
       punchline: "Share real moment at home with amazing people like you"
       check: "They are waiting for you!"
       icon1: "Each profil is thoroughly checked, the community is safe."
-      icon2: "Live unique moments ! Make real and friendly meetings."
-      icon3: "Become the master of the soiree. Choose your guests and chat with them !"
+      icon2: "Live unique moments! Make real and friendly meetings."
+      icon3: "Become the master of the soiree. Choose your guests and chat with them!"
 
     datepicker:
       city: "Enter a city"
@@ -39,8 +51,8 @@ en:
     dash_events:
       deny: "Deny"
       accept: "Accept"
-      accepted_at: "Accepted at : "
-      refused_at: "Refused at : "
+      accepted_at: "Accepted at: "
+      refused_at: "Refused at: "
       bringing: "is bringing"
       canceled_by_user: "Reservation canceled by the user at:"
       guests:
@@ -71,5 +83,5 @@ en:
 
   reservations:
       new:
-        available_places: "Free places : "
+        available_places: "Free places: "
 
