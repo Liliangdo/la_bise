@@ -42,7 +42,7 @@ fr:
       accepted_at: "Accepté à : "
       refused_at: "Refusé à : "
       canceled_by_user: "Réservation annulée par le participant à :"
-      bringing: "amene"
+      bringing: "amène"
       guests:
         zero: ""
         one: "personne"

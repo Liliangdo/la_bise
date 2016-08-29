@@ -52,7 +52,7 @@
               <% end %>
             <% elsif reservation.canceled? %>
               <p>
-                <%= ('.canceled_by_user') %> <%= l reservation.canceled_at, format: :short %>
+                <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: :short %>
               </p>
             <% else %>
               <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
