@@ -37,14 +37,14 @@
             </div>
             <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guest') %> for <%= reservation.event.price * reservation.guest %>€ .
             <% if not reservation.answered? %>
-              <%= simple_form_for([event, reservation]) do |f| %>
+              <%= simple_form_for([event, reservation], remote: false, method: "patch") do |f| %>
                 <%= f.input :refused_at,
                             as: :hidden,
                             input_html: {value: Time.now} %>
                 <%= f.button :submit, t('.deny'), class: "btn btn-danger pull-right" %>
               <% end %>
 
-              <%= simple_form_for([event, reservation]) do |f| %>
+              <%= simple_form_for([event, reservation], remote: false, method: "patch") do |f| %>
                 <%= f.input :accepted_at,
                             as: :hidden,
                             input_html: {value: Time.now} %>

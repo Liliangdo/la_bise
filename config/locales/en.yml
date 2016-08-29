@@ -34,6 +34,7 @@ en:
     dash_reservations:
       cancel: "Cancel"
       pending: "Pending"
+      canceled_at: "Canceled at: "
 
     dash_events:
       deny: "Deny"

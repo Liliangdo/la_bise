@@ -19,4 +19,8 @@ class Reservation < ApplicationRecord
   def answered?
     confirmed? || refused?
   end
+
+  def canceled?
+    !self.canceled_at.nil?
+  end
 end
