@@ -4,39 +4,46 @@
   background-size: cover;
   color: white;
 }
-
-.event-description h4 {
-  text-align: center;
-}
 .host_card {
   width: 100%;
   background-color: #FEFEFE;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 15px 30px 15px 15px;
   .media-right {
     font-size: 3em;
-    padding-right: 15px;
   }
+}
+.priceandplaces {
+  margin: 20px 0;
 }
 .price {
   font-size: 1.3em;
 }
 .options {
-  background-color: #CC00FF;
+  margin: 20px;
+  text-align: center;
 }
-.description {
-  background-color: #FFCC00;
+.event-description {
+  background-color: white;
+  padding: 15px;
+  .cancel {
+    color: $red;
+  }
 }
 .review-card {
-
+  margin: 25px;
+  .review-owner {
+    color: $bise-red;
+  }
+  .review-rating {
+    text-align: right;
+  }
+  .review-date {
+    color: $gray-light;
+    font-size: 0.8em;
+  }
 }
-
-
-.put_spaces {
-  padding: 20px;
-}
-
 
 .top-space {
   margin-top: 60px;
