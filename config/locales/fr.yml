@@ -10,14 +10,26 @@ fr:
       sign_in: "Connexion"
       dashboard: "Tableau de bord"
 
+    footer:
+      who: "Qui sommes-nous ?"
+      contact_us: "Contactez-nous !"
+      partners: "Partenaires"
+      press: "Presse"
+      help: "Help!"
+      faq: "FAQ"
+      manual: "Mode d'emploi"
+      credits: "CGU | CGV | Crédits"
+      security: "Sécurité"
+      super_quote: "Nous sommes une bande de développeurs qui aimons faire de nouvelles rencontres : nous avons conçu La Bise afin que chacun puisse organiser sa soirée et se découvrir de nouveaux amis."
+
 
   pages:
     home:
-      punchline: "Venez fumer des champignons !"
-      check: "ils n'attendent que vous!"
-      icon1: "Nous avons verifier chaque profils de l'ensemble de notre comunauté"
-      icon2: "Passez des moments unique ,en solos avec des amis, faites des rencontres réels et conviviale. "
-      icon3: "Organiser, devenez le maitre des lieux, des possibilité infinis s’offre à vous. Vous choisissez vos invités et pouvez chatter avec eux ! Votre adresse n’est communiqué qu’aux participants validés"
+      punchline: "Des rencontres directement chez les autres"
+      check: "Ils n'attendent que vous !"
+      icon1: "Nous avons verifiés chaque profil de l'ensemble de notre comunauté"
+      icon2: "Passez des moments uniques faits des rencontres réels et conviviales."
+      icon3: "Vous êtes maître de soirée, choisissez vos invités et chattez avec eux !"
 
     datepicker:
       city: "Entrer une ville"
@@ -34,13 +46,18 @@ fr:
     dash_reservations:
       cancel: "Annuler"
       pending: "En attente"
+      canceled_at: "Annulé à : "
+      event_cancel: "Désolé, l'événement est annulé, vous allez être remboursé"
 
     dash_events:
       deny: "Refuser"
       accept: "Accepter"
       accepted_at: "Accepté à : "
       refused_at: "Refusé à : "
-      bringing: "amene"
+      bringing: "amène"
+      canceled_by_user: "Réservation annulée par le participant à :"
+      canceled_by_host: "Vous avez annulé cet événement le "
+      cancel: "Annuler"
       guests:
         zero: ""
         one: "personne"
@@ -60,11 +77,27 @@ fr:
         zero: "plus de place disponible"
         one: "dernière place disponible"
         other: "places disponibles"
-      cancelrules: "Conditions d'anulation:"
+      cancelrules: "Conditions d'anulation :"
       reviews:
         zero: "l'hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
+    edit:
+      title_update: "Mettre à jour votre événement"
+      title_create: "Créé votre événement"
+    form_event:
+      upload: "Téléchargez une superbe photo de votre événement"
+      upload_error: "La photo est obligatoire, ajoutez une photo s'il vous plait"
+      name: "Ajoutez un nom"
+      name_error: "Nom obligatoire, ajoutez en un !"
+      address: "Adresse"
+      starting: "Date et heure"
+      price: "Prix par personne"
+      description: "Description"
+      capacity: "Capacité"
+      mood: "Ambiance"
+      house_type: "Type d'endroit"
+      option: "Options"
 
 
   reservations:

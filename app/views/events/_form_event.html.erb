@@ -1,0 +1,19 @@
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+  <% if @event.errors.any? %>
+    <%= @event.errors.full_messages.join(" ") %>
+  <% end %>
+  <%= f.input :photos, as: :attachinary,label: t('.upload'), error: t('.upload_error') %>
+  <button class="btn-upload" type="button" onclick="chooseFile();">Choisissez votre photo</button>
+  <%= f.input :name,label: t('.name'), error: t('.name_error')%>
+  <%= f.input :address, label: t('.address') %>
+  <%= f.input :starting_at, label: t('.starting') %>
+  <%= f.input :price, label: t('.price') %>
+  <%= f.input :description, label: t('.description'), :input_html => { :class => 'description', :rows => 6 } %>
+  <%= f.input :capacity, label: t('.capacity') %>
+  <%= f.input :mood, label: t('.mood'),collection: [ "Electro", "Pop", "Funk","Jazz","Cozy","Rap US"]%>
+  <%= f.input :house_type,  label: t('.house_type'), collection: [ "Studio", "Loft", "Flat","Private Garden","Rooftop","House","Villa"] %>
+  <%= f.input :option, label: t('.option') %>
+  <%= f.button :submit, class: "space btn-block btn-success" %>
+<% end %>
+

@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :find_event, only: [:show, :edit, :update]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = policy_scope(Event)
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   def new
     if current_user.first_name.blank? || current_user.birth_date.blank?
       session[:retake_create_event] = true
-      redirect_to edit_user_registration_path, alert: "Please fill in the fields  to create an event "
+      redirect_to edit_user_registration_path, alert: "Please fill in the fields to create an event "
     end
     @event = Event.new
     authorize @event
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
     @event.user = current_user
     authorize @event
     if @event.save
-      redirect_to dashboard_path
+      redirect_to dashboard_path, notice: "You have successfully created an event."
     else
       render :new
     end
@@ -51,6 +51,11 @@ class EventsController < ApplicationController
   end
 
   def update
+    @event.update(event_params)
+    redirect_to dashboard_path
+  end
+
+  def destroy
     @event.update(event_params)
     redirect_to dashboard_path
   end
@@ -73,6 +78,7 @@ class EventsController < ApplicationController
       :address,
       :mood,
       :option,
+      :canceled_at,
       photos: [] )
   end
 end

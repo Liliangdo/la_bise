@@ -24,25 +24,38 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="reservation-fontawesome">
-              <% if reservation.confirmed? %>
-                <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
-              <% end %>
+            <% if not reservation.event.canceled? %>
+              <% if not reservation.canceled? %>
+                <div class="reservation-fontawesome">
+                <% if reservation.confirmed? %>
+                  <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
+                <% end %>
 
-              <% if reservation.refused? %>
-                <i class="fa fa-times refused" aria-hidden="true"></i>
-              <% end %>
+                <% if reservation.refused? %>
+                  <i class="fa fa-times refused" aria-hidden="true"></i>
+                <% end %>
 
-              <% if reservation.pending? %>
-                <i class="fa fa-pause pending" aria-hidden="true"></i>
+                <% if reservation.pending? %>
+                  <i class="fa fa-pause pending" aria-hidden="true"></i>
+                <% end %>
+                <%= simple_form_for([reservation.event, reservation], remote: false, method: "patch") do |f| %>
+                  <%= f.input :canceled_at,
+                              as: :hidden,
+                              input_html: {value: Time.now} %>
+                  <%= f.button :submit, t('.cancel'), class: "btn btn-danger btn-lg" %>
+                <% end %>
+                </div>
+              <% else %>
+                <p>
+                  <%= t('.canceled_at')%> <%= l reservation.canceled_at, format: :short %>
+                </p>
               <% end %>
-              <%= simple_form_for ([reservation.event, reservation]) do |f| %>
-                <%= f.input :canceled_at,
-                            as: :hidden,
-                            input_html: {value: Time.now} %>
-                <%= f.button :submit, t('.cancel'), class: "btn btn-danger btn-lg" %>
-              <% end %>
-            </div>
+            <% else %>
+              <p>
+                <%= t('.event_cancel') %>
+              </p>
+            <% end %>
+
           </div>
         </div>
     </div>

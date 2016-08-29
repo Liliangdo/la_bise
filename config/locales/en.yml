@@ -10,14 +10,26 @@ en:
       sign_in: "Sign In"
       dashboard: "Dashboard"
 
+    footer:
+      who: "Who are we?"
+      contact_us: "Contact us!"
+      partners: "Partners"
+      press: "Press"
+      help: "Help!"
+      faq: "FAQ"
+      manual: "Manual"
+      credits: "Terms of Us | GCS | Credits"
+      security: "Security"
+      super_quote: "We are a team of developers who loves to meet new people: we designed La Bise so everyone can organize a party and make new friends."
+
 
   pages:
     home:
       punchline: "Share real moment at home with amazing people like you"
       check: "They are waiting for you!"
-      icon1: "We check each profile of our entire comunity"
-      icon2: "Spend unique moments in solos or with friends, make real and friendly meetings"
-      icon3: "Organize and become the master of the place, infinite possibility is offered to you. You choose your guests"
+      icon1: "Each profil is thoroughly checked, the community is safe."
+      icon2: "Live unique moments! Make real and friendly meetings."
+      icon3: "Become the master of the soiree. Choose your guests and chat with them!"
 
     datepicker:
       city: "Enter a city"
@@ -34,13 +46,18 @@ en:
     dash_reservations:
       cancel: "Cancel"
       pending: "Pending"
+      canceled_at: "Canceled at: "
+      event_cancel: "Sorry, this event is cancelling. You'll be refund"
 
     dash_events:
       deny: "Deny"
       accept: "Accept"
-      accepted_at: "Accepted at : "
-      refused_at: "Refused at : "
+      accepted_at: "Accepted at: "
+      refused_at: "Refused at: "
       bringing: "is bringing"
+      canceled_by_user: "Reservation canceled by the user at:"
+      canceled_by_host: "You have canceled this event on :"
+      cancel: "Cancel"
       guests:
         zero: "no guests"
         one: "guest"
@@ -65,9 +82,24 @@ en:
         zero: "Host not rated yet"
         one: "opinion"
         other: "opinions"
-
+    edit:
+      title_update: "Update your event"
+      title_create: "Create your event"
+    form_event:
+      upload: "Upload a beautiful Event's Picture"
+      upload_error: "Picture is mandatory, please specify one"
+      name: "Add an Event Name"
+      name_error: "Event Name is mandatory, please specify one"
+      address: "Adress"
+      starting: "Starting at"
+      price: "Price per guest"
+      description: "description"
+      capacity: "capacity"
+      mood: "mood"
+      house_type: "House type"
+      option: "Option"
 
   reservations:
       new:
-        available_places: "Free places : "
+        available_places: "Free places: "
 
