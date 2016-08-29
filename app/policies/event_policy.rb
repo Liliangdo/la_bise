@@ -1,7 +1,7 @@
 class EventPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all.where('canceled_at is NULL')
+      scope.all
     end
   end
 

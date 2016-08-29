@@ -34,6 +34,7 @@ fr:
       cancel: "Annuler"
       pending: "En attente"
       canceled_at: "Annulé à : "
+      event_cancel: "Désolé, l'événement est annulé, vous allez être remboursé"
 
     dash_events:
       deny: "Refuser"
