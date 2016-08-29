@@ -60,7 +60,7 @@ puts "event begin"
                             "115 Avenue Lucien Lerousseau, 33130 Bègles",
                             "262 cours gambetta 33400 Talence",
                             "Place Aristide Briand 33400 Talence",
-                            "3 place de la République 33160 Saint Médard en Jalles",
+                            "3 place de la République 33160 Saint-Médard-en-Jalles",
                             "15 rue Nicolas Leblanc 33160",
                             "19 Rue Jean Jacques Rousseau 33000 Bordeaux",
                             "134 Rue François de Sourdis 33000 Bordeaux",
@@ -94,7 +94,7 @@ puts "reservation seed end"
 
 puts "review begin"
 
-5.times do
+40.times do
   Review.create(
     event_id: Event.all.sample.id,
     user_id: User.all.sample.id,
