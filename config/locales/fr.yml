@@ -66,6 +66,22 @@ fr:
         zero: "l'hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
+    edit:
+      title_update: "Mettre à jour votre événement"
+      title_create: "Créé votre événement"
+    form_event:
+      upload: "Téléchargez une superbe photo de votre événement"
+      upload_error: "La photo est obligatoire, ajoutez une photo s'il vous plait"
+      name: "Ajoutez un nom"
+      name_error: "Nom obligatoire, ajoutez en un !"
+      address: "Adresse"
+      starting: "Date et heure"
+      price: "Prix par personne"
+      description: "Description"
+      capacity: "Capacité"
+      mood: "Ambiance"
+      house_type: "Type d'endroit"
+      option: "Options"
 
 
   reservations:
