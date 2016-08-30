@@ -6,22 +6,29 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:facebook]
 
   has_many :reservations
-  has_many :events, through: :reservations
+
+  has_many :events
+  has_many :participed_events, through: :reservations, source: :event
+
   has_many :messages_sent, class_name: "Message", foreign_key: :sender_id
   has_many :messages_received, class_name: "Message", foreign_key: :recipient_id
+
+  has_many :given_reviews, through: :participed_events, source: :reviews
   has_many :reviews, through: :events
 
 
   validates :first_name, presence: true, on: :update
   validates :birth_date, presence: true, on: :update
+  validates :phone_number, presence: true, on: :update
+  validates :email, uniqueness: true, on: :update
+  validates :description, presence: true, on: :update
+
 
   # validates :last_name, presence: true
   # validates :address, presence: true
   # validates :gender, presence: true
-  # validates :phone_number, presence: true
-  # validates :email, uniqueness: true
 
-  # has_attachment :photo
+  has_attachment :photo
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.to_h.slice(:provider, :uid)

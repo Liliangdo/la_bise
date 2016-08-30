@@ -43,6 +43,21 @@ fr:
       events: "Evénements"
       reservations: "Réservations"
 
+    dash_profil:
+      welcome: "Bonjour, je m'appelle"
+      edit: "Editer"
+      reviews_show:
+        zero: "Il n'y a aucun commentaires"
+        one: "Commentaire"
+        other: "Commentaires"
+      identification: "Identification"
+      birth_date: "Date de naissance"
+      phone_number: "N° de téléphone"
+      email: "Email"
+      created_at: "Compte crée le"
+
+
+
     dash_reservations:
       confirmed: "Confirmée"
       refused: "Refusée"
@@ -116,6 +131,23 @@ fr:
   reservations:
       new:
         available_places: "Places libres : "
+
+  users:
+    show:
+      welcome: "Bonjour, je m'appelle"
+      edit: "Editer"
+      reviews_show:
+        zero: "Il n'y a aucun commentaires"
+        one: "Commentaire"
+        other: "Commentaires"
+      identification: "Identification"
+      birth_date: "Date de naissance"
+      phone_number: "N° de téléphone"
+      email: "Email"
+      created_at: "Compte crée le"
+
+
+
 
 
 

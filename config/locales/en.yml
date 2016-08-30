@@ -43,6 +43,20 @@ en:
       events: "Events"
       reservations: "Reservations"
 
+    dash_profil:
+      welcome: "Hello, my name is"
+      edit: "Edit"
+      reviews_show:
+        zero: "There are no reviews yet"
+        one: "Review"
+        other: "Reviews"
+      identification: "Identification"
+      birth_date: "Birth date"
+      phone_number: "Phone number"
+      email: "Email"
+      created_at: "Profil created the"
+
+
     dash_reservations:
       confirmed: "Confirmed"
       refused: "Refused"
@@ -74,12 +88,12 @@ en:
         one: "guest"
         other: "guests"
       book: "Book"
-      age: "years old"
+      age: "Years old"
       price: "Price/guest:"
       available_places:
         zero: "no places left"
-        one: "place left"
-        other: "available places"
+        one: "Place left"
+        other: "Available places"
       cancelrules: "Cancel rules:"
       reviews:
         zero: "Host not rated yet"
@@ -104,13 +118,28 @@ en:
       address: "Adress"
       starting: "Starting at"
       price: "Price per guest"
-      description: "description"
-      capacity: "capacity"
-      mood: "mood"
+      description: "Description"
+      capacity: "Capacity"
+      mood: "Mood"
       house_type: "House type"
       option: "Option"
 
   reservations:
       new:
         available_places: "Free places: "
+  users:
+    show:
+      welcome: "Hello, my name is"
+      edit: "Edit"
+      reviews_show:
+        zero: "There are no reviews yet"
+        one: "Review"
+        other: "Reviews"
+      identification: "Identification"
+      birth_date: "Birth date"
+      phone_number: "Phone number"
+      email: "Email"
+      created_at: "Profil created the"
+
+
 
