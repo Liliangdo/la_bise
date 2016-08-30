@@ -54,10 +54,12 @@ fr:
     dash_events:
       deny: "Refuser"
       accept: "Accepter"
-      accepted_at: "Accepté à : "
-      refused_at: "Refusé à : "
-      bringing: "amène"
-      canceled_by_user: "Réservation annulée par le participant à :"
+      accepted_at: "Accepté le "
+      refused_at: "Refusé le "
+      bringing: "vient avec "
+      canceled_by_user: "Réservation annulée par le participant le"
+      letter_a: " à "
+
       canceled_by_host: "Vous avez annulé cet événement le "
       cancel: "Annuler"
       guests:
