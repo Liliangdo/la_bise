@@ -1,0 +1,15 @@
+.message, .answer {
+  min-height: 60px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #222;
+  background-color: #FFF;
+  padding: 10px;
+  margin-bottom: 10px;
+
+}
+
+.answer {
+  background-color: $gray-lighter;
+  margin-left: 50px;
+}

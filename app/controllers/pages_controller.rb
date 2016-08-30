@@ -9,7 +9,9 @@ class PagesController < ApplicationController
 
   def dashboard
     @events = policy_scope(Event).where(user_id: current_user.id)
-    # have informations about my reservation
     @reservations = policy_scope(Reservation).where(user: current_user)
+    # @messages = policy_scope(Message).where(user: :sender_id || :recipient_id)
+    @messages = policy_scope(Message).where(sender_id: 11).or(policy_scope(Message)
+                                      .where(recipient_id: 11))
   end
 end
