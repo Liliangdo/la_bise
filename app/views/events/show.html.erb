@@ -1,7 +1,9 @@
 <!-- floating recap for laptop on the right -->
 
 <div class="recap hidden-xs" id="float-search">
-  <h4><%= @event.name %></h4>
+  <h4>
+    <%= @event.name %>
+  </h4>
   <hr>
   <div class="info">
     <%= @event.address.split.last %>
@@ -59,6 +61,10 @@
       <p class="text-center">
         <%= l(@event.starting_at, format: '%A %d %B') %> - <%= l(@event.starting_at, format: '%H:%M') %>
       </p>
+      <p class="text-center">
+
+        <%= t('.capacity') %> <%= @event.capacity %> <%= t('.peoples', count: @event.capacity ) %>
+      </p>
     </div>
   </div>
 
@@ -98,7 +104,7 @@
           <strong><%= t('.price') %></strong> <%= @event.price %> €
         </p>
         <p>
-          <%= @event.available_places %>/<%= @event.capacity %> <%= t('.available_places', count: @event.available_places) %>
+          <%= @event.available_places %> <%= t('.available_places', count: @event.available_places) %>
         </p>
       </div>
     </div>
