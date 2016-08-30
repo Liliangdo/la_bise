@@ -1,6 +1,12 @@
 en:
-  colon: ":"
+  time:
+    formats:
+      standard: "%m/%d/%Y"
+  date:
+    formats:
+      standard: "%d/%m/%Y"
 
+  colon: ":"
   shared:
     navbar:
       profil: "Profile"

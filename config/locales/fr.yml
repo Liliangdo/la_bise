@@ -1,4 +1,11 @@
 fr:
+  time:
+    formats:
+      standard: "%d/%m/%Y"
+
+  date:
+    formats:
+      standard: "%d/%m/%Y"
   colon: " :"
 
   shared:
