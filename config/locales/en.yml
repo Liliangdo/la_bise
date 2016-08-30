@@ -87,6 +87,7 @@ en:
       capacity: "Capacity"
     edit:
       title_update: "Update your event"
+    new:
       title_create: "Create your event"
     form_event:
       upload: "Upload a beautiful Event's Picture"

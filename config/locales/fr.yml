@@ -87,7 +87,8 @@ fr:
       capacity: "Capacité de "
     edit:
       title_update: "Mettre à jour votre événement"
-      title_create: "Créé votre événement"
+    new:
+      title_create: "Créér votre événement"
     form_event:
       upload: "Téléchargez une superbe photo de votre événement"
       upload_error: "La photo est obligatoire, ajoutez une photo s'il vous plait"
