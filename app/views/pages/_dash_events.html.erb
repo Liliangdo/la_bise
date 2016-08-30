@@ -57,7 +57,7 @@
                   <div class="user-pic" style="background-image: url('https://unsplash.it/<%=rand(300..500)%>');">
                   </div>
                   <div class="reservation-user-informations">
-                    <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guest') %> for <%= reservation.event.price * reservation.guest %>€
+                    <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guests', count: reservation.guest) %> for <%= reservation.event.price * reservation.guest %>€
                   </div>
                   <div class="reservation-statuts">
                     <% if not reservation.answered? %>
