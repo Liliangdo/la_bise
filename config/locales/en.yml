@@ -84,6 +84,7 @@ en:
         zero: "Host not rated yet"
         one: "opinion"
         other: "opinions"
+      capacity: "Capacity"
     edit:
       title_update: "Update your event"
       title_create: "Create your event"

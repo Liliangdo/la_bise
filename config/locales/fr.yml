@@ -84,6 +84,7 @@ fr:
         zero: "l'hôte n'a pas encore été noté"
         one: "avis"
         other: "avis"
+      capacity: "Capacité de "
     edit:
       title_update: "Mettre à jour votre événement"
       title_create: "Créé votre événement"
