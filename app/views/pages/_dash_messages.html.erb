@@ -1,0 +1,23 @@
+<% @events.each do |event| %>
+  <h2>
+   <%= event.name %>
+  </h2>
+    <% event.messages.each do |message| %>
+      <div class="message">
+        <p>
+          <%= l message.created_at, format: :short %>
+          from
+          <%= message.sender_id %> to <%= message.recipient_id %>
+        </p>
+        <p>
+          <em>
+            <%= message.content %>
+          </em>
+        </p>
+      </div>
+      <div class="answer">
+
+        <%= link_to "Answer", new_event_message_path(event.id), class: 'btn btn-primary pull-right' %>
+      </div>
+    <% end %>
+<% end %>
