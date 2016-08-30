@@ -110,6 +110,12 @@ fr:
     show:
       welcome: "Bonjour, je m'appelle"
       edit: "Editer"
+      reviews_show:
+        zero: "Il n'y a aucun commentaires"
+        one: "Commentaire"
+        other: "Commentaires"
+    identification: "Identification"
+
 
 
 

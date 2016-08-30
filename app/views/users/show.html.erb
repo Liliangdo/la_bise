@@ -9,6 +9,36 @@ sa descrition -->
         <div class= "avatar-user-show">
           <%= helper_picture_tag(@user)%>
         </div>
+        <div class="identification">
+          <table>
+            <thead>
+              <tr><%= t('.identification') %></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= @user.birth_date %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= @user.phone_number %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= @user.email %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= @user.created_at %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
       </div>
       <div class="col-xs-12 col-md-8">
         <div class="welcome">
