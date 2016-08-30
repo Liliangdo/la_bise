@@ -26,6 +26,7 @@ class UsersController < ApplicationController
       :first_name,
       :last_name,
       :birth_date,
+      :description,
       :address,
       :gender,
       :phone_number,

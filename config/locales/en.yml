@@ -104,4 +104,8 @@ en:
   reservations:
       new:
         available_places: "Free places: "
+  users:
+    show:
+      welcome: "Hello, my name is"
+      edit: "Edit"
 

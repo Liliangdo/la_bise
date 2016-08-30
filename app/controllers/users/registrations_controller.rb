@@ -6,6 +6,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if session[:retake_create_event]
       session.delete(:retake_create_event)
       return new_event_path
+    else
+      return user_path(@user)
     end
     super
   end

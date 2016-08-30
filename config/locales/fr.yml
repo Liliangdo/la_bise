@@ -106,5 +106,10 @@ fr:
       new:
         available_places: "Places libres : "
 
+  users:
+    show:
+      welcome: "Bonjour, je m'appelle"
+      edit: "Editer"
+
 
 

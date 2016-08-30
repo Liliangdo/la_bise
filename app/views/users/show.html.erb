@@ -1,15 +1,23 @@
-<h1>Users#show</h1>
+
 <!-- on veut afficher la photo du user
-son nom
 son mail
 ses reviews
 sa descrition -->
-
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <%= @user.photo %>
-      <%= @user.first_name %>
+      <div class="col-xs-12 col-md-4">
+        <div class="photo">
+          <%= @user.photo %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <div class="welcome">
+          <h1><%= t('.welcome') %> <%= @user.first_name %> ! <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %></h1>
+          <p><%= @user.description %></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8">
+      </div>
 
     </div>
   </div>
