@@ -29,7 +29,8 @@ class Event < ApplicationRecord
 
 
   def confirmed_users
-    self.reservations.map { |r| r.user if r.confirmed? }
+    confirmed_users = self.reservations.map { |r| r.user if r.confirmed? }
+    confirmed_users << self.user
   end
 
   def average_reviews
