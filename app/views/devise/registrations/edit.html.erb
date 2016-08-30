@@ -8,8 +8,11 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
           <%= f.input :photo, as: :attachinary %>
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :birth_date  %>
+          <%= f.input :phone_number %>
+          <%= f.input :description %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>
