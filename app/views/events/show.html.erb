@@ -149,10 +149,11 @@
           <div class="info">
             <%= l(@event.starting_at, format: '%H:%M') %>
           </div>
-          <div class="info">
+          <div class="info" id="reservation-informations" data-price="<%= @event.price %>" data-frais="0.15">
             <!-- PUT DEFAULT VALUE FOR SESSION CAPACITY IF THE EVENT SHOW IS VISITED FROM THE HOME AND NOT A SEARCH RESULT -->
             <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
           </div>
+          <%= render 'shared/reservation_form' %>
             <%= link_to t('.book'), new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
         </div>
       </div>
