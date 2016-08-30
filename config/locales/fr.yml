@@ -56,7 +56,7 @@ fr:
       accept: "Accepter"
       accepted_at: "Accepté à : "
       refused_at: "Refusé à : "
-      bringing: "amène"
+      bringing: "vient avec "
       canceled_by_user: "Réservation annulée par le participant à :"
       canceled_by_host: "Vous avez annulé cet événement le "
       cancel: "Annuler"

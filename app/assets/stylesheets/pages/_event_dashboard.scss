@@ -1,0 +1,26 @@
+.button-event {
+  width: 175px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dashboard-event-user {
+  display: flex;
+  align-items :center;
+}
+
+.event-description {
+  width: 75%;
+}
+
+.event-description-button {
+  display: flex;
+  align-items: center;
+}
