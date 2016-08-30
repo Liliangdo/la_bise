@@ -21,7 +21,7 @@ class User < ApplicationRecord
   # validates :phone_number, presence: true
   # validates :email, uniqueness: true
 
-  # has_attachment :photo
+  has_attachment :photo
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.to_h.slice(:provider, :uid)
