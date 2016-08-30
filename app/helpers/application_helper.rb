@@ -14,4 +14,12 @@ module ApplicationHelper
       image_tag("image-cover.jpg")
     end
   end
+
+  def helper_picture_tag(user)
+    if user.photo?
+      cl_image_tag(user.photo.path)
+    else
+      image_tag("lilian.jpg")
+    end
+  end
 end

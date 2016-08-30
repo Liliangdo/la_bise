@@ -3,10 +3,11 @@ class UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update]
 
   def show
+    authorize @user
   end
 
   def edit
-
+    authorize @user
   end
 
   def update
@@ -25,6 +26,7 @@ class UsersController < ApplicationController
       :first_name,
       :last_name,
       :birth_date,
+      :description,
       :address,
       :gender,
       :phone_number,

@@ -11,5 +11,6 @@ class PagesController < ApplicationController
     @events = policy_scope(Event).where(user_id: current_user.id)
     # have informations about my reservation
     @reservations = policy_scope(Reservation).where(user: current_user)
+    @user = current_user
   end
 end
