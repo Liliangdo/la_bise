@@ -3,13 +3,13 @@ module ApplicationHelper
     if event.photos?
       cl_image_path(event.photos.first.path)
     else
-      "http://www.ledarlington.com/wp-content/uploads/2015/02/happyhour.jpg"
+      "http://static.wixstatic.com/media/b6a999_c97c7e56d74149a9aed270cc83927158.jpg"
     end
   end
 
   def helper_picture_tag(event)
     if event.photos?
-      cl_image_tag(event.photos.first.path, width: 300, height: 250, crop: :fill)
+      cl_image_tag(event.photos.first.path)
     else
       image_tag("image-cover.jpg")
     end
