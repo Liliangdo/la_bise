@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def helper_picture_tag(event)
     if event.photos?
-      cl_image_tag(event.photos.first.path)
+      cl_image_tag(event.photos.first.path, width: 300, height: 250, crop: :fill)
     else
       image_tag("image-cover.jpg")
     end
