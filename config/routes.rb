@@ -15,9 +15,9 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index, :create]
       resources :reservations, only: [:index, :new, :create, :update, :destroy]
     end
+    resources :users, only: [:show, :edit, :update]
   end
 
-  resources :users, only: [:show, :edit, :update]
   mount Attachinary::Engine => "/attachinary"
 end
 
