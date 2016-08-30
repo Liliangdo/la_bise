@@ -58,6 +58,7 @@ en:
       refused_at: "Refused at: "
       bringing: "is bringing"
       canceled_by_user: "Reservation canceled by the user at:"
+      letter_a: " at "
       canceled_by_host: "You have canceled this event on :"
       cancel: "Cancel"
       guests:

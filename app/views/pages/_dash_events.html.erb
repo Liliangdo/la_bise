@@ -76,11 +76,13 @@
                       <% end %>
                     <% elsif reservation.canceled? %>
                       <em>
-                        <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: :short %>
+                        <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: '%d %b' %> <%= t('.letter_a') %> <%= l reservation.canceled_at, format: '%H:%m' %>
                       </em>
                     <% else %>
                       <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
-                      <%= l reservation.updated_at, format: :short %>
+                        <%= l reservation.updated_at, format: '%d %b'%>
+                        <%= t('.letter_a') %>
+                        <%= l reservation.updated_at, format: '%H:%m'%>
                     <% end %>
                   </div>
                 </div>
