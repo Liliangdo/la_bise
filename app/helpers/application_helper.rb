@@ -15,7 +15,7 @@ module ApplicationHelper
     end
   end
 
-  def helper_picture_tag(user)
+  def helper_user_picture_tag(user)
     if user.photo?
       cl_image_tag(user.photo.path)
     else
