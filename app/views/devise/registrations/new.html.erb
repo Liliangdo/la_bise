@@ -1,21 +1,21 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+    <div id="form-registration" class="col-xs-12 col-sm-offset-4 col-sm-4">
       <h2><%= t('.sign_up', :default => "Sign up") %></h2>
 
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
         <div><%= f.label :email %><br />
-        <%= f.email_field :email %></div>
+        <%= f.email_field :email, class: "glowing-border" %></div>
 
         <div><%= f.label :password %><br />
-        <%= f.password_field :password %></div>
+        <%= f.password_field :password, class: "glowing-border" %></div>
 
         <div><%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation %></div>
+        <%= f.password_field :password_confirmation, class: "glowing-border" %></div>
 
-        <div><%= f.submit t('.sign_up', :default => "Sign up") %></div>
+        <div><%= f.button :submit, class: "btn btn-block btn-success" %></div>
       <% end %>
 
       <%= render "devise/shared/links" %>
