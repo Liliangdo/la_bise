@@ -85,6 +85,12 @@ fr:
         one: "avis"
         other: "avis"
       capacity: "Capacité de "
+
+    event-datepicker:
+      city: "Entrer une ville"
+      capacity: "Invités"
+      search: "Rechercher"
+
     edit:
       title_update: "Mettre à jour votre événement"
     new:
@@ -102,6 +108,7 @@ fr:
       mood: "Ambiance"
       house_type: "Type d'endroit"
       option: "Options"
+
 
 
   reservations:

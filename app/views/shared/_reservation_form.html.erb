@@ -1,0 +1,19 @@
+<%= simple_form_for [@event, @reservation] do |f| %>
+<%= f.error_notification %>
+<%= f.input :guest,
+            label: "Nombre de places souhaitées",
+            collection: (1..@event.available_places), selected: session[:capacity]
+%>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="infos">
+    <div id="price">
+    </div>
+    <div id="fees">
+    </div>
+    <div id="total-price">
+    </div>
+  </div>
+</div>
+<%= f.button :submit, class: "btn btn-warning btn-block" %>
+<% end %>

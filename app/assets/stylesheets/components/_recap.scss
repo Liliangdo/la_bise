@@ -1,7 +1,14 @@
-#recap {
+.recap-content {
+  top: 0px;
   background-color: #CC0000;
-  text-align: center;
   height: 100vh;
+  position: fixed;
+  right: 0px;
+  padding: 25px 10px 10px 10px;
+}
+#recap {
+  text-align: center;
+  margin-top: 80px;
   .info {
   background-color: white;
   margin: 9px 0px;
