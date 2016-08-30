@@ -6,14 +6,18 @@
 %>
 
 <div class="col-xs-12 col-sm-6 col-md-4">
-  <div class="infos">
+  <div class="infos" >
     <div id="price">
+     Le prix est de <%= price = @event.price * session[:capacity].to_i %> € <!-- TODO -->
     </div>
     <div id="fees">
+      Les frais sont de <%= fees = (price * 0.15).round %> € <!-- TODO -->
     </div>
     <div id="total-price">
+      Le montant total est de <%= price + fees %> € <!-- TODO -->
     </div>
   </div>
 </div>
 <%= f.button :submit, class: "btn btn-warning btn-block" %>
 <% end %>
+
