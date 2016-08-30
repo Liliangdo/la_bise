@@ -81,9 +81,9 @@ en:
         other: "available places"
       cancelrules: "Cancel rules:"
       reviews:
-        zero: "Host not rated yet"
-        one: "opinion"
-        other: "opinions"
+        zero: "There are no reviews yet"
+        one: "review"
+        other: "reviews"
     edit:
       title_update: "Update your event"
       title_create: "Create your event"
@@ -108,4 +108,9 @@ en:
     show:
       welcome: "Hello, my name is"
       edit: "Edit"
+      reviews_show:
+        zero: "There are no reviews yet"
+        one: "Review"
+        other: "Reviews"
+
 

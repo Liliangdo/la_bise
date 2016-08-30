@@ -1,0 +1,16 @@
+.review-card {
+  margin: 0px;
+  .review-owner {
+    color: $bise-red;
+  }
+  .review-rating {
+    text-align: right;
+  }
+  .review-date {
+    color: $gray-light;
+    font-size: 0.8em;
+  }
+}
+.reviews {
+  margin-top: 60px;
+}

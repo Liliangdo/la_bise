@@ -14,11 +14,28 @@ sa descrition -->
         <div class="welcome">
           <h1><%= t('.welcome') %> <%= @user.first_name %> ! <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %></h1>
           <p><%= @user.description %></p>
+          <div class="reviews">
+            <h2><%= t('.reviews_show', count: @user.reviews.count) %></h2>
+            <% @user.reviews.each do |review| %>
+              <div class="review-card card-polaroid">
+                  <div class="media">
+                    <div class="media-left">
+                      REVIEW'S OWNER AVATAR
+                    </div>
+                    <div class="media-body">
+                      <strong class="review-owner"><%= review.user.first_name %></strong><%= t('colon') %> <%= review.content %>
+                      <br>
+                      <span class="review-date"><%= l(review.created_at, format: '%A %d %B') %></span>
+                      <div class="review-rating">
+                        <%= stars(review.rating) %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-8">
-      </div>
-
     </div>
-  </div>
 </div>
+
