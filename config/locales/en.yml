@@ -85,6 +85,12 @@ en:
         one: "opinion"
         other: "opinions"
       capacity: "Capacity"
+
+    event-datepicker:
+      city: "Enter a city"
+      capacity: "Guests"
+      search: "Search"
+
     edit:
       title_update: "Update your event"
       title_create: "Create your event"
