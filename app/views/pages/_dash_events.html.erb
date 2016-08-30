@@ -54,7 +54,7 @@
               <br>
               <div>
                 <div class="dashboard-event-user">
-                  <div class="user-pic" style="background-image: url('https://unsplash.it/<%=rand(300..500)%>');">
+                  <div class="user-pic" style="background-image: url('https://unsplash.it/<%=rand(50..70)%>');">
                   </div>
                   <div class="reservation-user-informations">
                     <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guests', count: reservation.guest) %> for <%= reservation.event.price * reservation.guest %>€
@@ -75,14 +75,16 @@
                         <%= f.button :submit, t('.accept'), class: "btn btn-success pull-right" %>
                       <% end %>
                     <% elsif reservation.canceled? %>
-                      <em>
+                      <p>
                         <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: '%d %b' %> <%= t('.letter_a') %> <%= l reservation.canceled_at, format: '%H:%m' %>
-                      </em>
+                      </p>
                     <% else %>
-                      <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
-                        <%= l reservation.updated_at, format: '%d %b'%>
-                        <%= t('.letter_a') %>
-                        <%= l reservation.updated_at, format: '%H:%m'%>
+                      <p>
+                        <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
+                          <%= l reservation.updated_at, format: '%d %b'%>
+                          <%= t('.letter_a') %>
+                          <%= l reservation.updated_at, format: '%H:%m'%>
+                      </p>
                     <% end %>
                   </div>
                 </div>
