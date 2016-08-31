@@ -1,15 +1,18 @@
 en:
+  colon: ":"
+
   time:
     formats:
       standard: "%m/%d/%Y"
+
   date:
     formats:
-      standard: "%d/%m/%Y"
+      standard: "%m/%d/%Y"
 
-  colon: ":"
+
   shared:
     navbar:
-      profil: "Profile"
+      profil: "Profil"
       home: "Home"
       sign_out: "Log out"
       add_event: "Add event"
@@ -26,7 +29,7 @@ en:
       manual: "Manual"
       credits: "Terms of Us | GCS | Credits"
       security: "Security"
-      super_quote: "We are a team of developers who loves to meet new people: we designed La Bise so everyone can organize a party and make new friends."
+      super_quote: "We are a team of friendly, sociable, loving developers: we designed La Bise so that everyone can meet people in a friendly environment."
 
 
   pages:
@@ -44,13 +47,12 @@ en:
 
     dashboard:
       profil: "Profil"
-      profil-message: "Welcome message on profil page"
       messages: "Messages"
       events: "Events"
       reservations: "Reservations"
 
     dash_profil:
-      welcome: "Hello, my name is"
+      welcome: "Hey, I'm"
       edit: "Edit"
       reviews_show:
         zero: "There are no reviews yet"
@@ -69,7 +71,7 @@ en:
       cancel: "Cancel"
       pending: "Pending"
       canceled_at: "Canceled the: "
-      event_cancel: "Sorry, this event is cancelling. You'll be refund"
+      event_cancel: "Sorry, this event is canceled. You'll be refund"
 
     dash_events:
       deny: "Deny"
@@ -79,7 +81,7 @@ en:
       bringing: "is bringing"
       canceled_by_user: "Reservation canceled by the user the "
       letter_a: " at "
-      canceled_by_host: "You have canceled this event on :"
+      canceled_by_host: "You have canceled this event on the:"
       cancel: "Cancel"
       guests:
         zero: "no guests"
@@ -95,12 +97,12 @@ en:
         other: "guests"
       book: "Book"
       age: "Years old"
-      price: "Price/guest:"
+      price: "Price/Guest:"
       available_places:
         zero: "no places left"
         one: "Place left"
         other: "Available places"
-      cancelrules: "Cancel rules:"
+      cancelrules: "Condition of cancellation:"
       reviews:
         zero: "Host not rated yet"
         one: "opinion"
@@ -117,10 +119,10 @@ en:
     new:
       title_create: "Create your event"
     form_event:
-      upload: "Upload a beautiful Event's Picture"
+      upload: "Upload a beautiful event picture"
       upload_error: "Picture is mandatory, please specify one"
-      name: "Add an Event Name"
-      name_error: "Event Name is mandatory, please specify one"
+      name: "Add an event name"
+      name_error: "Event name is mandatory, please specify one"
       address: "Address"
       starting: "Starting at"
       price: "Price per guest"
@@ -136,7 +138,7 @@ en:
         available_places: "Free places: "
   users:
     show:
-      welcome: "Hello, my name is"
+      welcome: "Hey, I'm"
       edit: "Edit"
       reviews_show:
         zero: "There are no reviews yet"

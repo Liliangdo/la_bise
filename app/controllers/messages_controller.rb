@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-  before_action :find_message, only: []
+  before_action :find_message, only: [:update]
 
   def index
     @messages = Message.all
@@ -24,10 +24,16 @@ class MessagesController < ApplicationController
     end
   end
 
+  def update
+    @message.update(message_params)
+    authorize @message
+    redirect_to dashboard_path
+  end
+
   private
 
   def find_message
-    @message = Message.find(params[:id])
+    @message = Message.find(params[:message][:message_id].to_i)
   end
 
   def message_params
