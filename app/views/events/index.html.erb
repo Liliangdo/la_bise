@@ -1,11 +1,10 @@
 <div class="event-list-container">
-
   <div class="event-list">
     <h1 class="text-center title-index">Event available in <%= session[:city] %>
     </h1>
     <% @events.each do |event| %>
       <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12">
           <%= link_to event_path(event) do %>
             <div class="card text-center">
               <div class="card-polaroid">
@@ -19,7 +18,7 @@
                   <i class="fa fa-eur"></i> <%=event.price%>
                   <i class="fa fa-users"></i> <%=event.capacity%>
                   <i class="fa fa-heart"></i> <%=event.mood%>
-
+                  </a>
                 </p>
               </div>
               <p class="card-author">
