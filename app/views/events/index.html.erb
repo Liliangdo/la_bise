@@ -1,6 +1,6 @@
 <div class="event-list-container">
   <div class="event-list">
-    <h1 class="text-center title-index">Event available in <%= session[:city] %>
+    <h1 class="text-center title-index"><%= t('.result') %> <%= session[:city] %>
     </h1>
     <% @events.each do |event| %>
       <div class="row">

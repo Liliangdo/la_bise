@@ -90,6 +90,9 @@ en:
 
 
   events:
+    index:
+      result: "Restult for"
+
     show:
       peoples:
         zero: ""
@@ -121,7 +124,7 @@ en:
       title_create: "Create your event"
 
     form_event:
-      upload: "Upload a beautiful event picture"
+      upload: "Add a picture"
       upload_error: "Picture is mandatory, please specify one"
       name: "Add an event name"
       name_error: "Event name is mandatory, please specify one"
@@ -134,6 +137,7 @@ en:
       mood: "Mood"
       house_type: "House type"
       option: "Option"
+      create: "Create my event"
 
 
   messages:
