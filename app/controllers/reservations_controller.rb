@@ -18,8 +18,11 @@ class ReservationsController < ApplicationController
     authorize @reservation
     @reservation.user = @current_user
     @reservation.event = @event
+    @reservation.event_sku = @event.sku
+    @reservation.amount = (@reservation.guest * @reservation.event.price * 1.15).round
+    @reservation.state = "pending"
     if @reservation.save
-      redirect_to dashboard_path, notice: "Your reservation was successfully booked."
+      redirect_to new_event_reservation_payment_path(@event, @reservation)
     else
       render :new
     end

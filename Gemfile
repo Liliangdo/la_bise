@@ -19,6 +19,9 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+gem 'money-rails'
+gem 'stripe'
+
 
 gem 'faker'
 
