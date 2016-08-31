@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get '/', to: 'pages#home'
     get '/dashboard', to: 'pages#dashboard'
     resources :events, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
-      resources :messages, only: [:index, :new, :create]
+      resources :messages, only: [:index, :new, :create, :edit, :update]
       resources :reviews, only: [:index, :create]
       resources :reservations, only: [:index, :new, :create, :update, :destroy]
     end

@@ -4,17 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
-        <%= simple_form_for [@event, @message] do |f| %>
-            <%= f.error_notification %>
-              <% if @message.errors.any? %>
-                <%= @message.errors.full_messages.join(" ") %>
-               <% end %>
-            <%= f.input :content %>
-            <%#= f.association :recipient, collection: @event.confirmed_users, label_method: :username %>
-            <%= f.input :recipient_id, as: :hidden, input_html: {value: @event.user_id} %>
-            <%= f.input :sender_id, as: :hidden, input_html: { value: current_user.id } %>
-            <%= f.button :submit, class: "space btn-block btn-primary" %>
-        <% end %>
+      <%= render 'form_message', {event: @event, message: @message} %>
     </div>
   </div>
 </div>
