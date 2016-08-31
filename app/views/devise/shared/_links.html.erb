@@ -1,4 +1,10 @@
 <%- if controller_name != 'sessions' %>
+  <%- if devise_mapping.omniauthable? %>
+    <%= link_to omniauth_authorize_path(resource_name, "facebook"), class: "btn btn-block btn-primary" do %>
+      <span class="facebook pull-left"><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
+      <%= t('.sign_in_with_provider', :provider => "facebook", :default => "Sign in with Facebook")%>
+    <% end %> <br>
+  <% end -%>
   <%= link_to t(".sign_in"), new_session_path(resource_name) %><br />
 <% end -%>
 
@@ -18,9 +24,3 @@
   <%= link_to t('.didn_t_receive_unlock_instructions'), new_unlock_path(resource_name) %><br />
 <% end -%>
 
-<%- if devise_mapping.omniauthable? %>
-  <%= link_to omniauth_authorize_path(resource_name, "facebook"), class: "btn btn-primary btn-facebook" do %>
-    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-    <%= t('.sign_in_with_provider', :provider => "facebook", :default => "Sign in with Facebook") %>
-  <% end %>
-<% end -%>

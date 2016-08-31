@@ -12,6 +12,10 @@
     font-weight: 600;
   }
 
+  h2 {
+    color: $bise-red;
+  }
+
   ul {
     list-style:none;
     -webkit-margin-before: 0em;
@@ -62,9 +66,16 @@
 
   .btn {
     height: 50px;
+    line-height: 38px;
   }
 
   .description {
     resize: none;
+  }
+
+  i {
+    font-size: 30px;
+    color: white;
+    vertical-align: sub;
   }
 }
