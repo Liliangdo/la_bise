@@ -3,9 +3,9 @@
     <% if message.errors.any? %>
       <%= message.errors.full_messages.join(" ") %>
      <% end %>
-  <%= f.input :content %>
+  <%= f.input :content, label: t('.chat') %>
   <%= f.input :message_id, as: :hidden, input_html: {value: message.id} %>
   <%= f.input :recipient_id, as: :hidden, input_html: {value: message.sender_id} %>
   <%= f.input :sender_id, as: :hidden, input_html: { value: current_user.id } %>
-  <%= f.button :submit, class: "space btn-block btn-primary" %>
+  <%= f.button :submit, t('.answer'), class: "space btn-block btn-primary" %>
 <% end %>

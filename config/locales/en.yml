@@ -144,6 +144,10 @@ en:
       your_message: "Your message:"
       send: "Send"
 
+    form_message_answer:
+      chat: "Chat"
+      answer: "Answer"
+
 
   reservations:
     new:

@@ -148,6 +148,9 @@ fr:
       available_places: "Places libres : "
       send: "Envoyer"
 
+    form_message_answer:
+      chat: "Discussion :"
+      answer: "Répondre"
 
   users:
     show:
