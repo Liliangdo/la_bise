@@ -17,7 +17,7 @@
       <div class="row">
         <div class="hidden-xs">
           <h1 class="text-center">
-            <%= render 'events/event-datepicker' %>
+            <%= render 'events/event-datepicker'  %>
           </h1>
         </div>
       </div>
@@ -150,10 +150,8 @@
             <%= l(@event.starting_at, format: '%H:%M') %>
           </div>
           <div class="info" id="reservation-informations" data-price="<%= @event.price %>" data-frais="0.15">
-            <!-- PUT DEFAULT VALUE FOR SESSION CAPACITY IF THE EVENT SHOW IS VISITED FROM THE HOME AND NOT A SEARCH RESULT -->
-            <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
+            <%= render 'shared/reservation_form' %>
           </div>
-          <%= render 'shared/reservation_form' %>
         </div>
       </div>
     </div>
