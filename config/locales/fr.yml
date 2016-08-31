@@ -12,12 +12,12 @@ fr:
 
   shared:
     navbar:
-      profil: "Profil"
-      home: "Acccueil"
-      sign_out: "Déconnexion"
       add_event: "Créer une soirée"
       sign_in: "Connexion"
+    dropdown:
+      home: "Accueil"
       dashboard: "Tableau de bord"
+      sign_out: "Déconnexion"
 
     footer:
       who: "Qui sommes-nous ?"
@@ -29,7 +29,7 @@ fr:
       manual: "Mode d'emploi"
       credits: "CGU | CGV | Crédits"
       security: "Sécurité"
-      super_quote: "Nous sommes une bande de développeurs qui aimons faire de nouvelles rencontres : nous avons conçu La Bise afin que chacun puisse organiser sa soirée et se découvrir de nouveaux amis."
+      super_quote: "Nous sommes une bande de développeurs qui aimons faire de nouvelles rencontres : nous avons conçu La Bise afin que chacun puisse organiser sa soirée et rencontrer de nouveaux amis."
 
 
   pages:
@@ -92,6 +92,9 @@ fr:
 
 
   events:
+    index:
+      result: "Résultat pour"
+
     show:
       peoples:
         zero: ""
@@ -118,10 +121,12 @@ fr:
 
     edit:
       title_update: "Mettre à jour votre événement"
+
     new:
-      title_create: "Créér votre événement"
+      title_create: "Créez votre événement"
+
     form_event:
-      upload: "Téléchargez une superbe photo de votre événement"
+      upload: "Ajoutez une image"
       upload_error: "La photo est obligatoire, ajoutez une photo s'il vous plait"
       name: "Ajoutez un nom"
       name_error: "Nom obligatoire, ajoutez en un !"
@@ -134,6 +139,7 @@ fr:
       mood: "Ambiance"
       house_type: "Type d'endroit"
       option: "Options"
+      create: "Créer mon évènement"
 
 
   messages:

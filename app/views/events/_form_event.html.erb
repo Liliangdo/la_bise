@@ -3,8 +3,8 @@
   <% if @event.errors.any? %>
     <%= @event.errors.full_messages.join(" ") %>
   <% end %>
-  <%= f.input :photos, as: :attachinary, label: t('.upload'), error: t('.upload_error') %>
-  <button class="btn-upload" type="button" onclick="chooseFile();">Choisissez votre photo</button>
+  <%= f.input :photos, as: :attachinary, error: t('.upload_error') %>
+  <button class="btn-upload" type="button" onclick="chooseFile();"><%= t('.upload') %></button>
   <%= f.input :name, label: t('.name'), error: t('.name_error')%>
   <%= f.input :address, label: t('.address') %>
   <%= f.input :starting_at, label: t('.starting') %>
@@ -13,6 +13,6 @@
   <%= f.input :capacity, label: t('.capacity'), collection: (1..100) %>
   <%= f.input :mood, label: t('.mood'),collection: [ "Electro", "Pop", "Funk","Jazz","Cozy","Rap US"]%>
   <%= f.input :house_type,  label: t('.house_type'), collection: [ "Studio", "Loft", "Flat","Private Garden","Rooftop","House","Villa"] %>
-  <%= f.button :submit, class: "btn btn-block btn-success" %>
+  <%= f.button :submit, t('.create'), class: "btn btn-block btn-success" %>
 <% end %>
 
