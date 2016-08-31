@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-  before_action :find_message, only: [:update]
+  before_action :find_message, only: [:update, :edit]
 
   def index
     @messages = Message.all
@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
+    message_load
     @message.event = Event.find(params[:event_id])
     authorize @message
     if @message.save
@@ -22,6 +23,11 @@ class MessagesController < ApplicationController
     else
       render 'messages/new'
     end
+  end
+
+  def edit
+    message_load
+    @message.update
   end
 
   def update
@@ -38,5 +44,9 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:content, :recipient_id, :sender_id, :event_id)
+  end
+
+  def message_load
+    @message.content = "#{@message.content}\n#{'-' * 3} \n#{@message.sender_id} at #{@message.created_at}\n#{'-' * 50}\n"
   end
 end

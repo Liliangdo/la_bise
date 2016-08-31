@@ -116,8 +116,10 @@ en:
 
     edit:
       title_update: "Update your event"
+
     new:
       title_create: "Create your event"
+
     form_event:
       upload: "Upload a beautiful event picture"
       upload_error: "Picture is mandatory, please specify one"
@@ -133,9 +135,25 @@ en:
       house_type: "House type"
       option: "Option"
 
+
+  messages:
+    new:
+      new_message: "New message"
+
+    form_message:
+      your_message: "Your message:"
+      send: "Send"
+
+    form_message_answer:
+      chat: "Chat"
+      answer: "Answer"
+
+
   reservations:
-      new:
-        available_places: "Free places: "
+    new:
+      available_places: "Free places: "
+
+
   users:
     show:
       welcome: "Hey, I'm"
