@@ -11,7 +11,7 @@ class PagesController < ApplicationController
     @user = current_user
 
     @events = policy_scope(Event).where(user_id: current_user.id)
-    @reservations = policy_scope(Reservation).where(user: current_user)
+    @reservations = policy_scope(Reservation).where(user: current_user, state: "paid")
     # @messages = policy_scope(Message).where(user: :sender_id || :recipient_id)
     @messages = policy_scope(Message).where(sender_id: current_user).or(policy_scope(Message)
                                       .where(recipient_id: current_user))

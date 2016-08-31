@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'payments/new'
+
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations'
@@ -13,7 +15,9 @@ Rails.application.routes.draw do
     resources :events, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
       resources :messages, only: [:index, :new, :create]
       resources :reviews, only: [:index, :create]
-      resources :reservations, only: [:index, :new, :create, :update, :destroy]
+      resources :reservations, only: [:index, :new, :create, :update, :destroy] do
+        resources :payments, only: [:new, :create]
+      end
     end
     resources :users, only: [:show, :edit, :update]
   end
