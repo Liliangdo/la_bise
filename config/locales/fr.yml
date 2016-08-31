@@ -136,10 +136,18 @@ fr:
       option: "Options"
 
 
+  messages:
+    new:
+      new_message: "Nouveau message"
+
+    form_message:
+      your_message: "Votre message :"
 
   reservations:
-      new:
-        available_places: "Places libres : "
+    new:
+      available_places: "Places libres : "
+      send: "Envoyer"
+
 
   users:
     show:

@@ -3,9 +3,9 @@
   <% if @event.errors.any? %>
     <%= @event.errors.full_messages.join(" ") %>
   <% end %>
-  <%= f.input :photos, as: :attachinary,label: t('.upload'), error: t('.upload_error') %>
+  <%= f.input :photos, as: :attachinary, label: t('.upload'), error: t('.upload_error') %>
   <button class="btn-upload" type="button" onclick="chooseFile();">Choisissez votre photo</button>
-  <%= f.input :name,label: t('.name'), error: t('.name_error')%>
+  <%= f.input :name, label: t('.name'), error: t('.name_error')%>
   <%= f.input :address, label: t('.address') %>
   <%= f.input :starting_at, label: t('.starting') %>
   <%= f.input :price, label: t('.price') %>
