@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     @reservation.user = @current_user
     @reservation.event = @event
     @reservation.event_sku = @event.sku
-    @reservation.amount = (@reservation.guest * @reservation.event.price * 1.15).round
+    @reservation.amount = @reservation.compute_price
     @reservation.state = "pending"
     if @reservation.save
       redirect_to new_event_reservation_payment_path(@event, @reservation)

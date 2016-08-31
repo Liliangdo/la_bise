@@ -25,4 +25,8 @@ class Reservation < ApplicationRecord
   def canceled?
     !self.canceled_at.nil?
   end
+
+  def compute_price
+    (guest * event.price * 1.15).round
+  end
 end
