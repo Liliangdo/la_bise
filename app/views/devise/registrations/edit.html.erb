@@ -12,7 +12,13 @@
           <%= f.input :email, required: true, autofocus: true %>
           <%= f.input :first_name %>
           <%= f.input :last_name %>
-          <%= f.input :birth_date  %>
+
+        </div>
+        <div class="input-group date" data-lang="<%= I18n.locale %>" >
+          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+          <%= f.text_field :birth_date, class: "input-sm form-control", value: current_user.birth_date %>
+        </div>
+        <div>
           <%= f.input :phone_number %>
           <%= f.input :description %>
 
