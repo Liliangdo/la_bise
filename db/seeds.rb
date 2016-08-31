@@ -130,12 +130,17 @@ end
 puts " "
 puts "message seed end"
 
-# User.create(first_name: "Lilian", last_name: "Garrido", birth_date: "13/10/1995", address: "Bordeaux", gender: "male", email: "lili@lewagon.org", phone_number: "555-550", description: "Bonjour je m'appelle Lilian et je suis le créateur de La Bise !", password: "123456789")
-# User.create(first_name: "Laurianne", last_name: "Gerin", birth_date: "22/04/1992", address: "Bordeaux", gender: "female", email: "lolo@lewagon.org", phone_number: "555-551", description: "Bonjour je m'appelle Laurianne et j'aime le raisin !", password: "123456789")
-# User.create(first_name: "Marc", last_name: "Desrosiers", birth_date: "01/11/1972", address: "Angoulême", gender: "male", email: "marco@lewagon.org", phone_number: "555-552", description: "Bonjour je m'appelle Marc et j'ai remporté un Iron Man !!!", password: "123456789")
-# User.create(first_name: "Sébastien", last_name: "Carnélos", birth_date: "19/10/1983", address: "Bordeaux", gender: "male", email: "seb@lewagon.org", phone_number: "555-553", description: "Bonjour je m'appelle Sébastien et je grimpe sur tout ce qui a des prises !", password: "123456789")
-#
-#
+
+# User.create(first_name: "Lilian", last_name: "Garrido", birth_date: "13/10/1995", address: "Bordeaux", gender: "male", email: "lilian@lewagon.org", phone_number: "555-550", description: "Bonjour je m'appelle Lilian et je suis le créateur de La Bise !", password: "123soleil")
+# puts "user lilian@lewagon.org"
+# User.create(first_name: "Laurianne", last_name: "Gerin", birth_date: "22/04/1992", address: "Bordeaux", gender: "female", email: "laurianne@lewagon.org", phone_number: "555-551", description: "Bonjour je m'appelle Laurianne et j'aime le raisin !", password: "123soleil")
+# puts "user laurianne@lewagon.org"
+# User.create(first_name: "Marc", last_name: "Desrosiers", birth_date: "01/11/1972", address: "Angoulême", gender: "male", email: "marc@lewagon.org", phone_number: "555-552", description: "Bonjour je m'appelle Marc et j'ai remporté un Iron Man !!!", password: "123soleil")
+# puts "user marc@lewagon.org"
+# User.create(first_name: "Sébastien", last_name: "Carnélos", birth_date: "19/10/1983", address: "Bordeaux", gender: "male", email: "seb@lewagon.org", phone_number: "555-553", description: "Bonjour je m'appelle Sébastien et je grimpe sur tout ce qui a des prises !", password: "123soleil")
+# puts "user seb@lewagon.org"
+
+
 # Event.create(user_id: 1, name: "Soirée d'inauguration La Bise", description: "Pour fêter la fin de notre projet, je vous invite à un brunch, chez moi.", price: 15, house_type: "Appartement", capacity: "8",created_at: Time.now, starting_at: Faker::Date.backward(14))
 # Event.create(user_id: 2, name: "Soirée raisin", description: "Dégusation de raisins (pas de vins) : colique assurée !", price: 8, house_type: "Appartement", capacity: "10",created_at: Time.now, starting_at: Faker::Date.forward(23))
 # Event.create(user_id: 3, name: "Soirée Iron Man", description: "Venez regarder la trilogie Iron Man dans mon home cinema. Je parle des trois dernières courses, pas des films !", price: 5, house_type: "Maison", capacity: "7",created_at: Time.now, starting_at: Faker::Date.forward(23))
