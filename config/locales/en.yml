@@ -128,6 +128,7 @@ en:
       price: "Price per guest"
       description: "Description"
       capacity: "Capacity"
+      group_age: "Group age"
       mood: "Mood"
       house_type: "House type"
       option: "Option"

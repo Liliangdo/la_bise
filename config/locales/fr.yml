@@ -130,6 +130,7 @@ fr:
       price: "Prix par personne"
       description: "Description"
       capacity: "Capacité"
+      group_age: "Tranche d'age"
       mood: "Ambiance"
       house_type: "Type d'endroit"
       option: "Options"
