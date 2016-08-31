@@ -45,7 +45,6 @@ fr:
 
     dashboard:
       profil: "Profile"
-      profil-message: "Message de bienvenue sur la page du progil"
       messages: "Messages"
       events: "Evénements"
       reservations: "Réservations"
