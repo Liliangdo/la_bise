@@ -47,6 +47,6 @@ class MessagesController < ApplicationController
   end
 
   def message_load
-    @message.content = "#{@message.content}\n#{'-' * 3} \n#{@message.sender_id} at #{@message.created_at}\n#{'-' * 50}\n"
+    @message.content = "#{@message.content}\n#{'-' * 3} \n#{User.find(@message.sender_id).username} - #{l Time.now, format: :short}\n#{'*' * 50}\n"
   end
 end
