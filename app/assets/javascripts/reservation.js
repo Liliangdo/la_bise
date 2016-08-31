@@ -7,7 +7,7 @@ $(document).ready(function() {
     // Save unit price
     var unit_price = $("#reservation-informations").data('price');
     // Collecte the number place choice on change
-    var number_place = $('#reservation_guest')["0"].selectedIndex;
+    var number_place = $('#reservation_guest')["0"].selectedIndex + 1;
     // Collecte the rate fees
     var rate_fees = $("#reservation-informations").data('frais');
     // Calculate the price number place * unit price
