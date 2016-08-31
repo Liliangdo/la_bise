@@ -26,9 +26,15 @@ class ReservationsController < ApplicationController
   end
 
   def update
-    @reservation.update(params_reservation)
-    authorize @reservation
-    redirect_to dashboard_path
+    # @reservation.update(params_reservation)
+    # authorize @reservation
+    # redirect_to dashboard_path
+    if @reservation.update(params_reservation)
+      respond_to do |format|
+        format.html {redirect_to dashboard_path}
+        format.js
+      end
+    end
   end
 
   def destroy
@@ -39,6 +45,8 @@ class ReservationsController < ApplicationController
 
   def find_reservation
     @reservation = Reservation.find(params[:id])
+    authorize @reservation
+
   end
 
   def find_event

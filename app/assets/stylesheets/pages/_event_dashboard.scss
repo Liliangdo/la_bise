@@ -29,7 +29,7 @@
   width: 75%;
 }
 
-.reservation-statuts {
+.reservation-statuts, .dashboard-events-buttons {
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -38,3 +38,4 @@
     color: $gray-light;
   }
 }
+
