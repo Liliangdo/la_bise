@@ -51,6 +51,7 @@ puts "event begin"
     capacity: rand(1..15),
     starting_at: Faker::Time.forward(23, :evening),
     mood: Faker::Color.color_name,
+    sku: "event#{rand(1..99)}",
     group_age: ["18-25", "25-30", "30-35", "35-40"].sample,
     option: ["Jardin", "Terrasse", "Piscine", "Garage", "Patio", "Home cinema", "Animaux", "Non-fumeur"].sample(2).flatten,
     address:["25 rue georges Pompidou 33600 pessac",
@@ -79,12 +80,15 @@ puts "event seed end"
 puts "reservation begin"
 
 10.times do
+  event = Event.all.sample
   reservation = Reservation.new(
     user_id: User.all.sample.id,
-    event_id: Event.all.sample.id,
+    event: event,
     ['accepted_at', 'refused_at', 'canceled_at'].sample.to_sym => Faker::Time.backward(5),
-    guest: rand(1..5)
+    guest: rand(1..5),
+    event_sku: event.sku,
   )
+  reservation.amount = reservation.compute_price
   reservation.save
   print "* "
 end
