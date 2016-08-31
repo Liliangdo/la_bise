@@ -26,12 +26,12 @@ class MessagesController < ApplicationController
   end
 
   def edit
-    message_load
     @message.update
   end
 
   def update
     @message.update(message_params)
+    message_load
     authorize @message
     redirect_to dashboard_path
   end
@@ -47,6 +47,7 @@ class MessagesController < ApplicationController
   end
 
   def message_load
-    @message.content = "#{@message.content}\n#{'-' * 3} \n#{@message.sender_id} at #{@message.created_at}\n#{'-' * 50}\n"
+    @message.content = "#{@message.content}\n#{'-' * 3} \n#{User.find(@message.sender_id).username} - #{l Time.now, format: :short}\n#{'*' * 50}\n"
+    authorize @message
   end
 end

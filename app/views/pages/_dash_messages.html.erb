@@ -1,20 +1,31 @@
-<% @events.each do |event| %>
-  <h2>
-   <%= event.name %>
-  </h2>
-  <% event.messages.each do |message| %>
+<% if not @events.nil? %>
+  <% @messages.each do |message| %>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8">
           <div class="answer">
-                <%#= message.content %>
-              <%#= l message.created_at, format: :short %>
-              <!-- from -->
-              <!-- <%#= message.sender_id %> to <%#= message.recipient_id %> -->
-            <%= render 'messages/form_message_answer', {event: event, message: message} %>
+            <%= render 'messages/form_message_answer', {event: message.event, message: message} %>
           </div>
         </div>
       </div>
      </div>
   <% end %>
+<% else %>
+  <% @events.each do |event| %>
+    <h2>
+     <%= event.name %>
+    </h2>
+    <% event.messages.each do |message| %>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+            <div class="answer">
+              <%= render 'messages/form_message_answer', {event: event, message: message} %>
+            </div>
+          </div>
+        </div>
+       </div>
+    <% end %>
+  <% end %>
 <% end %>
+
