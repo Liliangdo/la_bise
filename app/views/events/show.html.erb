@@ -58,7 +58,7 @@
                   <i class="fa fa-star" asria-hidden="true"></i> <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong> - <%= @event.reviews.count != 0 ? @event.reviews.count : ""  %> <%= t('.reviews', count: @event.reviews.count) %>
                 </div>
                 <div class="media-right">
-                  <%= link_to '<i class="fa fa-comments" aria-hidden="true"></i>'.html_safe, new_event_message_path(params[:id]) %>
+                  <%= link_to '<i class="fa fa-comments" aria-hidden="true"></i>'.html_safe, "#" %>
                 </div>
               </div>
             </div>
