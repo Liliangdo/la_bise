@@ -1,15 +1,15 @@
 <% if user_signed_in? %>
 
-  <li class="hidden-md">
+  <li class="hidden-sm hidden-md hidden-lg">
     <%= link_to new_event_path do %>
       <i class="fa fa-plus-circle bise-red" aria-hidden="true"></i> <%= t('.add_event') %>
     <% end %>
   </li>
-  <li>
+<!--   <li>
     <%= link_to user_path(current_user) do %>
       <i class="fa fa-user bise-red"></i> <%= t('.profil') %>
     <% end %>
-  </li>
+  </li> -->
   <li>
     <%= link_to root_path do %>
       <i class="fa fa-home bise-red"></i>  <%= t('.home') %>

@@ -17,9 +17,9 @@ $(document).ready(function() {
     // Calculate the total
     var total_price = price + fees;
 
-    $('#price').text('Le prix est de ' + price + ' €');
-    $('#fees').text('Les frais sont de ' + fees + ' €');
-    $('#total-price').text('Le montant total est de ' + total_price + ' €');
+    $('#price').text('The price is ' + price + '€');
+    $('#fees').text('Fees are ' + fees + '€');
+    $('#total-price').text('The amount is ' + total_price + '€');
 
     $('#price').slideDown();
     $('#fees').slideDown();
