@@ -2,22 +2,19 @@
   <h2>
    <%= event.name %>
   </h2>
-    <% event.messages.each do |message| %>
-      <div class="message">
-        <p>
-          <%= l message.created_at, format: :short %>
-          from
-          <%= message.sender_id %> to <%= message.recipient_id %>
-        </p>
-        <p>
-          <em>
-            <%= message.content %>
-          </em>
-        </p>
+  <% event.messages.each do |message| %>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+          <div class="answer">
+                <%#= message.content %>
+              <%#= l message.created_at, format: :short %>
+              <!-- from -->
+              <!-- <%#= message.sender_id %> to <%#= message.recipient_id %> -->
+            <%= render 'messages/form_message_answer', {event: event, message: message} %>
+          </div>
+        </div>
       </div>
-      <div class="answer">
-
-        <%= link_to "Answer", new_event_message_path(event.id), class: 'btn btn-primary pull-right' %>
-      </div>
-    <% end %>
+     </div>
+  <% end %>
 <% end %>

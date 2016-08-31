@@ -1,0 +1,11 @@
+<%= simple_form_for [event, message], url: new_event_message_path(event.id) do |f| %>
+  <%= f.error_notification %>
+    <% if message.errors.any? %>
+      <%= message.errors.full_messages.join(" ") %>
+     <% end %>
+  <%= f.input :content %>
+  <%= f.input :message_id, as: :hidden, input_html: {value: message.id} %>
+  <%= f.input :recipient_id, as: :hidden, input_html: {value: message.sender_id} %>
+  <%= f.input :sender_id, as: :hidden, input_html: { value: current_user.id } %>
+  <%= f.button :submit, class: "space btn-block btn-primary" %>
+<% end %>

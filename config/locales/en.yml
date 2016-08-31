@@ -121,7 +121,7 @@ en:
       upload_error: "Picture is mandatory, please specify one"
       name: "Add an Event Name"
       name_error: "Event Name is mandatory, please specify one"
-      address: "Adress"
+      address: "Address"
       starting: "Starting at"
       price: "Price per guest"
       description: "Description"

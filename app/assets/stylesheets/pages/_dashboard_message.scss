@@ -1,6 +1,5 @@
 .message, .answer {
   min-height: 60px;
-  width: 400px;
   border-radius: 5px;
   box-shadow: 0 0 10px #222;
   background-color: #FFF;
@@ -11,5 +10,5 @@
 
 .answer {
   background-color: $gray-lighter;
-  margin-left: 50px;
+  // margin-left: 50px;
 }
