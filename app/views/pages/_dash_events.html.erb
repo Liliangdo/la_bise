@@ -61,19 +61,23 @@
                   </div>
                   <div class="reservation-statuts">
                     <% if not reservation.answered? %>
-                      <%= simple_form_for([event, reservation], remote: false, method: "patch") do |f| %>
-                        <%= f.input :refused_at,
-                                  as: :hidden,
-                                  input_html: {value: Time.now} %>
-                        <%= f.button :submit, t('.deny'), class: "btn btn-danger pull-right" %>
-                      <% end %>
-
-                      <%= simple_form_for([event, reservation], remote: false, method: "patch") do |f| %>
-                        <%= f.input :accepted_at,
-                                    as: :hidden,
-                                    input_html: {value: Time.now} %>
-                        <%= f.button :submit, t('.accept'), class: "btn btn-success pull-right" %>
-                      <% end %>
+                      <% btn_reservation_id = 'btn_reservation_' + reservation.id.to_s %>
+                        <div class=<%= btn_reservation_id%>>
+                          <%= simple_form_for([event, reservation], remote: true, method: "patch") do |f| %>
+                            <%= f.input :refused_at,
+                                      as: :hidden,
+                                      input_html: {value: Time.now} %>
+                            <%= f.button :submit, t('.deny'), class: "btn btn-danger pull-right" %>
+                          <% end %>
+                        </div>
+                        <div class=<%= btn_reservation_id%>>
+                          <%= simple_form_for([event, reservation], remote: true) do |f| %>
+                            <%= f.input :accepted_at,
+                                        as: :hidden,
+                                        input_html: {value: Time.now} %>
+                            <%= f.button :submit, t('.accept'), class: "btn btn-success pull-right" %>
+                          <% end %>
+                        </div>
                     <% elsif reservation.canceled? %>
                       <p>
                         <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: '%d %b' %> <%= t('.letter_a') %> <%= l reservation.canceled_at, format: '%H:%m' %>
