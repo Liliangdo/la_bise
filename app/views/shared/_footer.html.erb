@@ -1,8 +1,22 @@
 <div id="footer">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <h4 class="footer-titles">La Bise</h4>
+
+
+      <div class="col-xs-12 col-sm-3">
+        <h4 class="footer-flags"></h4>
+          <% if I18n.locale == I18n.default_locale %>
+            <%= link_to :locale=>'fr' do %>
+              <%= image_tag("france.png")%>
+            <% end %>
+          <% else %>
+            <%= link_to :locale=>'' do %>
+              <%= image_tag("uk.png") %>
+            <% end %>
+          <%end%>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <h4 class="footer-titles text-center">La Bise</h4>
         <ul>
           <li class="no-decoration-list"><a href="#"><%= t('.who') %></a></li>
           <li class="no-decoration-list"><a href="#"><%= t('.contact_us') %></a></li>
@@ -10,8 +24,8 @@
           <li class="no-decoration-list"><a href="#"><%= t('.press') %></a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <h4 class="footer-titles"><%= t('.help') %></h4>
+      <div class="col-xs-12 col-sm-3">
+        <h4 class="footer-titles text-center"><%= t('.help') %></h4>
         <ul>
           <li class="no-decoration-list"><a href="#"><%= t('.faq') %></a></li>
           <li class="no-decoration-list"><a href="#"><%= t('.manual') %></a></li>
@@ -19,7 +33,7 @@
           <li class="no-decoration-list"><a href="#"><%= t('.security') %></a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-3">
         <h4><i class="fa fa-quote-right footer-titles" aria-hidden="true"></i></h4>
         <p><em><%= t('.super_quote') %></em></p>
       </div>
