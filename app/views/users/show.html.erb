@@ -13,7 +13,9 @@
             <tbody>
               <tr>
                 <td>
-                  <i class="fa fa-check-circle-o" aria-hidden="true"></i>  <%= t('.birth_date') %><%= l(@user.birth_date, format: :standard) %>
+                  <% if @user.birth_date  %>
+                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>  <%= t('.birth_date') %><%= l(@user.birth_date, format: :standard) %>
+                  <% end %>
                 </td>
               </tr>
               <tr>
