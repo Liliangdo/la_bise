@@ -16,7 +16,7 @@ class Event < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
-
+  monetize :price_cents
 
 
   def available_places

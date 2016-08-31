@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825085739) do
+ActiveRecord::Schema.define(version: 20160831104315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,19 +34,20 @@ ActiveRecord::Schema.define(version: 20160825085739) do
     t.integer  "user_id"
     t.string   "name"
     t.text     "description"
-    t.integer  "price"
     t.string   "mood"
     t.string   "group_age"
     t.string   "option"
     t.string   "house_type"
     t.integer  "capacity"
     t.datetime "starting_at"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.datetime "canceled_at"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "address"
+    t.string   "sku"
+    t.integer  "price_cents", default: 0, null: false
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end
 
@@ -62,15 +63,29 @@ ActiveRecord::Schema.define(version: 20160825085739) do
     t.index ["sender_id"], name: "index_messages_on_sender_id", using: :btree
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string   "state"
+    t.string   "event_sku"
+    t.integer  "amount_cents", default: 0, null: false
+    t.json     "payement"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "event_id"
     t.datetime "accepted_at"
     t.datetime "refused_at"
     t.datetime "canceled_at"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "guest"
+    t.integer  "price_cents",  default: 0, null: false
+    t.string   "state"
+    t.string   "event_sku"
+    t.integer  "amount_cents", default: 0, null: false
+    t.json     "payment"
     t.index ["event_id"], name: "index_reservations_on_event_id", using: :btree
     t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
   end
