@@ -39,8 +39,10 @@
       </div>
       <div class="col-xs-12 col-md-8">
         <div class="welcome">
-          <h1><%= t('.welcome') %> <%= @user.first_name %> ! <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %></h1>
-          <p><%= @user.description %></p>
+          <div class="description">
+            <h1><%= t('.welcome') %> <%= @user.first_name %> ! <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %></h1>
+            <p><%= @user.description %></p>
+          </div>
           <div class="reviews">
             <h2><%= t('.reviews_show', count: @user.reviews.count) %></h2>
             <% @user.reviews.each do |review| %>
