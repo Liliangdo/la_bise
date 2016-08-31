@@ -154,7 +154,6 @@
             <%= session[:capacity] %> <%= t('.peoples', count: session[:capacity].to_i) %>
           </div>
           <%= render 'shared/reservation_form' %>
-            <%= link_to t('.book'), new_event_reservation_path(params[:id]), class: "btn btn-warning btn-block" %>
         </div>
       </div>
     </div>

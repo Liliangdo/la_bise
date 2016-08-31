@@ -2,8 +2,9 @@
   top: 0px;
   background-color: #CC0000;
   height: 100vh;
+  max-width: 200px;
   position: fixed;
-  right: 0px;
+  right: 15px;
   padding: 25px 10px 10px 10px;
 }
 #recap {
@@ -14,4 +15,8 @@
   margin: 9px 0px;
   padding: 5px 10px ;
   }
+}
+
+.reservation-results-div {
+  width:150px;
 }
