@@ -6,7 +6,7 @@ console.log('<%= div_name %>');
 // hide slowly buttons on clic
 $('.<%= div_name %>').slideUp();
 // Display a letter picture for few seconds, move the letter fast on the top
-$('.<%= div_name %>').text('Check!');
+$('.<%= div_name %>').html('<i class="fa fa-check-circle-o" aria-hidden="true"></i>');
 // Display a setences... Confirmation send
 $('.<%= div_name %>').slideDown().delay( 800 );
 //
