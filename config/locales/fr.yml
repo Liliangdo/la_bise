@@ -15,7 +15,7 @@ fr:
       add_event: "Créer une soirée"
       sign_in: "Connexion"
     dropdown:
-      home: "Acccueil"
+      home: "Accueil"
       dashboard: "Tableau de bord"
       sign_out: "Déconnexion"
 
