@@ -6,9 +6,11 @@
   margin: 0;
   text-align: center;
   color: white;
+  z-index: 2000;
 }
 .alert-info {
   background: $green;
+  border-color: none !important;
 }
 .alert-warning {
   background: $red;
