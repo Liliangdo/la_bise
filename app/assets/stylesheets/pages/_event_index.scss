@@ -13,6 +13,7 @@
       font-size: 2.3rem;
       font-weight: 600;
       padding: 0 20px;
+      color: $bise-red;
     }
 
     .card {
@@ -33,6 +34,10 @@
     flex-direction: column;
     margin: 0;
     align-items: stretch;
+  }
+
+  h1 {
+    color: $bise-red;
   }
 
   .navbar-wagon {
