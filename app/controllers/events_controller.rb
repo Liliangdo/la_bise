@@ -9,7 +9,6 @@ class EventsController < ApplicationController
     session[:city] = params[:search][:city]
     session[:capacity] = params[:search][:capacity]
     params[:search][:flexible] == "1" ? flexible = 4 : flexible = 0
-raise
     if params[:search][:date].empty?
       redirect_to root_path, alert: "Please fill the fields below..."
     else
