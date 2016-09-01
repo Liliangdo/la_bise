@@ -6,3 +6,20 @@
   background-color: white;
   width: 100%;
 }
+
+.event-picture img{
+  width: 100%;
+}
+
+.stripe-button-el {
+  background-image: none !important;
+  box-shadow: none !important;
+  background-color: $bise-red !important;
+}
+
+
+.stripe-button-el span {
+  background-color: $bise-red !important;
+  text-shadow: none !important;
+  background-image: none !important;
+}

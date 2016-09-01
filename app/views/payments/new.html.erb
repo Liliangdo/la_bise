@@ -3,7 +3,12 @@
     <div class="row">
       <div class="col-xs-12 col-sm-offset-4 col-sm-4">
         <div class="payment-bill text-center">
-          <h1><%= t('.purchase')%></h1> <h3><%= @reservation.event.name %></h3>
+          <h1><%= t('.purchase')%></h1>
+          <div class="event-picture">
+            <%= helper_picture_tag(@reservation.event) %>
+          </div>
+          <h3><%= @reservation.event.name %></h3>
+
           <%= form_tag event_reservation_payments_path(@reservation.event, @reservation) do %>
             <article>
               <label class="amount">
