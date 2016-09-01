@@ -1,7 +1,7 @@
 <%- if controller_name != 'sessions' %>
   <%- if devise_mapping.omniauthable? %>
     <%= link_to omniauth_authorize_path(resource_name, "facebook"), class: "btn btn-block btn-primary" do %>
-      <span class="facebook pull-left"><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
+      <span class="facebook pull-left"><i id= "fb" class="fa fa-facebook-official" aria-hidden="true"></i></span>
       <%= t('.sign_in_with_provider', :provider => "facebook", :default => "Sign in with Facebook")%>
     <% end %> <br>
   <% end -%>
