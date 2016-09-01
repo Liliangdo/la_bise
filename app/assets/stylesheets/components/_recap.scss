@@ -1,11 +1,14 @@
 .recap-content {
   top: 0px;
-  background-color: #CC0000;
-  height: 100vh;
+  background-color: rgba(170,144,252, 0.6);
+  height: 585px;
   max-width: 200px;
   position: fixed;
   right: 15px;
   padding: 25px 10px 10px 10px;
+  h4{
+    color:white;
+  }
 }
 #recap {
   text-align: center;
@@ -19,4 +22,5 @@
 
 .reservation-results-div {
   width:150px;
+  padding-right: 15px;
 }

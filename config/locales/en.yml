@@ -105,7 +105,7 @@ en:
         zero: "no places left"
         one: "Place left"
         other: "Available places"
-      cancelrules: "Condition of cancellation:"
+      cancelrules: "Cancellation"
       reviews:
         zero: "Host not rated yet"
         one: "opinion"
