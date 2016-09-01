@@ -24,7 +24,9 @@
         <div class="badge-container">
           <i class="fa fa-envelope-o"></i>
           <div class="badge badge-red">
-            <%= @messages.count %>
+            <%=
+              @messages.count.nil? ? O : @messages.count
+            %>
           </div>
         </div>
       <% end %>
