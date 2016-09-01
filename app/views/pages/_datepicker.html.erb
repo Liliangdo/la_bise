@@ -12,10 +12,14 @@
           <%= f.text_field :date, class: "input-sm form-control" %>
         </div>
       </div>
-
       <div class='col-xs-12 col-md-3'>
-        <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'} %>
+
+        <div class="align-checkbox">
+          <%= f.check_box :flexible, label: false%>
+          <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'} %>
+        </div>
       </div>
+
 
       <div class='col-xs-12 col-md-3'>
         <%= f.button :submit, t('.search'), class: "btn btn-danger btn-block" %>
