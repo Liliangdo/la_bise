@@ -68,6 +68,7 @@
     height: 50px;
     line-height: 38px;
     margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   .description {
@@ -75,25 +76,8 @@
   }
 
   i {
-    font-size: 30px;
     color: white;
     vertical-align: sub;
-  }
-}
 
-#form-user-edit {
-  padding: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  background-color: white;
-  h2 {
-    color: $bise-red;
-  }
-  .attachinary-input {
-    overflow: hidden;
-  }
-  .date {
-margin-bottom: 15px;
   }
 }

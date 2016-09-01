@@ -16,5 +16,8 @@ $('.date').datepicker({
 });
 
 function chooseFile() {
-  $("#event_photos").click();
+  if ($("#event_photos").length)
+    $("#event_photos").click();
+  else
+    $("#user_photo").click();
 }
