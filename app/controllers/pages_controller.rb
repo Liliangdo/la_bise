@@ -5,6 +5,8 @@ class PagesController < ApplicationController
 
   def home
     @events = Event.all
+    @messages = policy_scope(Message).where(sender_id: current_user).or(policy_scope(Message)
+                                      .where(recipient_id: current_user))
   end
 
   def dashboard

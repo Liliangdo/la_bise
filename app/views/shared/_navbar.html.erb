@@ -23,7 +23,9 @@
       <%= link_to dashboard_path, class: "navbar-wagon-item navbar-wagon-link" do %>
         <div class="badge-container">
           <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-red">3</div>
+          <div class="badge badge-red">
+            <%= @messages.count %>
+          </div>
         </div>
       <% end %>
 
