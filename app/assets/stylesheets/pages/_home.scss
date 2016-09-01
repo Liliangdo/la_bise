@@ -103,10 +103,14 @@
 
 .date-picker-home {
   span {
+    padding: 0;
 
   }
 }
 
 .search_flexible {
+  select {
+  appearance: none;
   border-radius: 0px;
+}
 }
