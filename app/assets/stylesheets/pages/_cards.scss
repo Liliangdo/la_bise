@@ -20,7 +20,7 @@
 }
 
 .card-title {
-  margin: 5px;
+  margin: 10px;
   color: white;
   text-shadow: 0 1px 2px rgba(0,0,0,0.8);
   text-align: left;
@@ -28,11 +28,28 @@
   bottom: 0;
 }
 
+.card-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.event-host {
+  width: 45%;
+  text-align: left;
+  color: $bise-red;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .card-stats {
   color: $bise-red;
   font-size: 14px;
   text-align: right;
   margin: 10px 0;
+  vertical-align: middle;
   i {
     margin-left: 10px;
   }
@@ -43,13 +60,6 @@
 }
 
 
-.card-bottom {
-  margin: 10px 10px;
-  line-height: 32px;
-  img {
-    vertical-align: top;
-  }
-}
 
 
 .card-infos {
