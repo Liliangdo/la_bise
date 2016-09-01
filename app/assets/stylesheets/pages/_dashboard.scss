@@ -39,6 +39,7 @@
     background: $body-bg; // TODO
     border-top: solid 1px $bise-red;
     border-left: solid 1px $bise-red;
+    border-right: solid 1px $bise-red;
 
     color: $bise-red;
   }
@@ -81,6 +82,9 @@
   background-color: $body-bg; // TODO
   border-left: solid 1px $bise-red;
   border-right: solid 1px $bise-red;
+  border-bottom: solid 1px $bise-red;
+  min-height: 500px;
+
   margin-left: -15px;
   margin-right: -15px;
 }
