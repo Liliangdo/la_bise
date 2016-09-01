@@ -3,25 +3,28 @@
       <div class="col-xs-12 col-md-4">
         <div class= "avatar-user-show text-center">
           <%= helper_user_picture_tag(@user)%>
+          <p>
+            <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-danger" %>
+          </p>
         </div>
         <div class="identification">
-            <h3><%= t('.identification') %></h3>
+            <h3 class="text-center"><%= t('.identification') %></h3>
             <% if @user.birth_date  %>
-              <i class="fa fa-check-circle-o" aria-hidden="true"></i>  <%= t('.birth_date') %><br><%= l(@user.birth_date, format: :standard) %>
+              <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.birth_date') %>: <%= l(@user.birth_date, format: :standard) %>
             <% end %>
             <br>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.phone_number') %><br><%= hidden_phone(@user) %>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.phone_number') %>: <%= hidden_phone(@user) %>
             <br>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.email') %><br><%= hidden_email(@user)%>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.email') %>: <%= hidden_email(@user)%>
             <br>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.created_at') %><br><%=  l(@user.created_at, format: :standard) %>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.created_at') %>: <%=  l(@user.created_at, format: :standard) %>
             <br>
         </div>
       </div>
       <div class="col-xs-12 col-md-8">
         <div class="welcome">
           <div class="description">
-            <h1><%= t('.welcome') %> <%= @user.first_name %> ! <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %></h1>
+            <h1><%= t('.welcome') %> <%= @user.first_name %> ! </h1>
             <p><%= @user.description %></p>
           </div>
           <div class="reviews">
