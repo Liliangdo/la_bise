@@ -8,143 +8,146 @@
 
 <div class="container">
   <div class="row">
-  <!-- Temporary head picture -->
-    <div class="col-xs-12">
-      <!-- Datepicker -->
+    <div class="col-sm-10">
+
       <div class="row">
-        <div class="hidden-xs">
-          <h1 class="text-center">
-            <%= render 'events/event-datepicker' %>
-          </h1>
+      <!-- Temporary head picture -->
+        <div class="col-xs-12">
+          <!-- Datepicker -->
+          <div class="row">
+            <div class="hidden-xs">
+              <h1 class="text-center">
+                <%= render 'events/event-datepicker' %>
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="head_picture" style="background-image: url(<%= helper_picture_url(@event) %>);">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="head_picture" style="background-image: url(<%= helper_picture_url(@event) %>);">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- Event name and date -->
+      <!-- Event name and date -->
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="event-mini-card">
-        <h3 class="text-center"><%= @event.name %></h3>
-        <p class="text-center">
-          <%= l(@event.starting_at, format: '%A %d %B') %> - <%= l(@event.starting_at, format: '%H:%M') %>
-        </p>
-        <p class="text-center">
-          <%= t('.capacity') %> <%= @event.capacity %>  <%= t('.peoples', count: @event.capacity) %>
-        </p>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="event-mini-card">
+            <h3 class="text-center"><%= @event.name %></h3>
+            <p class="text-center">
+              <%= l(@event.starting_at, format: '%A %d %B') %> - <%= l(@event.starting_at, format: '%H:%M') %>
+            </p>
+            <p class="text-center">
+              <%= t('.capacity') %> <%= @event.capacity %>  <%= t('.peoples', count: @event.capacity) %>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Host, price and places -->
+      <!-- Host, price and places -->
 
-  <div class="row">
-    <!-- Price and places -->
-    <div class="col-xs-12 col-sm-4">
-      <div class="event-tag text-center">
-        <p class="price">
-          <strong><%= t('.price') %></strong> <%= @event.price %> €
-        </p>
-        <p>
-          <%= @event.available_places %> <%= t('.available_places', count: @event.available_places) %>
-        </p>
+      <div class="row">
+        <!-- Price and places -->
+        <div class="col-xs-12 col-sm-4">
+          <div class="event-tag text-center">
+            <p class="price">
+              <strong><%= t('.price') %></strong> <%= @event.price %> €
+            </p>
+            <p>
+              <%= @event.available_places %> <%= t('.available_places', count: @event.available_places) %>
+            </p>
+          </div>
+        </div>
+        <!-- Host card -->
+        <div class="col-xs-12 col-sm-8">
+          <div class="host_card">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="user-pic">
+                  <a href="#">
+                    <%#= helper_user_picture_tag(@user)%>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="user-infos">
+                  <%#= @event.user.age_calculator %> <%#= t('.age') %>
+                  <%= @event.user.description %>
+                  <i class="fa fa-star" asria-hidden="true"></i> <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong> - <%= @event.reviews.count != 0 ? @event.reviews.count : ""  %> <%= t('.reviews', count: @event.reviews.count) %>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="user-message">
+                  <%= link_to '<i class="fa fa-comments" aria-hidden="true"></i>'.html_safe, "#" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- Host card -->
-    <div class="col-xs-12 col-sm-8">
-      <div class="host_card">
+
+      <!-- Description -->
+
+      <div class="description-card">
         <div class="row">
-          <div class="col-sm-4">
-            <div class="user-pic">
-              <a href="#">
-                <%#= helper_user_picture_tag(@user)%>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="user-infos">
-              <%#= @event.user.age_calculator %> <%#= t('.age') %>
-              <%= @event.user.description %>
-              <i class="fa fa-star" asria-hidden="true"></i> <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong> - <%= @event.reviews.count != 0 ? @event.reviews.count : ""  %> <%= t('.reviews', count: @event.reviews.count) %>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="user-message">
-              <%= link_to '<i class="fa fa-comments" aria-hidden="true"></i>'.html_safe, "#" %>
+          <div class="col-xs-12">
+            <div class="event-description">
+              <p><%= @event.description %></p>
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p class="cancel"><%= t('.cancelrules')%></p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Description -->
+    <!-- Reviews -->
+      <% @event.reviews.order('updated_at DESC').take(5).each do |review| %>
+        <div class="review-card card-polaroid">
+          <div class="media">
+            <div class="media-left">
 
-  <div class="description-card">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="event-description">
-          <p><%= @event.description %></p>
-          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p class="cancel"><%= t('.cancelrules')%></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Reviews -->
-
-  <% @event.reviews.order('updated_at DESC').take(5).each do |review| %>
-    <div class="review-card card-polaroid">
-      <div class="media">
-        <div class="media-left">
-
-        </div>
-        <div class="media-body">
-          <strong class="review-owner"><%= review.user.first_name %></strong><%= t('colon') %> <%= review.content %>
-          <br>
-          <span class="review-date"><%= l(review.created_at, format: '%A %d %B') %></span>
-          <div class="review-rating">
-            <%= stars(review.rating) %>
+            </div>
+            <div class="media-body">
+              <strong class="review-owner"><%= review.user.first_name %></strong><%= t('colon') %> <%= review.content %>
+              <br>
+              <span class="review-date"><%= l(review.created_at, format: '%A %d %B') %></span>
+              <div class="review-rating">
+                <%= stars(review.rating) %>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
-
-
-
 
   <!-- recap for laptop on the right -->
-
-  <div class="hidden-xs col-sm-2">
-    <div class="recap-content">
-      <div id="recap">
-        <h4><%= @event.name %></h4>
-        <hr>
-        <div class="info">
-          <%= @event.address.split.last %>
-        </div>
-        <div class="info">
-          <%= l(@event.starting_at, format: '%A %d %B') %>
-        </div>
-        <div class="info">
-          <%= l(@event.starting_at, format: '%H:%M') %>
-        </div>
-        <div class="info" id="reservation-informations" data-price="<%= @event.price %>" data-frais="0.15">
-          <%= render 'shared/reservation_form' %>
+    <div class="col-sm-2">
+      <div class="hidden-xs col-sm-2">
+        <div class="recap-content">
+          <div id="recap">
+            <h4><%= @event.name %></h4>
+            <hr>
+            <div class="info">
+              <%= @event.address.split.last %>
+            </div>
+            <div class="info">
+              <%= l(@event.starting_at, format: '%A %d %B') %>
+            </div>
+            <div class="info">
+              <%= l(@event.starting_at, format: '%H:%M') %>
+            </div>
+            <div class="info" id="reservation-informations" data-price="<%= @event.price %>" data-frais="0.15">
+              <%= render 'shared/reservation_form' %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="bottom-space hidden-sm hidden-md hidden-lg">
+  <!-- bottom button phone -->
+    <div class="bottom-space hidden-sm hidden-md hidden-lg">
+    </div>
   </div>
 </div>
 
