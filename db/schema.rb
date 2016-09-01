@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160901052527) do
     t.integer  "user_id"
     t.string   "name"
     t.text     "description"
+    t.integer  "price"
     t.string   "mood"
     t.string   "group_age"
     t.string   "option"
@@ -64,15 +65,6 @@ ActiveRecord::Schema.define(version: 20160901052527) do
     t.index ["sender_id"], name: "index_messages_on_sender_id", using: :btree
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.string   "state"
-    t.string   "event_sku"
-    t.integer  "amount_cents", default: 0, null: false
-    t.json     "payement"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
-
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "event_id"
@@ -82,7 +74,6 @@ ActiveRecord::Schema.define(version: 20160901052527) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.integer  "guest"
-    t.integer  "price_cents",  default: 0, null: false
     t.string   "state"
     t.string   "event_sku"
     t.integer  "amount_cents", default: 0, null: false

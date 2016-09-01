@@ -79,3 +79,17 @@
     vertical-align: sub;
   }
 }
+
+#form-user-edit {
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: white;
+  h2 {
+    color: $bise-red;
+  }
+  .attachinary-input {
+    overflow: hidden;
+  }
+}
