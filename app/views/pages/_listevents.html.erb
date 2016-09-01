@@ -9,22 +9,16 @@
 
           <div class="card text-center">
             <div class="card-polaroid hoverable">
-              <%=helper_picture_tag(event) %>
-              <div class="card-infos">
-                <h3>
-                  <%= event.name %>
-                </h3>
-              </div>
-
+              <%= helper_picture_tag(event) %>
               <p class="card-stats">
-                <i class="fa fa-eur"></i> <%=event.price%>
-                <i class="fa fa-users"></i> <%=event.available_places%>
-                <i class="fa fa-glass"></i> <%=event.mood%>
+                <i class="fa fa-eur"></i> <%= event.price %>
+                <i class="fa fa-users"></i> <%= event.available_places %>
+                <i class="fa fa-glass"></i> <%= event.mood %>
                 </a>
               </p>
             </div>
             <p class="card-bottom">
-              <%=event.name%>
+              <%= event.name %>
             </p>
           </div>
         <% end %>
