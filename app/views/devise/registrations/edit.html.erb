@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div id="form-event-new" class="col-xs-12 col-sm-offset-4 col-sm-4">
+    <div id="form-user-edit" class="col-xs-12 col-sm-offset-4 col-sm-4">
 
       <h2><%= t(".title", resource: resource_class.model_name.human) %></h2>
 
@@ -14,9 +14,10 @@
           <%= f.input :last_name %>
 
         </div>
+        <strong>*</strong> <%= label_tag(:birth_date) %>
         <div class="input-group date" data-lang="<%= I18n.locale %>" >
-          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-          <%= f.text_field :birth_date, class: "input-sm form-control", label: 'Birth Date', value: current_user.birth_date %>
+          <span class="input-group-addon date-edit-user"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+          <%= f.text_field :birth_date, class: "input-sm form-control", value: current_user.birth_date %>
         </div>
         <div>
           <%= f.input :phone_number %>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, t(".update"), class: "btn btn-block btn-lg btn-danger"%>
+          <%= f.button :submit, t(".update"), class: "btn btn-block btn-lg btn-danger" %>
         </div>
       <% end %>
 

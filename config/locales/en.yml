@@ -15,7 +15,7 @@ en:
       profil: "Profil"
       home: "Home"
       sign_out: "Log out"
-      add_event: "Add event"
+      add_event: "Host"
       sign_in: "Sign In"
       dashboard: "Dashboard"
 
@@ -91,7 +91,7 @@ en:
 
   events:
     index:
-      result: "Restult for"
+      result: "Results for"
 
     show:
       peoples:
@@ -171,6 +171,15 @@ en:
       phone_number: "Phone number"
       email: "Email"
       created_at: "Profil created the"
+
+  payments:
+    new:
+      for: "for"
+      guests:
+        zero: "no guests"
+        one: "guest"
+        other: "guests"
+      purchase: "Purchase"
 
 
 

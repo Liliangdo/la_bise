@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+    <div id="form-event-new" class="col-xs-12 col-sm-offset-4 col-sm-4">
 
-      <h2><%= t(".sign_in") %></h2>
+      <h2 class="text-center"><%= t(".sign_in") %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, t(".sign_in") %>
+          <%= f.button :submit, t(".sign_in"), class: "btn btn-block btn-danger" %>
         </div>
       <% end %>
 

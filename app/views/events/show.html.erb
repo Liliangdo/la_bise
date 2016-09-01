@@ -53,7 +53,7 @@
                 <div class="media-body">
                   <%= @event.user.first_name %>
                   <br>
-                  <%= @event.user.age_calculator %> <%= t('.age') %>
+                  <%#= @event.user.age_calculator %> <%= t('.age') %>
                   <br>
                   <i class="fa fa-star" asria-hidden="true"></i> <strong><%= @event.reviews.count != 0 ? @event.average_reviews : "" %></strong> - <%= @event.reviews.count != 0 ? @event.reviews.count : ""  %> <%= t('.reviews', count: @event.reviews.count) %>
                 </div>
@@ -112,7 +112,7 @@
 
       <!-- Reviews -->
 
-        <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
+        <% @event.reviews.order('updated_at DESC').take(5).each do |review| %>
           <div class="review-card card-polaroid">
             <div class="media">
               <div class="media-left">

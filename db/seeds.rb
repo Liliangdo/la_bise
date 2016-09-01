@@ -44,7 +44,7 @@ puts "event begin"
 15.times do
   Event.create(
     user_id: User.all.sample.id,
-    name: Faker::Book.title,
+    name: Faker::Book.title[0..25],
     description: Faker::Lorem.paragraph,
     price: rand(1..10),
     house_type: Faker::Lorem.word,

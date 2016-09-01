@@ -2,9 +2,9 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 $base-font: "Open Sans", "Helvetica", "sans-serif";
-$header-font: "Poppins", "sans-serif";
+$header-font: 'Montserrat', sans-serif;
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -35,6 +35,7 @@ $bise-red: #fd4e68;
 $bise-blue: #22b4ff;
 $bise-yellow: #ffd218;
 $bise-purple: #aa90fc;
+$bise-fb:   #3b5998;
 
 // Gray scale
 $gray-darker:  lighten(#000, 13.5%); // #222
