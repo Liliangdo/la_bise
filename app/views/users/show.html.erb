@@ -7,9 +7,12 @@
         </div>
         <div class="identification">
           <table>
-            <thead>
-              <tr><%= t('.identification') %></tr>
-            </thead>
+            <tr>
+              <th>
+                <%= t('.identification') %>
+                <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %>
+              </th>
+            </tr>
             <tbody>
               <tr>
                 <td>
@@ -40,7 +43,11 @@
       </div>
       <div class="col-xs-12 col-md-8">
         <div class="welcome">
-          <h1><%= t('.welcome') %> <%= @user.first_name %> ! <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-infos pull-right" %></h1>
+          <h1>
+            <%= t('.welcome') %>
+            <%= @user.first_name %> !
+            <%= link_to t('.back'), dashboard_path, class: "btn btn-infos pull-right" %>
+          </h1>
           <p><%= @user.description %></p>
           <div class="reviews">
             <h2><%= t('.reviews_show', count: @user.reviews.count) %></h2>

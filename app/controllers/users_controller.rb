@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     authorize @user
+    redirect_to dashboard_path
   end
 
   def edit
@@ -12,7 +13,6 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    redirect_to user_path(@user)
   end
 
   private
