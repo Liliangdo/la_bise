@@ -5,16 +5,18 @@
       <%= link_to event_path(event) do %>
         <div class="card text-center">
           <div class="card-polaroid hoverable">
-            <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(event) %>);"></div>
+            <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(event) %>);">
+              <h4 class="card-title"><%= event.name %></h4>
+            </div>
             <p class="card-stats">
               <i class="fa fa-eur"></i> <%= event.price %>
               <i class="fa fa-users"></i> <%= event.available_places %>
               <i class="fa fa-glass"></i> <%= event.mood %>
-              </a> <!-- Permet de gruger l'affiche des liens sur la card -->
+              </a> <!-- Permet de gruger l'affichage des liens sur la card -->
             </p>
           </div>
           <p class="card-bottom">
-            <%= event.name %>
+            ANCIEN TITRE
           </p>
         </div>
       <% end %>
