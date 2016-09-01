@@ -61,6 +61,10 @@
   border-radius: 5px;
   box-shadow: 0 0 10px #222;
   background-size: cover;
+  background-position: center center;
+  &:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;}
 
 }
 

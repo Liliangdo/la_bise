@@ -11,12 +11,14 @@
           <span class="input-group-addon date-picker-home"><i class="fa fa-calendar" aria-hidden="true"></i></span>
           <div class="align-checkbox">
            <%= f.text_field :date, class: "input-sm form-control" %>
-            <%= f.input :flexible, as: :select, collection: [["Dates non flexibles", false], ["Dates flexibles", true]], label: false , default: 0%>
+            <%= f.input :flexible, as: :select, collection: [["Dates non flexibles", false], ["Dates flexibles", true]], label: false, default: 0%>
           </div>
         </div>
       </div>
       <div class='col-xs-12 col-md-2'>
-        <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'} %>
+        <div class="search_flexible">
+         <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'}, collection: (1..20), default: 1 %>
+        </div>
       </div>
 
 
