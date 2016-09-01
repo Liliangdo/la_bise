@@ -1,36 +1,70 @@
 .head_picture {
-  background-image: url('http://il5.picdn.net/shutterstock/videos/8742685/thumb/1.jpg');
-  height: 40vh;
-  background-size: cover;
-  color: white;
-}
-.host_card {
   width: 100%;
-  background-color: #FEFEFE;
-  border-radius: 5px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px 30px 15px 15px;
-  .media-right {
-    font-size: 3em;
-  }
+  height: 320px;
+  background-size: cover !important;
+  background-position: center center;
+  border-radius: 2px;
 }
-.priceandplaces {
-  margin: 20px 0;
+
+.host_card {
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 2px;
+  color:black;
+  width: 100%;
 }
-.price {
-  font-size: 1.3em;
+
+.avatar-event-user img{
+  width: 85px;
+  height: 85px;
 }
-.options {
-  margin: 20px;
-  text-align: center;
+
+.event-mini-card{
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 2px;
 }
+
+.user-message i {
+  font-size: 70px;
+  color: $bise-red;
+}
+
+.event-tag {
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 2px;
+  border: 2px solid;
+  border-color: $bise-red;
+}
+
+.description-card{
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 2px;
+}
+
 .event-description {
-  background-color: $gray-lighter;
-  padding: 15px;
   .cancel {
-    color: $red;
+    color: $bise-red;
+  }
+  i{
+    color: $bise-red;
   }
 }
+
 .review-card {
   margin: 25px;
   .review-owner {
