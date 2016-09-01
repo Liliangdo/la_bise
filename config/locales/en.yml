@@ -91,7 +91,7 @@ en:
 
   events:
     index:
-      result: "Restult for"
+      result: "Results for"
 
     show:
       peoples:
