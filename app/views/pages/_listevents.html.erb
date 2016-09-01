@@ -2,20 +2,23 @@
   <div class="row">
     <% @events.order('created_at DESC').take(9).each do |event| %>
     <div class="col-xs-12 col-sm-4">
-      <%= link_to event_path(event) do %>
+      <%= link_to event_path(event), class: "card-link" do %>
         <div class="card text-center">
           <div class="card-polaroid hoverable">
-            <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(event) %>);"></div>
-            <p class="card-stats">
-              <i class="fa fa-eur"></i> <%= event.price %>
-              <i class="fa fa-users"></i> <%= event.available_places %>
-              <i class="fa fa-glass"></i> <%= event.mood %>
-              </a> <!-- Permet de gruger l'affiche des liens sur la card -->
-            </p>
+            <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(event) %>);">
+              <h4 class="card-title"><%= event.name %></h4>
+            </div>
+            <div class="media card-bottom">
+              <div class="media-left event-host">
+                <%= helper_user_picture_tag(event.user) %> &nbsp; <%= event.user.first_name %>
+              </div>
+              <div class="media-body card-stats">
+                <i class="fa fa-eur"></i> <%= event.price %>
+                <i class="fa fa-users"></i> <%= event.available_places %>
+                <i class="fa fa-glass"></i> <%= event.mood %>
+              </div>
+            </div>
           </div>
-          <p class="card-bottom">
-            <%= event.name %>
-          </p>
         </div>
       <% end %>
     </div>
