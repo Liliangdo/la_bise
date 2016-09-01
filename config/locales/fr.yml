@@ -172,3 +172,13 @@ fr:
       phone_number: "N° de téléphone"
       email: "Email"
       created_at: "Compte crée le"
+
+  payments:
+    new:
+      for: "pour"
+      guests:
+        zero: ""
+        one: "personne"
+        other: "personnes"
+      purchase: "Achat"
+

@@ -1,22 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-4 col-sm-4">
-      <h1>Purchase <%= @reservation.event_sku %></h1>
-      <%= form_tag event_reservation_payments_path(@reservation.event, @reservation) do %>
-        <article>
-          <label class="amount">
-            <span>Amount: <%= humanized_money_with_symbol(@reservation.amount) %></span>
-          </label>
-        </article>
+<div class="payment-card">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+        <div class="payment-bill text-center">
+          <h1><%= t('.purchase')%></h1> <h3><%= @reservation.event.name %></h3>
+          <%= form_tag event_reservation_payments_path(@reservation.event, @reservation) do %>
+            <article>
+              <label class="amount">
+                <span>Amount: <%= humanized_money_with_symbol(@reservation.amount) %> <%= t('.for') %> <%= @reservation.guest%> <%=t('.guests', count: @reservation.guest)%> </span>
+              </label>
+            </article>
 
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-name="My Event"
-          data-description="Event <%= @reservation.event_sku %>"
-          data-amount="<%= @reservation.amount_cents %>"
-          data-currency="EUR">
-        </script>
-      <% end %>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-name="My Event"
+              data-description="Event <%= @reservation.event_sku %>"
+              data-amount="<%= @reservation.amount_cents %>"
+              data-currency="EUR">
+            </script>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
