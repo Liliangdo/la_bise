@@ -15,7 +15,13 @@
       <div class='col-xs-12 col-md-3'>
 
         <div class="align-checkbox">
-          <%= f.check_box :flexible, label: false%>
+          <%= f.check_box :flexible,
+                          label:
+                            ('
+                              <i class="fa fa-circle-o unchecked"></i>
+                              <i class="fa fa-check-circle-o checked">
+                            '),
+                          class: 'checkbox'%>
           <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'} %>
         </div>
       </div>

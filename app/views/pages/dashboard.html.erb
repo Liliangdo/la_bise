@@ -22,7 +22,9 @@
           <h3><%= t('.profil') %></h3>
         </a>
         <a  data-target="#messages" class="col-xs-4 col-sm-3 tab mob-cond">
-          <p><%=@messages.count%></p>
+          <p>
+            <%=@messages.count.nil? ? O : @messages.count%>
+          </p>
           <h3><%= t('.messages') %></h3>
         </a>
         <a  data-target="#events" class="col-xs-4 col-sm-3 tab">

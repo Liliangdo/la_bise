@@ -95,3 +95,26 @@
   // color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
+
+.checkbox {
+  // display: none;
+}
+.checkbox + label {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.checkbox:checked + label .unchecked {
+//  display: none;
+}
+.checkbox:checked + label .checked {
+  display: inline;
+}
+
+.checkbox + label .checked {
+//  display: none;
+}
+
+.checkbox + label .unchecked {
+  display: inline;
+}
