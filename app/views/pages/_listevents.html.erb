@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <% @events.each do |event| %>
+    <% @events.order('created_at DESC').take(9).each do |event| %>
 
       <div class="col-xs-12 col-sm-4">
 
