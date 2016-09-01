@@ -24,9 +24,7 @@
         <div class="badge-container">
           <i class="fa fa-envelope-o"></i>
           <div class="badge badge-red">
-            <%=
-              @messages.count.nil? ? O : @messages.count
-            %>
+            <%= user_messages_count(current_user) %>
           </div>
         </div>
       <% end %>

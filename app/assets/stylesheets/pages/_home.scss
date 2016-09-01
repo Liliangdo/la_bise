@@ -67,6 +67,11 @@
   align-items: flex-start;
   justify-content: space-around;
 }
+
+#search_date {
+  width: 150px;
+}
+
 .carousel {
   position: relative;
 }
@@ -96,25 +101,12 @@
   margin-bottom: 20px;
 }
 
-.checkbox {
-  // display: none;
-}
-.checkbox + label {
-  font-size: 40px;
-  cursor: pointer;
+.date-picker-home {
+  span {
+
+  }
 }
 
-.checkbox:checked + label .unchecked {
-//  display: none;
-}
-.checkbox:checked + label .checked {
-  display: inline;
-}
-
-.checkbox + label .checked {
-//  display: none;
-}
-
-.checkbox + label .unchecked {
-  display: inline;
+.search_flexible {
+  border-radius: 0px;
 }

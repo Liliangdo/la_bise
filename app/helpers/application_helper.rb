@@ -24,4 +24,8 @@ module ApplicationHelper
       image_tag("lilian.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown")
     end
   end
+
+  def user_messages_count(user)
+    Message.where(sender_id: user).or(Message.where(recipient_id: user)).count
+  end
 end

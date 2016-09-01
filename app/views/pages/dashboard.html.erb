@@ -23,7 +23,7 @@
         </a>
         <a  data-target="#messages" class="col-xs-4 col-sm-3 tab mob-cond">
           <p>
-            <%=@messages.count.nil? ? O : @messages.count%>
+            <%= user_messages_count(current_user) %>
           </p>
           <h3><%= t('.messages') %></h3>
         </a>
