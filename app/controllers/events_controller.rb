@@ -8,6 +8,8 @@ class EventsController < ApplicationController
 
     session[:city] = params[:search][:city]
     session[:capacity] = params[:search][:capacity]
+    params[:search][:flexible] == "1" ? flexible = 4 : flexible = 0
+raise
     if params[:search][:date].empty?
       redirect_to root_path, alert: "Please fill the fields below..."
     else
@@ -21,8 +23,8 @@ class EventsController < ApplicationController
         @search = params[:search]
         @events = Event.near(@search[:city],5)
                       .where("capacity >= ?", @search[:capacity].to_f)
-                      .where("starting_at >= ?", session[:date])
-                      .where("starting_at <= ?", session[:date] + 2)
+                      .where("starting_at >= ?", session[:date] - flexible)
+                      .where("starting_at <= ?", session[:date] + flexible)
       end
     end
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|

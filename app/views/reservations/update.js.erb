@@ -4,11 +4,16 @@
 // concatene the name of the div : btn_reservation_xx
 console.log('<%= div_name %>');
 // hide slowly buttons on clic
-$('.<%= div_name %>').slideUp();
+
+$btnReservation = $('.<%= div_name %>');
+
+$btnReservation.slideUp();
 // Display a letter picture for few seconds, move the letter fast on the top
-$('.<%= div_name %>').html('<i class="fa fa-check-circle-o" aria-hidden="true"></i>');
+$btnReservation.html('<i class="fa fa-check-circle-o" aria-hidden="true"></i>');
 // Display a setences... Confirmation send
-$('.<%= div_name %>').slideDown().delay( 800 );
-//
+$btnReservation.slideDown().delay( 2000 ).promise().done(function(){
+  $btnReservation.text('Accepted at...').slideDown(3000);
+});
+
 
 
