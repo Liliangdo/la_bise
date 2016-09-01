@@ -66,6 +66,9 @@
               <div class="col-xs-12 col-sm-4">
                 <div class="user-pic">
                   <%#= helper_user_picture_tag(@user)%>
+                  <div class= "avatar-event-user text-center">
+                    <%= helper_user_picture_tag(@event.user)%>
+                  </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-4">
@@ -78,7 +81,7 @@
                 <%= @event.reviews.count != 0 ? @event.reviews.count : ""  %> <%= t('.reviews', count: @event.reviews.count) %>
               </div>
               <div class="col-xs-12 col-sm-4">
-                <div class="user-message">
+                <div class="user-message text-center">
                   <%= link_to '<i class="fa fa-comments" aria-hidden="true"></i>'.html_safe, "#" %>
                 </div>
               </div>
@@ -105,11 +108,11 @@
       <h3><%= t('.title-reviews')%></h3>
       <% @event.reviews.order('updated_at DESC').take(5).each do |review| %>
         <div class="review-card card-polaroid">
-          <div class="media">
-            <div class="media-left">
-
+          <div class="row">
+            <div class="col-sm-1">
+              <%= helper_user_picture_tag(review.user) %>
             </div>
-            <div class="media-body">
+            <div class="col-sm-11">
               <strong class="review-owner"><%= review.user.first_name %></strong><%= t('colon') %> <%= review.content %>
               <br>
               <span class="review-date"><%= l(review.created_at, format: '%A %d %B') %></span>

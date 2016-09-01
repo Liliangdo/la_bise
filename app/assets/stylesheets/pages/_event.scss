@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.avatar-event-user img{
+  width: 85px;
+  height: 85px;
+}
+
 .event-mini-card{
   padding: 30px;
   margin-top: 40px;
@@ -27,7 +32,7 @@
 }
 
 .user-message i {
-  font-size: 40px;
+  font-size: 70px;
   color: $bise-red;
 }
 
