@@ -14,6 +14,7 @@ fr:
     navbar:
       add_event: "Créer une soirée"
       sign_in: "Connexion"
+
     dropdown:
       home: "Accueil"
       dashboard: "Tableau de bord"
@@ -161,7 +162,7 @@ fr:
   users:
     show:
       welcome: "Bonjour, je m'appelle"
-      edit: "Editer"
+      edit: "Éditer"
       reviews_show:
         zero: "Il n'y a aucun commentaires"
         one: "Commentaire"
@@ -171,9 +172,3 @@ fr:
       phone_number: "N° de téléphone"
       email: "Email"
       created_at: "Compte crée le"
-
-
-
-
-
-
