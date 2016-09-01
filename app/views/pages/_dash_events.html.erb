@@ -1,94 +1,94 @@
 <div class="container">
-  <% @events.each do |event| %>
     <div class="row">
+  <% @events.each do |event| %>
       <div class="col-xs-12 col-sm-12">
-        <div class="event">
-        <div  class="picture-event-show" style="background-image: url(<%= helper_picture_url(event) %>);">
-          <h2><%= event.name %> </h2>
-          <% if not event.canceled? %>
-            <div class="event-description-button">
-              <div class="event-description">
-                <p><%= event.description %></p>
-              </div>
-              <div class="button-event">
-                  <%= link_to "Edit", edit_event_path(event.id), class: "btn btn-default" %>
-                  <%= simple_form_for(event, remote: false, method: "delete") do |e| %>
-                    <%= e.input :canceled_at,
-                                as: :hidden,
-                                input_html: {value: Time.now}
-                     %>
-                    <%= e.button :submit, t('.cancel'), class: "btn btn-danger" %>
-                  <% end %>
-              </div>
-            </div>
-            <p>
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <%= l event.starting_at, format: :short %>
-            </p>
-            <p>
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <%= event.address %>
-            </p>
-
-            <table style="border-spacing: 30px; border-collapse: separate;">
-              <tbody>
-                <tr>
-                  <td><p><i class="fa fa-circle-o" aria-hidden="true"></i> <%= event.mood %></p></td>
-                  <td><p><i class="fa fa-angellist" aria-hidden="true"></i> <%= event.group_age %> old</p></td>
-                </tr>
-                <tr>
-                  <td><p><i class="fa fa-home" aria-hidden="true"></i> <%= event.house_type %></p></td>
-                  <td><p><i class="fa fa-users"></i> <%= event.capacity %></p></td>
-                </tr>
-                <tr>
-                  <td><p> <i class="fa fa-eur"></i> <%= event.price %></p></td>
-                  <td><p> <i class="fa fa-gift" aria-hidden="true"></i> <%= event.option %></p></td>
-                </tr>
-              </tbody>
-            </table>
-            <% event.reservations.each do |reservation|%>
-              <br>
-              <div>
-                <div class="dashboard-event-user">
-                  <div class="user-pic">
-                  <%= helper_user_picture_tag(@user)%>
-                  </div>
-                  <div class="reservation-user-informations">
-                    <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guests', count: reservation.guest) %> for <%= reservation.event.price * reservation.guest %>€
-                  </div>
-                  <div class="reservation-statuts">
-                    <% if not reservation.answered? %>
-                      <% btn_reservation_id = 'btn_reservation_' + reservation.id.to_s %>
-                        <div class=<%= btn_reservation_id%>>
-                          <%= simple_form_for([event, reservation], remote: true, method: "patch") do |f| %>
-                            <%= f.input :refused_at,
-                                      as: :hidden,
-                                      input_html: {value: Time.now} %>
-                            <%= f.button :submit, t('.deny'), class: "btn btn-danger pull-right" %>
-                          <% end %>
-                        </div>
-                        <div class=<%= btn_reservation_id%>>
-                          <%= simple_form_for([event, reservation], remote: true) do |f| %>
-                            <%= f.input :accepted_at,
-                                        as: :hidden,
-                                        input_html: {value: Time.now} %>
-                            <%= f.button :submit, t('.accept'), class: "btn btn-success pull-right" %>
-                          <% end %>
-                        </div>
-                    <% elsif reservation.canceled? %>
-                      <p>
-                        <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: '%d %b' %> <%= t('.letter_a') %> <%= l reservation.canceled_at, format: '%H:%m' %>
-                      </p>
-                    <% else %>
-                      <p>
-                        <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
-                          <%= l reservation.updated_at, format: '%d %b'%>
-                          <%= t('.letter_a') %>
-                          <%= l reservation.updated_at, format: '%H:%m'%>
-                      </p>
+        <div class="event-card-polaroid">
+          <div  class="picture-event-show" style="background-image: url(<%= helper_picture_url(event) %>);">
+            <h2 class="event-card-title"><%= event.name %> </h2>
+          </div>
+            <% if not event.canceled? %>
+              <div class="event-description-button">
+                <div class="event-description">
+                  <strong>
+                    <%= event.description %>
+                  </strong>
+                  <div class="button-event">
+                    <%= link_to "Edit", edit_event_path(event.id), class: "btn btn-default" %>
+                    <%= simple_form_for(event, remote: false, method: "delete") do |e| %>
+                      <%= e.input :canceled_at,
+                                  as: :hidden,
+                                  input_html: {value: Time.now}
+                       %>
+                      <%= e.button :submit, t('.cancel'), class: "btn btn-danger" %>
                     <% end %>
                   </div>
                 </div>
+              </div>
+              <div class="event-informations">
+                <div>
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <%= l event.starting_at, format: :short %>
+                  &nbsp;
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <%= event.address %>
+                </div>
+                <div>
+                  <table style="border-spacing: 30px; border-collapse: separate;">
+                    <tbody>
+                      <tr>
+                        <td><p><i class="fa fa-circle-o" aria-hidden="true"></i> <%= event.mood %></p></td>
+                        <td><p><i class="fa fa-home" aria-hidden="true"></i> <%= event.house_type %></p></td>
+                        <td><p><i class="fa fa-users"></i> <%= event.capacity %></p></td>
+                        <td><p> <i class="fa fa-eur"></i> <%= event.price %></p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div class="event-informations">
+              <% event.reservations.each do |reservation|%>
+                  <div class="hr-div">
+                    <hr>
+                  </div>
+                  <div class="dashboard-event-user">
+                    <div class="user-pic">
+                      <%= helper_user_picture_tag(@user) %>
+                    </div>
+                    <div class="reservation-user-informations">
+                      <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guests', count: reservation.guest) %> for <%= reservation.event.price * reservation.guest %>€
+                    </div>
+                    <% btn_reservation_id = 'btn_reservation_' + reservation.id.to_s %>
+                    <div class="button-event" id="<%= btn_reservation_id %>">
+                      <!-- <div class="reservation-statuts"> -->
+                        <% if not reservation.answered? %>
+                            <%= simple_form_for([event, reservation], remote: true, method: "patch") do |f| %>
+                              <%= f.input :refused_at,
+                                      as: :hidden,
+                                      input_html: {value: Time.now} %>
+                              <%= f.button :submit, t('.deny'), class: "btn btn-danger pull-right" %>
+                            <% end %>
+                          <div class= <%= btn_reservation_id %> >
+                            <%= simple_form_for([event, reservation], remote: true) do |f| %>
+                              <%= f.input :accepted_at,
+                                        as: :hidden,
+                                        input_html: {value: Time.now} %>
+                              <%= f.button :submit, t('.accept'), class: "btn btn-primary pull-right" %>
+                            <% end %>
+                          </div>
+                        <% elsif reservation.canceled? %>
+                          <p>
+                            <%= t('.canceled_by_user') %> <%= l reservation.canceled_at, format: '%d %b' %> <%= t('.letter_a') %> <%= l reservation.canceled_at, format: '%H:%m' %>
+                          </p>
+                        <% else %>
+                          <p>
+                          <%= reservation.confirmed? ? t('.accepted_at') : t('.refused_at') %>
+                            <%= l reservation.updated_at, format: '%d %b'%>
+                            <%= t('.letter_a') %>
+                            <%= l reservation.updated_at, format: '%H:%m'%>
+                          </p>
+                        <% end %>
+                      <!-- </div> -->
+                    </div>
+                  </div>
               <% end %>
             <% else %>
               <em>
@@ -96,11 +96,9 @@
               </em>
             <% end %>
           </div>
-        </div>
-        </div>
       </div>
-    </div>
   <% end %>
+    </div>
 </div>
 
 

@@ -4,7 +4,7 @@
 
 .tabs {
   background: #f4f4f4;
-  border-color: $bise-blue;
+  border-color: $gray; // TODO
   display: flex;
   padding: 10px 0px 0px 0px;
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .tab {
-  background: $bise-blue;
+  background: $bise-red; // TODO
   flex: 0 0 25%;
   text-align: center;
   padding: 20px 0;
@@ -36,29 +36,16 @@
     border-radius: 0 10px 0 0;
   }
   &.active {
-    background: $bise-yellow;
-    color: white;
+    background: $body-bg; // TODO
+    border-top: solid 4px $bise-red;
+    border-left: solid 2px $bise-red;
+
+    color: $bise-red;
   }
 }
 
-.picture-event {
-  height: 150px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #222;
-  background-size: cover;
-
-}
-
-.picture-event-show {
-  height: 300px;
-  width:100%;
-  background-size: cover;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #222;
-}
-
 .confirmed {
-  color: $bise-blue;
+  color: $gray;
 }
 
 .pending {
@@ -91,13 +78,15 @@
 }
 
 .wrapper-dashboard {
-  background-color: $bise-yellow;
+  background-color: $body-bg; // TODO
+  border-left: solid 2px $bise-red;
+  border-right: solid 2px $bise-red;
   margin-left: -15px;
   margin-right: -15px;
 }
 
 .wrapper-tabs {
-  background-color: red;
+  //background-color: red;
 }
 
 .event {

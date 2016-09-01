@@ -5,15 +5,11 @@
 console.log('<%= div_name %>');
 // hide slowly buttons on clic
 
-$btnReservation = $('.<%= div_name %>');
+$btnReservation = $('#<%= div_name %>');
 
-$btnReservation.slideUp();
-// Display a letter picture for few seconds, move the letter fast on the top
+$btnReservation.hide();
 $btnReservation.html('<i class="fa fa-check-circle-o" aria-hidden="true"></i>');
-// Display a setences... Confirmation send
-$btnReservation.slideDown().delay( 2000 ).promise().done(function(){
-  $btnReservation.text('Accepted at...').slideDown(3000);
-});
-
-
-
+$btnReservation.slideDown(1500).promise().done(function(){
+$btnReservation.hide();
+$btnReservation.text('Accepted at...');
+$btnReservation.fadeIn(4000);});

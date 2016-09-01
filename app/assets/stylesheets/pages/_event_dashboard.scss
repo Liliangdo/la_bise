@@ -2,6 +2,10 @@
   width: 175px;
   display: flex;
   justify-content: space-around;
+  i {
+    color: $bise-red;
+    font-size: 20px;
+  }
 }
 
 .user-pic {
@@ -14,10 +18,20 @@
 .dashboard-event-user {
   display: flex;
   align-items :center;
+  justify-content: space-between;
+  margin-right: 15px;
 }
 
 .event-description {
-  width: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.event-informations {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .event-description-button {
@@ -26,7 +40,7 @@
 }
 
 .reservation-user-informations {
-  width: 75%;
+  //width: 75%;
 }
 
 .reservation-statuts, .dashboard-events-buttons {
@@ -37,5 +51,24 @@
   p {
     color: $gray-light;
   }
+}
+
+.picture-event {
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #222;
+  background-size: cover;
+
+}
+
+.picture-event-show {
+  height: 300px;
+  width:100%;
+  background-size: cover;
+  border-radius: 2px;
+}
+.hr-div {
+  width: 50%;
+  margin: auto;
 }
 
