@@ -4,7 +4,8 @@ Devise.setup do |config|
   config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
     scope: 'email',
     info_fields: 'email, first_name, last_name',
-    image_size: 'square',  # 50x50, guaranteed ratio
+    image_size: { width: 800, height: 800 },
+    # 50x50, guaranteed ratio
     secure_image_url: true
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -21,7 +22,7 @@ Devise.setup do |config|
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
-  # available as additional gems.
+  # available as additional gems.@
   require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
