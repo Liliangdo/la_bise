@@ -108,9 +108,13 @@ en:
       cancelrules: "Cancellation"
       reviews:
         zero: "Host not rated yet"
-        one: "opinion"
-        other: "opinions"
+        one: "Opinion"
+        other: "Opinions"
       capacity: "Capacity"
+      title-description: "Description"
+      title-reviews: "Reviews"
+      average: "Average :"
+      name: "Name :"
 
     event-datepicker:
       city: "Enter a city"
