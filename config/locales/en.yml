@@ -172,5 +172,14 @@ en:
       email: "Email"
       created_at: "Profil created the"
 
+  payments:
+    new:
+      for: "for"
+      guests:
+        zero: "no guests"
+        one: "guest"
+        other: "guests"
+      purchase: "Purchase"
+
 
 
