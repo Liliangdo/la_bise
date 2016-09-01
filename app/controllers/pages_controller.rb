@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     @events = Event.all
     @messages = policy_scope(Message).where(sender_id: current_user).or(policy_scope(Message)
                                       .where(recipient_id: current_user))
+    render layout: "home"
   end
 
   def dashboard
