@@ -15,35 +15,39 @@
       <a href="#" class="btn btn-info">Edit</a>
     </div>
   </div>
-  <div class="row">
-    <div class="tabs">
-      <a  data-target="#profil" class="hidden-xs col-sm-3 tab active">
-        <h3><%= t('.profil') %></h3>
-      </a>
-      <a  data-target="#messages" class="col-xs-4 col-sm-3 tab mob-cond">
-        <h3><%= t('.messages') %></h3>
-      </a>
-      <a  data-target="#events" class="col-xs-4 col-sm-3 tab">
-        <h3><%= t('.events') %></h3>
-      </a>
-      <a  data-target="#reservations" class="col-xs-4 col-sm-3 tab">
-        <h3><%= t('.reservations') %></h3>
-      </a>
+  <div class="wrapper-tabs">
+    <div class="row">
+      <div class="tabs">
+        <a  data-target="#profil" class="hidden-xs col-sm-3 tab active">
+          <h3><%= t('.profil') %></h3>
+        </a>
+        <a  data-target="#messages" class="col-xs-4 col-sm-3 tab mob-cond">
+          <h3><%= t('.messages') %></h3>
+        </a>
+        <a  data-target="#events" class="col-xs-4 col-sm-3 tab">
+          <h3><%= t('.events') %></h3>
+        </a>
+        <a  data-target="#reservations" class="col-xs-4 col-sm-3 tab">
+          <h3><%= t('.reservations') %></h3>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <div class="tab-content" id="profil">
-    <%= render 'dash_profil'%>
-  </div>
-  <div class="tab-content hidden" id="messages">
-    <%= render 'dash_messages' %>
-  </div>
-  <div class="tab-content hidden" id="reservations">
-    <%= render 'dash_reservations'%>
-  </div>
-  <div class="tab-content hidden" id="events">
-    <%= render 'dash_events' %>
+  <div class="wrapper-dashboard">
+    <div class="tab-content" id="profil">
+      <%= render 'dash_profil'%>
+    </div>
+    <div class="tab-content hidden" id="messages">
+      <%= render 'dash_messages' %>
+    </div>
+    <div class="tab-content hidden" id="reservations">
+      <%= render 'dash_reservations'%>
+    </div>
+    <div class="tab-content hidden" id="events">
+      <%= render 'dash_events' %>
+    </div>
   </div>
 </div>
