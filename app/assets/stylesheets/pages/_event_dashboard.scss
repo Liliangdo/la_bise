@@ -1,5 +1,5 @@
 .button-event {
-  width: 175px;
+  width: 250px;
   display: flex;
   justify-content: space-around;
   i {
@@ -74,4 +74,6 @@
   width: 50%;
   margin: auto;
 }
-
+.bise-red-color {
+  color: $bise-red;
+}

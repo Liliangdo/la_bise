@@ -28,7 +28,7 @@
                 <div>
                   <i class="fa fa-clock-o" aria-hidden="true"></i>
                   <%= l event.starting_at, format: :short %>
-                  &nbsp;
+
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                   <%= event.address %>
                 </div>
@@ -92,7 +92,14 @@
               <% end %>
             <% else %>
               <em>
-                <%= t('.canceled_by_host') %> <%=l event.canceled_at, format: :short %>
+                <div class="event-description bise-red-color">
+                  <strong class=>
+                    <%= t('.canceled_by_host') %>
+                    <%=l event.canceled_at, format: '%d %b' %>
+                    <%= t('.letter_a') %>
+                    <%=l event.canceled_at, format: '%H:%m' %>
+                  </strong>
+                </div>
               </em>
             <% end %>
           </div>
