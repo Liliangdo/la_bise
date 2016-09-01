@@ -108,12 +108,16 @@ fr:
         zero: "plus de place disponible"
         one: "dernière place disponible"
         other: "places disponibles"
-      cancelrules: "Conditions d'anulation :"
+      cancelrules: "Annulation"
       reviews:
-        zero: "l'hôte n'a pas encore été noté"
-        one: "avis"
-        other: "avis"
+        zero: "L'hôte n'a pas encore été noté"
+        one: "Avis"
+        other: "Avis"
       capacity: "Capacité de "
+      title-description: "Description"
+      title-reviews: "Commentaires"
+      average: "Moyenne :"
+      name: "Prénom :"
 
     event-datepicker:
       city: "Entrer une ville"
