@@ -1,13 +1,11 @@
 // Avant
 .events-index {
   padding-top: 70px;
-
   .cards-container {
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
     height: 100vh;
-
     h1 {
       text-transform: uppercase;
       font-size: 2.3rem;
@@ -15,17 +13,11 @@
       padding: 0 20px;
       color: $bise-red;
     }
-
-    .card {
-      margin: 1%;
-      width: 48%;
-      overflow: hidden;
-    }
   }
 }
 
+
 // Apres
-//
 .events_index {
   height: 100%;
   body {
@@ -35,21 +27,18 @@
     margin: 0;
     align-items: stretch;
   }
-
   h1 {
     color: $bise-red;
+    margin-bottom: 25px;
   }
-
   .navbar-wagon {
     flex: 1 0 auto;
   }
-
   .event-list-container {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
   }
-
   .event-list {
     width: 50%;
     overflow-y: scroll;
@@ -59,7 +48,6 @@
   .map-wrapper {
     width: 50%;
   }
-
 }
 
 

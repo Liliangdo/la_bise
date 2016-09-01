@@ -4,26 +4,24 @@
     </h1>
     <% @events.each do |event| %>
       <div class="row">
-        <div class="col-xs-12">
-          <%= link_to event_path(event) do %>
+        <div class="col-xs-offset-1 col-xs-10">
+          <%= link_to event_path(event), class: "card-link" do %>
             <div class="card text-center">
-              <div class="card-polaroid">
-                <%=helper_picture_tag(event) %>
-                <div class="card-infos">
-                  <h3>
-                    <%= event.name %>
-                  </h3>
+              <div class="card-polaroid hoverable">
+                <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(event) %>);">
+                  <h4 class="card-title"><%= event.name %></h4>
                 </div>
-                <p class="card-stats">
-                  <i class="fa fa-eur"></i> <%=event.price%>
-                  <i class="fa fa-users"></i> <%=event.capacity%>
-                  <i class="fa fa-heart"></i> <%=event.mood%>
-                  </a>
-                </p>
+                <div class="media card-bottom">
+                  <div class="media-left event-host">
+                    <%= helper_user_picture_tag(event.user) %> &nbsp; <%= event.user.first_name %>
+                  </div>
+                  <div class="media-body card-stats">
+                    <i class="fa fa-eur"></i> <%= event.price %>
+                    <i class="fa fa-users"></i> <%= event.available_places %>
+                    <i class="fa fa-glass"></i> <%= event.mood %>
+                  </div>
+                </div>
               </div>
-              <p class="card-author">
-                <%=event.name%>
-              </p>
             </div>
           <% end %>
         </div>
