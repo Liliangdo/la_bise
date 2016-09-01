@@ -38,7 +38,7 @@
   &.active {
     background: $body-bg; // TODO
     border-top: solid 1px $bise-red;
-    border-left: solid 2px $bise-red;
+    border-left: solid 1px $bise-red;
 
     color: $bise-red;
   }
@@ -79,8 +79,8 @@
 
 .wrapper-dashboard {
   background-color: $body-bg; // TODO
-  border-left: solid 2px $bise-red;
-  border-right: solid 2px $bise-red;
+  border-left: solid 1px $bise-red;
+  border-right: solid 1px $bise-red;
   margin-left: -15px;
   margin-right: -15px;
 }
