@@ -1,28 +1,24 @@
 <div class="container">
   <div class="row">
-
     <% @events.order('created_at DESC').take(9).each do |event| %>
-
-      <div class="col-xs-12 col-sm-4">
-
-        <%= link_to event_path(event) do %>
-
-          <div class="card text-center">
-            <div class="card-polaroid hoverable">
-              <%= helper_picture_tag(event) %>
-              <p class="card-stats">
-                <i class="fa fa-eur"></i> <%= event.price %>
-                <i class="fa fa-users"></i> <%= event.available_places %>
-                <i class="fa fa-glass"></i> <%= event.mood %>
-                </a>
-              </p>
-            </div>
-            <p class="card-bottom">
-              <%= event.name %>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to event_path(event) do %>
+        <div class="card text-center">
+          <div class="card-polaroid hoverable">
+            <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(event) %>);"></div>
+            <p class="card-stats">
+              <i class="fa fa-eur"></i> <%= event.price %>
+              <i class="fa fa-users"></i> <%= event.available_places %>
+              <i class="fa fa-glass"></i> <%= event.mood %>
+              </a> <!-- Permet de gruger l'affiche des liens sur la card -->
             </p>
           </div>
-        <% end %>
-      </div>
+          <p class="card-bottom">
+            <%= event.name %>
+          </p>
+        </div>
+      <% end %>
+    </div>
     <% end %>
   </div>
 </div>
