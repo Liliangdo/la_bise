@@ -112,7 +112,7 @@
 
       <!-- Reviews -->
 
-        <% @event.reviews.order('created_at DESC').take(5).each do |review| %>
+        <% @event.reviews.order('updated_at DESC').take(5).each do |review| %>
           <div class="review-card card-polaroid">
             <div class="media">
               <div class="media-left">

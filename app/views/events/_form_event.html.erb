@@ -5,11 +5,11 @@
   <% end %>
   <%= f.input :photos, as: :attachinary, error: t('.upload_error') %>
   <button class="btn-upload" type="button" onclick="chooseFile();"><%= t('.upload') %></button>
-  <%= f.input :name, label: t('.name'), error: t('.name_error')%>
+  <%= f.input :name, maxlength: 25, label: t('.name'), error: t('.name_error')%>
   <%= f.input :address, label: t('.address') %>
   <%= f.input :starting_at, label: t('.starting') %>
   <%= f.input :price, label: t('.price'), collection: (1..25)  %>
-  <%= f.input :description, label: t('.description'), :input_html => { :class => 'description', :rows => 6 } %>
+  <%= f.input :description, label: t('.description'), input_html: { :class => 'description', :rows => 6 } %>
   <%= f.input :capacity, label: t('.capacity'), collection: (1..100) %>
   <%= f.input :mood, label: t('.mood'),collection: [ "Electro", "Pop", "Funk","Jazz","Cozy","Rap US"]%>
   <%= f.input :house_type,  label: t('.house_type'), collection: [ "Studio", "Loft", "Flat","Private Garden","Rooftop","House","Villa"] %>
