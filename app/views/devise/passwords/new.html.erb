@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+    <div id="form-event-new" class="col-xs-12 col-sm-offset-4 col-sm-4">
 
-      <h2><%= t(".forgot_your_password") %></h2>
+      <h2 class="text-center"><%= t(".forgot_your_password") %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, t(".send_me_reset_password_instructions") %>
+          <%= f.button :submit, t(".send_me_reset_password_instructions"), class: "btn btn-block btn-danger"  %>
         </div>
       <% end %>
 
