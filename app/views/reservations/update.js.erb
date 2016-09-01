@@ -8,8 +8,8 @@ console.log('<%= div_name %>');
 $btnReservation = $('#<%= div_name %>');
 
 $btnReservation.hide();
-$btnReservation.html('<i class="fa fa-check-circle-o" aria-hidden="true"></i>');
+$btnReservation.html('<i class="fa fa-envelope-o" aria-hidden="true"></i>');
 $btnReservation.slideDown(1500).promise().done(function(){
 $btnReservation.hide();
-$btnReservation.text('Accepted at...');
+$btnReservation.text('Réponse envoyée à l\'invité');
 $btnReservation.fadeIn(4000);});
