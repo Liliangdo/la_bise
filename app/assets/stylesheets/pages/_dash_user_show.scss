@@ -4,6 +4,8 @@
   background-color: white;
   padding: 30px;
   border-radius: 2px;
+  width: 100%;
+
   .review-owner {
     color: $bise-red;
   }
@@ -28,7 +30,7 @@
 
 .identification {
   background-color: white;
-  width:255px;
+  width:100%;
   height:400px;
   margin-top: 20px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -37,7 +39,7 @@
   border-radius:2px;
 }
 
-.fa {
+ .identification .fa {
   font-size: 20px;
   color:#32B796;
   line-height: 30px;
@@ -54,8 +56,8 @@
 }
 .description {
   background-color: white;
-  width:730px;
-  height:350px;
+  width:100%;
+  height:100%;
   margin-top: 20px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   background-color: white;
