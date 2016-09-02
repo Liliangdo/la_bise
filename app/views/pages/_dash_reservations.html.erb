@@ -1,9 +1,9 @@
-<div class="container">
-  <% @reservations.each do |reservation|%>
-    <div class="row">
-      <div class="wrapper">
+<% @reservations.each do |reservation|%>
+  <div class="dash-reservations">
+    <div class="container">
+      <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div  class="picture-event" style="background-image: url(<%= helper_picture_url(reservation.event) %>);">
+            <div  class="resa-picture-event" style="background-image: url(<%= helper_picture_url(reservation.event) %>);">
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
@@ -26,7 +26,7 @@
           <div class="col-xs-12 col-sm-4">
             <% if not reservation.event.canceled? %>
               <% if not reservation.canceled? %>
-                <div class="reservation-fontawesome">
+                <div class="reservation-fontawesome resa-dash-statut">
                 <% if reservation.confirmed? %>
                   <p class="confirmed"><%= t('.confirmed') %></p>
                   <i class="fa fa-check-square confirmed" aria-hidden="true"></i>
@@ -58,9 +58,8 @@
                 <%= t('.event_cancel') %>
               </p>
             <% end %>
-
           </div>
-        </div>
+      </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
