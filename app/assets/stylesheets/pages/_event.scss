@@ -58,10 +58,8 @@
 
 .cancel-link {
   color: $bise-red;
-}
-
-.event-description {
-  i{
+  text-align: right;
+  i {
     color: $bise-red;
   }
 }
@@ -83,6 +81,7 @@
 .event-datepicker {
   width: 50%;
 }
+
 .review-title {
   margin-bottom: 40px
 }
