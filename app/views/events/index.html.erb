@@ -1,6 +1,6 @@
 <div class="event-list-container">
   <div class="event-list">
-    <h1 class="text-center title-index"><%= t('.result', count: (!@event.nil? ? @event.count : 0) ) %> <%= session[:city] %>
+    <h1 class="text-center title-index"><%=  t('.result', count: (!@events.nil? ? @events.size : 0) ) %> <%= session[:city] %>
     </h1>
     <% @events.each do |event| %>
       <div class="row">

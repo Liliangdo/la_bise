@@ -93,8 +93,8 @@ en:
     index:
       result:
         zero: "No results for"
-        one: "Result for"
-        other: "Results for"
+        one: " 1 result for"
+        other: " %{count} results for"
 
     show:
       peoples:
