@@ -4,7 +4,7 @@
         <div class= "avatar-user-show text-center">
           <%= helper_user_picture_tag(@user)%>
           <p>
-            <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-danger" %>
+            <%= link_to t('.edit'), edit_user_registration_path, class: "btn btn-lg btn-danger" %>
           </p>
         </div>
         <div class="identification">
@@ -28,7 +28,7 @@
             <p><%= @user.description %></p>
           </div>
           <div class="reviews">
-            <h2><%= t('.reviews_show', count: @user.reviews.count) %></h2>
+            <h3 class="review-title"><%= t('.reviews_show', count: @user.reviews.count) %></h3>
             <% @user.reviews.each do |review| %>
               <div class="review-card card-polaroid">
                   <div class="media">
