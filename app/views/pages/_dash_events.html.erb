@@ -63,7 +63,7 @@
               </div>
               <div class="dashboard-event-user">
                 <div class="user-pic">
-                  <%= helper_user_picture_tag(@user) %>
+                  <%= helper_user_picture_tag(reservation.user) %>
                 </div>
                 <div class="reservation-user-informations">
                   <%= reservation.user.first_name %>, <%= t('.bringing') %> <%= reservation.guest %> <%= t('.guests', count: reservation.guest) %> for <%= reservation.event.price * reservation.guest %>€

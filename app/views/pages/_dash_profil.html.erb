@@ -33,7 +33,7 @@
               <div class="review-card card-polaroid">
                   <div class="media">
                     <div class="media-left">
-                      <%= helper_user_picture_tag(@user)%>
+                      <%= helper_user_picture_tag(review.user)%>
                     </div>
                     <div class="media-body">
                       <strong class="review-owner"><%= review.user.first_name %></strong><%= t('colon') %> <%= review.content %>

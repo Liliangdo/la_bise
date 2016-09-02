@@ -12,7 +12,6 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-
     @events = policy_scope(Event).where(user_id: current_user.id)
     @reservations = policy_scope(Reservation).where(user: current_user, state: "paid")
     # @messages = policy_scope(Message).where(user: :sender_id || :recipient_id)
