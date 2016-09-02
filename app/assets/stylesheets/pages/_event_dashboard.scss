@@ -25,10 +25,12 @@
   margin-right: 15px;
 }
 
-.event-description {
+.dash-event-description {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: $gray-lighter;
+  padding: 10px;
 }
 .event-informations {
   display: flex;
