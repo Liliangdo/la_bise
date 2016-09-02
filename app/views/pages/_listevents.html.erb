@@ -13,9 +13,17 @@
                 <%= helper_user_picture_tag(event.user) %> &nbsp; <%= event.user.first_name %>
               </div>
               <div class="media-body card-stats">
-                <i class="fa fa-eur"></i> <%= event.price %>
-                <i class="fa fa-users"></i> <%= event.available_places %>
-                <i class="fa fa-glass"></i> <%= event.mood %>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-users"></i> <%= event.available_places %>
+                </li>
+                <li>
+                  <i class="fa fa-music"></i> <%= event.mood %>
+                </li>
+                <li>
+                  <%= event.price %> <i class="fa fa-eur"></i>
+                </li>
+              </ul>
               </div>
             </div>
           </div>
