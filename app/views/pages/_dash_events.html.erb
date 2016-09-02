@@ -7,42 +7,54 @@
             <h2 class="event-card-title"><%= event.name %></h2>
           </div>
           <% if not event.canceled? %>
-            <div class="event-description-button">
-              <div class="dash-event-description">
+            <div class="media">
+              <div class="media-body">
                 <strong>
                   <%= event.description %>
                 </strong>
-                <div class="button-event">
-                  <%= link_to "Edit", edit_event_path(event.id), class: "btn btn-default" %>
-                  <%= simple_form_for(event, remote: false, method: "delete") do |e| %>
-                    <%= e.input :canceled_at,
-                                as: :hidden,
-                                input_html: {value: Time.now}
-                     %>
-                    <%= e.button :submit, t('.cancel'), class: "btn btn-danger" %>
-                  <% end %>
+              </div>
+              <div class="media-right">
+                <div class="media">
+                  <div class="media-left">
+                    <%= link_to "Edit", edit_event_path(event.id), class: "btn btn-default" %>
+                  </div>
+                  <div class="media-right">
+                    <%= simple_form_for(event, remote: false, method: "delete") do |e| %>
+                      <%= e.input :canceled_at,
+                                  as: :hidden,
+                                  input_html: {value: Time.now} %>
+                       <%= e.button :submit, t('.cancel'), class: "btn btn-danger" %>
+                    <% end %>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="event-informations">
+            <div class="event-informations card-stats">
               <div>
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <%= l event.starting_at, format: :short %>
-
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <%= event.address %>
+                <ul class="list-inline">
+                  <li>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> <%= l event.starting_at, format: :short %>
+                  </li>
+                  <li>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> <%= event.address %>
+                  </li>
+                </ul>
               </div>
               <div>
-                <table style="border-spacing: 30px; border-collapse: separate;">
-                  <tbody>
-                    <tr>
-                      <td><p><i class="fa fa-circle-o" aria-hidden="true"></i> <%= event.mood %></p></td>
-                      <td><p><i class="fa fa-home" aria-hidden="true"></i> <%= event.house_type %></p></td>
-                      <td><p><i class="fa fa-users"></i> <%= event.capacity %></p></td>
-                      <td><p> <i class="fa fa-eur"></i> <%= event.price %></p></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <ul class="list-inline">
+                  <li>
+                    <i class="fa fa-music"></i> <%= event.mood %>
+                  </li>
+                  <li>
+                    <i class="fa fa-home" aria-hidden="true"></i> <%= event.house_type %>
+                  </li>
+                  <li>
+                    <i class="fa fa-users"></i> <%= event.available_places %>/<%= event.capacity %>
+                  </li>
+                  <li>
+                    <%= event.price %> <i class="fa fa-eur"></i>
+                  </li>
+                </ul>
               </div>
             </div>
             <% event.reservations.each do |reservation|%>
