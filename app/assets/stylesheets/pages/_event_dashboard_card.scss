@@ -21,11 +21,12 @@
   position: absolute;
   top: 240px;
   left: 30px;
-  color: #FFF;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
 }
 
 .event-card-stats {
-  color: #FE4A49;
+  color: $bise-red;
   font-size: 14px;
   text-align: right;
   margin: 10px 0;
@@ -35,7 +36,7 @@
 }
 
 .event-card-stats a {
-  color: #FE4A49;
+  color: $bise-red;
 }
 
 .event-card-bottom {
@@ -61,4 +62,8 @@
 
 .event-card-polaroid:hover {
   opacity: 1;
+}
+
+.event-informations {
+  margin: 30px 10px 10px 25px;
 }
