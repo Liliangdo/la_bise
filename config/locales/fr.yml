@@ -94,7 +94,11 @@ fr:
 
   events:
     index:
-      result: "Résultat pour"
+      result:
+        zero: "Pas de résultats pour"
+        one: "Résultat pour"
+        other: "Résultats pour"
+
 
     show:
       peoples:

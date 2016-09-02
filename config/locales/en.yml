@@ -91,7 +91,10 @@ en:
 
   events:
     index:
-      result: "Results for"
+      result:
+        zero: "No results for"
+        one: "Result for"
+        other: "Results for"
 
     show:
       peoples:
