@@ -8,7 +8,7 @@
           </p>
         </div>
         <div class="identification">
-            <h3 class="text-center"><%= t('.identification') %></h3>
+            <h3 class="identification-title text-center"><%= t('.identification') %></h3>
             <% if @user.birth_date  %>
               <i class="fa fa-check-circle-o" aria-hidden="true"></i> <%= t('.birth_date') %>: <%= l(@user.birth_date, format: :standard) %>
             <% end %>
