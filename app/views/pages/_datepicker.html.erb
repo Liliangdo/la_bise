@@ -1,31 +1,29 @@
+
 <%= simple_form_for :search, url: events_path, method: :get do |f| %>
-  <div class="container">
-    <div class="row">
+  <div class="col-xs-1">
 
-      <div class="col-xs-12 col-md-3">
-        <%= f.input :city, label: false, placeholder: t('.city'), input_html: { value: 'Bordeaux'} %>
-      </div>
-
-      <div class='col-xs-12 col-md-4'>
-        <div class="input-group date" data-lang="<%= I18n.locale %>" >
-          <span class="input-group-addon date-picker-home"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-          <div class="align-checkbox">
-           <%= f.text_field :date, class: "input-sm form-control" %>
-            <%= f.input :flexible, as: :select, collection: [["Dates non flexibles", false], ["Dates flexibles", true]], label: false, default: 0%>
-          </div>
-        </div>
-      </div>
-      <div class='col-xs-12 col-md-2'>
-        <div class="search_flexible">
-         <%= f.input :capacity, label: false, placeholder: t('.capacity'), input_html: { value: '2'}, collection: (1..20), default: 1 %>
-        </div>
-      </div>
-
-
-      <div class='col-xs-12 col-md-3'>
-        <%= f.button :submit, t('.search'), class: "btn btn-danger btn-block" %>
-      </div>
-
+  </div>
+  <div class="col-xs-2">
+    <%= f.input :city, label: false, placeholder: t('.city'), input_html: { value: 'Bordeaux'} %>
+  </div>
+  <div class="col-xs-2">
+    <div class="input-group date" data-lang="<%= I18n.locale %>">
+      <span class="input-group-addon" id="basic-addon1">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </span>
+      <%= f.text_field :date, class: "input-sm form-control" %>
     </div>
   </div>
-<%end%>
+
+  <div class="col-xs-2">
+    <%= f.input :flexible, as: :select, collection: [["Flexible date", true], ["Exact date", false]], label: false, default: 0 %>
+  </div>
+  <div class="col-xs-2">
+    <%= f.input :capacity, label: false, input_html: { value: '2'}, collection: (1..20), default: 1 %>
+
+  </div>
+  <div class="col-xs-2">
+    <%= f.button :submit, t('.search'), class: 'btn btn-danger btn-block' %>
+  </div>
+
+<% end %>
