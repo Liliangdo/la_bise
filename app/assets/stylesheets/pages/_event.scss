@@ -56,10 +56,11 @@
   border-radius: 2px;
 }
 
+.cancel-link {
+  color: $bise-red;
+}
+
 .event-description {
-  .cancel {
-    color: $bise-red;
-  }
   i{
     color: $bise-red;
   }
@@ -78,6 +79,10 @@
     font-size: 0.8em;
   }
 }
+
 .event-datepicker {
   width: 50%;
+}
+.review-title {
+  margin-bottom: 40px
 }

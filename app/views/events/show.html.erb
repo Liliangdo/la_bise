@@ -94,18 +94,15 @@
 
       <h3><%= t('.title-description')%></h3>
       <div class="description-card">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="event-description">
-              <p><%= @event.description %></p>
-              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p class="cancel"><%= t('.cancelrules')%></p>
-            </div>
-          </div>
+        <div class="event-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <br>
+          <span class="cancel-link"><%= t('.cancelrules')%></span>
         </div>
       </div>
 
     <!-- Reviews -->
-      <h3><%= t('.title-reviews')%></h3>
+      <h3 class="review-title"><%= t('.title-reviews')%></h3>
       <% @event.reviews.order('updated_at DESC').take(5).each do |review| %>
         <div class="review-card card-polaroid">
           <div class="row">
