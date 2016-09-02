@@ -96,8 +96,8 @@ fr:
     index:
       result:
         zero: "Pas de résultats pour"
-        one: "Résultat pour"
-        other: "Résultats pour"
+        one: "résultat pour"
+        other: " %{count} résultats pour"
 
 
     show:
