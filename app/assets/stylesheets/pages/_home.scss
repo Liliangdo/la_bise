@@ -89,16 +89,15 @@
   margin-bottom: 20px;
 }
 
-.date-picker-home {
-  span {
-    padding: 0;
-
-  }
+.search_form {
+  display: flex;
+  justify-content: space-between;
 }
 
 .search_flexible {
-  select {
-  appearance: none;
-  border-radius: 0px;
+
 }
+
+.input-group input {
+  height: 37px;
 }
