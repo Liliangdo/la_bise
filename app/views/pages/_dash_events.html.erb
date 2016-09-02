@@ -8,7 +8,7 @@
           </div>
             <% if not event.canceled? %>
               <div class="event-description-button">
-                <div class="event-description">
+                <div class="dash-event-description">
                   <strong>
                     <%= event.description %>
                   </strong>
@@ -92,7 +92,7 @@
               <% end %>
             <% else %>
               <em>
-                <div class="event-description bise-red-color">
+                <div class="dash-event-description bise-red-color">
                   <strong class=>
                     <%= t('.canceled_by_host') %>
                     <%=l event.canceled_at, format: '%d %b' %>
