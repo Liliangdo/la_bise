@@ -3,7 +3,9 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <div class="carousel-relative">
     <h1 class="title text-center">La Bise</h1>
-    <h3 class="punchline text-center"><%= t('.punchline') %></h3>
+    <div class="hidden-xs">
+      <h3 class="punchline text-center"><%= t('.punchline') %></h3>
+    </div>
     <%= render 'datepicker' %>
   </div>
   <div class="carousel-inner" role="listbox">
